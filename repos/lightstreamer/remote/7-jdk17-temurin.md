@@ -1,0 +1,264 @@
+## `lightstreamer:7-jdk17-temurin`
+
+```console
+$ docker pull lightstreamer@sha256:1d4814ccd9915a9547bfe67a95c38778ea8f87ec24d236622cb261f0ef6b69e2
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 4
+	-	linux; amd64
+	-	unknown; unknown
+	-	linux; arm64 variant v8
+	-	unknown; unknown
+
+### `lightstreamer:7-jdk17-temurin` - linux; amd64
+
+```console
+$ docker pull lightstreamer@sha256:82990b0b27f0b2ec833b79020b6df1cbf06faed56891675d2a034f84bbef5ca8
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **256.2 MB (256207975 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:14ef94066f136950867fdc3dd7c006040a866429b853009d2a299c42d7c17fea`
+-	Entrypoint: `["\/__cacert_entrypoint.sh"]`
+-	Default Command: `[".\/LS.sh","run"]`
+
+```dockerfile
+# Fri, 04 Oct 2024 12:48:42 GMT
+ARG RELEASE
+# Fri, 04 Oct 2024 12:48:42 GMT
+ARG LAUNCHPAD_BUILD_ARCH
+# Fri, 04 Oct 2024 12:48:42 GMT
+LABEL org.opencontainers.image.ref.name=ubuntu
+# Fri, 04 Oct 2024 12:48:42 GMT
+LABEL org.opencontainers.image.version=24.04
+# Fri, 04 Oct 2024 12:48:42 GMT
+ADD file:bcebbf0fddcba5b864d5d267b68dd23bcfb01275e6ec7bcab69bf8b56af14804 in / 
+# Fri, 04 Oct 2024 12:48:42 GMT
+CMD ["/bin/bash"]
+# Fri, 04 Oct 2024 12:48:42 GMT
+ENV JAVA_HOME=/opt/java/openjdk
+# Fri, 04 Oct 2024 12:48:42 GMT
+ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+# Fri, 04 Oct 2024 12:48:42 GMT
+ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
+# Fri, 04 Oct 2024 12:48:42 GMT
+RUN set -eux;     apt-get update;     DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends         curl         wget         gnupg         fontconfig         ca-certificates p11-kit         binutils         tzdata         locales     ;     echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen;     locale-gen en_US.UTF-8;     rm -rf /var/lib/apt/lists/* # buildkit
+# Fri, 04 Oct 2024 12:48:42 GMT
+ENV JAVA_VERSION=jdk-17.0.13+11
+# Fri, 04 Oct 2024 12:48:42 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        amd64)          ESUM='8682892fc02965930b9022c066fa164dd6f458ef4a5dc262016aa28333b30f49';          BINARY_URL='https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.13%2B11/OpenJDK17U-jdk_x64_linux_hotspot_17.0.13_11.tar.gz';          ;;        arm64)          ESUM='0c17fa4f14c0d2cc9e9334f996fccdddc5da4459d768f3105c7ff0283c47bf62';          BINARY_URL='https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.13%2B11/OpenJDK17U-jdk_aarch64_linux_hotspot_17.0.13_11.tar.gz';          ;;        armhf)          ESUM='e69d43be937e05dbccae4cc98f732ed86aa11993234bf5ad6e81c30475a78ce7';          BINARY_URL='https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.13%2B11/OpenJDK17U-jdk_arm_linux_hotspot_17.0.13_11.tar.gz';          ;;        ppc64el)          ESUM='d4e553c6fa7afdfe2577420c6e77a558db8113a3cef84e755384148f5610834e';          BINARY_URL='https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.13%2B11/OpenJDK17U-jdk_ppc64le_linux_hotspot_17.0.13_11.tar.gz';          ;;        riscv64)          ESUM='e7c82833a7381a05cae2be0e947c08e971bbae4f2e4142c6ec87bbd7530a5646';          BINARY_URL='https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.13%2B11/OpenJDK17U-jdk_riscv64_linux_hotspot_17.0.13_11.tar.gz';          ;;        s390x)          ESUM='1f824d7369dfd570dc561e2a56035fdcd2970c97cbd355f6deb6ed0e7c6bcb79';          BINARY_URL='https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.13%2B11/OpenJDK17U-jdk_s390x_linux_hotspot_17.0.13_11.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     wget --progress=dot:giga -O /tmp/openjdk.tar.gz ${BINARY_URL};     wget --progress=dot:giga -O /tmp/openjdk.tar.gz.sig ${BINARY_URL}.sig;     export GNUPGHOME="$(mktemp -d)";     gpg --batch --keyserver keyserver.ubuntu.com --recv-keys 3B04D753C9050D9A5D343F39843C48A565F8F04B;     gpg --batch --verify /tmp/openjdk.tar.gz.sig /tmp/openjdk.tar.gz;     rm -r "${GNUPGHOME}" /tmp/openjdk.tar.gz.sig;     echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -;     mkdir -p "$JAVA_HOME";     tar --extract         --file /tmp/openjdk.tar.gz         --directory "$JAVA_HOME"         --strip-components 1         --no-same-owner     ;     rm -f /tmp/openjdk.tar.gz ${JAVA_HOME}/lib/src.zip;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;     java -Xshare:dump; # buildkit
+# Fri, 04 Oct 2024 12:48:42 GMT
+RUN set -eux;     echo "Verifying install ...";     fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java;     echo "javac --version"; javac --version;     echo "java --version"; java --version;     echo "Complete." # buildkit
+# Fri, 04 Oct 2024 12:48:42 GMT
+COPY --chmod=755 entrypoint.sh /__cacert_entrypoint.sh # buildkit
+# Fri, 04 Oct 2024 12:48:42 GMT
+ENTRYPOINT ["/__cacert_entrypoint.sh"]
+# Fri, 04 Oct 2024 12:48:42 GMT
+CMD ["jshell"]
+# Fri, 04 Oct 2024 12:48:42 GMT
+LABEL maintainer=Lightstreamer Server Development Team <support@lightstreamer.com>
+# Fri, 04 Oct 2024 12:48:42 GMT
+RUN apt-get -y update         && apt-get -y install gnupg         && rm -rf /var/lib/apt/lists/* # buildkit
+# Fri, 04 Oct 2024 12:48:42 GMT
+RUN gpg --batch --keyserver hkp://keyserver.ubuntu.com --recv-keys 9B90BFD14309C7DA5EF58D7D4A8C08966F29B4D2 # buildkit
+# Fri, 04 Oct 2024 12:48:42 GMT
+ENV LIGHTSTREAMER_VERSION=7.4.5
+# Fri, 04 Oct 2024 12:48:42 GMT
+ENV LIGHTSTREAMER_URL_DOWNLOAD=https://lightstreamer.com/distros/ls-server/7.4.5/Lightstreamer-7.4.5.tar.gz
+# Fri, 04 Oct 2024 12:48:42 GMT
+RUN set -ex;         mkdir /lightstreamer && cd /lightstreamer         && curl -fSL -o Lightstreamer.tar.gz ${LIGHTSTREAMER_URL_DOWNLOAD}         && curl -fSL -o Lightstreamer.tar.gz.asc ${LIGHTSTREAMER_URL_DOWNLOAD}.asc         && gpg --batch --verify Lightstreamer.tar.gz.asc Lightstreamer.tar.gz         && tar -xvf Lightstreamer.tar.gz --strip-components=1         && sed -i -e 's/<appender-ref ref="LSDailyRolling" \/>/<appender-ref ref="LSConsole" \/>/'                   -e '/<logger name="LightstreamerLogger.init/,+2s/<appender-ref ref="LSConsole" \/>/<!-- <appender-ref ref="LSConsole" \/> -->/'                   -e '/<logger name="LightstreamerLogger.license/,+2s/<appender-ref ref="LSConsole" \/>/<!-- <appender-ref ref="LSConsole" \/> -->/'                   -e '/<logger name="LightstreamerProxyAdapters/,+2s/<appender-ref ref="LSConsole" \/>/<!-- <appender-ref ref="LSConsole" \/> -->/'                   conf/lightstreamer_log_conf.xml         && groupadd -r -g 10000 lightstreamer         && useradd --no-log-init -r -g lightstreamer -u 10000 lightstreamer         && chown -R lightstreamer:lightstreamer ../lightstreamer         && rm Lightstreamer.tar.gz Lightstreamer.tar.gz.asc # buildkit
+# Fri, 04 Oct 2024 12:48:42 GMT
+USER lightstreamer
+# Fri, 04 Oct 2024 12:48:42 GMT
+EXPOSE map[8080/tcp:{}]
+# Fri, 04 Oct 2024 12:48:42 GMT
+WORKDIR /lightstreamer/bin/unix-like
+# Fri, 04 Oct 2024 12:48:42 GMT
+CMD ["./LS.sh" "run"]
+```
+
+-	Layers:
+	-	`sha256:de44b265507ae44b212defcb50694d666f136b35c1090d9709068bc861bb2d64`  
+		Last Modified: Tue, 19 Nov 2024 17:38:27 GMT  
+		Size: 29.8 MB (29751968 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:192c83835a594a8b0613ec21fa579a8e40cfe71b50991cfb84b8ad0901afeac2`  
+		Last Modified: Tue, 03 Dec 2024 02:30:28 GMT  
+		Size: 22.9 MB (22948557 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:735344c4030102dd4f803056f564831c3c572c0f49f8412c61c2d0c6e2833072`  
+		Last Modified: Tue, 03 Dec 2024 02:30:30 GMT  
+		Size: 144.5 MB (144542438 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:8fb6bbb9e7eae15223a1b9bec4f44d764a5f61608c199f1207dc11a052b3b7d8`  
+		Last Modified: Tue, 03 Dec 2024 02:30:27 GMT  
+		Size: 160.0 B  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:1b9d1e181a2a2b6ed242e21c8a4d40d33cf851fd5522737a9aaa8a708d215f94`  
+		Last Modified: Tue, 03 Dec 2024 02:30:28 GMT  
+		Size: 2.3 KB (2283 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1`  
+		Last Modified: Tue, 07 Mar 2017 15:01:14 GMT  
+		Size: 32.0 B  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:30f9f11273572c28cd0e570676f5a4594f2cceb8b232f0da13c9822693b2ac20`  
+		Last Modified: Tue, 03 Dec 2024 03:22:55 GMT  
+		Size: 2.6 KB (2646 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:4c545f37ce47e2257a2b9ac6f2f898f7f0c62df1914970469ed52524b3bd9098`  
+		Last Modified: Tue, 03 Dec 2024 03:22:57 GMT  
+		Size: 59.0 MB (58959859 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1`  
+		Last Modified: Tue, 07 Mar 2017 15:01:14 GMT  
+		Size: 32.0 B  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+
+### `lightstreamer:7-jdk17-temurin` - unknown; unknown
+
+```console
+$ docker pull lightstreamer@sha256:4f0629a3b4f8ccc1c100661b611795c88b91e5ab9c830b898a7fa82bcb4fdf53
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **19.6 KB (19565 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:a6129ba8701d2af3c52ff4c5e60ff332a59b31d04de8e9b4ccba6d6ba595ebad`
+
+```dockerfile
+```
+
+-	Layers:
+	-	`sha256:f1dc2d550ce2e814bf9e9d845e64bdb54745618ad7981535b729c51441099a50`  
+		Last Modified: Tue, 03 Dec 2024 03:22:55 GMT  
+		Size: 19.6 KB (19565 bytes)  
+		MIME: application/vnd.in-toto+json
+
+### `lightstreamer:7-jdk17-temurin` - linux; arm64 variant v8
+
+```console
+$ docker pull lightstreamer@sha256:c6dd6be565626668b6d19709744ef83048c42c2eb81170342fe5e936843adc48
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **255.4 MB (255385227 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:238ad020b0fd310d80633a01b137da481c1e3daf20737a17311cd64776346600`
+-	Entrypoint: `["\/__cacert_entrypoint.sh"]`
+-	Default Command: `[".\/LS.sh","run"]`
+
+```dockerfile
+# Fri, 04 Oct 2024 12:48:42 GMT
+ARG RELEASE
+# Fri, 04 Oct 2024 12:48:42 GMT
+ARG LAUNCHPAD_BUILD_ARCH
+# Fri, 04 Oct 2024 12:48:42 GMT
+LABEL org.opencontainers.image.ref.name=ubuntu
+# Fri, 04 Oct 2024 12:48:42 GMT
+LABEL org.opencontainers.image.version=24.04
+# Fri, 04 Oct 2024 12:48:42 GMT
+ADD file:765dfd09ec2ac4870c8b3efd6ef4a994f99695c574d546d7a9a0e69bbb970b03 in / 
+# Fri, 04 Oct 2024 12:48:42 GMT
+CMD ["/bin/bash"]
+# Fri, 04 Oct 2024 12:48:42 GMT
+ENV JAVA_HOME=/opt/java/openjdk
+# Fri, 04 Oct 2024 12:48:42 GMT
+ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+# Fri, 04 Oct 2024 12:48:42 GMT
+ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
+# Fri, 04 Oct 2024 12:48:42 GMT
+RUN set -eux;     apt-get update;     DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends         curl         wget         gnupg         fontconfig         ca-certificates p11-kit         binutils         tzdata         locales     ;     echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen;     locale-gen en_US.UTF-8;     rm -rf /var/lib/apt/lists/* # buildkit
+# Fri, 04 Oct 2024 12:48:42 GMT
+ENV JAVA_VERSION=jdk-17.0.13+11
+# Fri, 04 Oct 2024 12:48:42 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        amd64)          ESUM='8682892fc02965930b9022c066fa164dd6f458ef4a5dc262016aa28333b30f49';          BINARY_URL='https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.13%2B11/OpenJDK17U-jdk_x64_linux_hotspot_17.0.13_11.tar.gz';          ;;        arm64)          ESUM='0c17fa4f14c0d2cc9e9334f996fccdddc5da4459d768f3105c7ff0283c47bf62';          BINARY_URL='https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.13%2B11/OpenJDK17U-jdk_aarch64_linux_hotspot_17.0.13_11.tar.gz';          ;;        armhf)          ESUM='e69d43be937e05dbccae4cc98f732ed86aa11993234bf5ad6e81c30475a78ce7';          BINARY_URL='https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.13%2B11/OpenJDK17U-jdk_arm_linux_hotspot_17.0.13_11.tar.gz';          ;;        ppc64el)          ESUM='d4e553c6fa7afdfe2577420c6e77a558db8113a3cef84e755384148f5610834e';          BINARY_URL='https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.13%2B11/OpenJDK17U-jdk_ppc64le_linux_hotspot_17.0.13_11.tar.gz';          ;;        riscv64)          ESUM='e7c82833a7381a05cae2be0e947c08e971bbae4f2e4142c6ec87bbd7530a5646';          BINARY_URL='https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.13%2B11/OpenJDK17U-jdk_riscv64_linux_hotspot_17.0.13_11.tar.gz';          ;;        s390x)          ESUM='1f824d7369dfd570dc561e2a56035fdcd2970c97cbd355f6deb6ed0e7c6bcb79';          BINARY_URL='https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.13%2B11/OpenJDK17U-jdk_s390x_linux_hotspot_17.0.13_11.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     wget --progress=dot:giga -O /tmp/openjdk.tar.gz ${BINARY_URL};     wget --progress=dot:giga -O /tmp/openjdk.tar.gz.sig ${BINARY_URL}.sig;     export GNUPGHOME="$(mktemp -d)";     gpg --batch --keyserver keyserver.ubuntu.com --recv-keys 3B04D753C9050D9A5D343F39843C48A565F8F04B;     gpg --batch --verify /tmp/openjdk.tar.gz.sig /tmp/openjdk.tar.gz;     rm -r "${GNUPGHOME}" /tmp/openjdk.tar.gz.sig;     echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -;     mkdir -p "$JAVA_HOME";     tar --extract         --file /tmp/openjdk.tar.gz         --directory "$JAVA_HOME"         --strip-components 1         --no-same-owner     ;     rm -f /tmp/openjdk.tar.gz ${JAVA_HOME}/lib/src.zip;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;     java -Xshare:dump; # buildkit
+# Fri, 04 Oct 2024 12:48:42 GMT
+RUN set -eux;     echo "Verifying install ...";     fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java;     echo "javac --version"; javac --version;     echo "java --version"; java --version;     echo "Complete." # buildkit
+# Fri, 04 Oct 2024 12:48:42 GMT
+COPY --chmod=755 entrypoint.sh /__cacert_entrypoint.sh # buildkit
+# Fri, 04 Oct 2024 12:48:42 GMT
+ENTRYPOINT ["/__cacert_entrypoint.sh"]
+# Fri, 04 Oct 2024 12:48:42 GMT
+CMD ["jshell"]
+# Fri, 04 Oct 2024 12:48:42 GMT
+LABEL maintainer=Lightstreamer Server Development Team <support@lightstreamer.com>
+# Fri, 04 Oct 2024 12:48:42 GMT
+RUN apt-get -y update         && apt-get -y install gnupg         && rm -rf /var/lib/apt/lists/* # buildkit
+# Fri, 04 Oct 2024 12:48:42 GMT
+RUN gpg --batch --keyserver hkp://keyserver.ubuntu.com --recv-keys 9B90BFD14309C7DA5EF58D7D4A8C08966F29B4D2 # buildkit
+# Fri, 04 Oct 2024 12:48:42 GMT
+ENV LIGHTSTREAMER_VERSION=7.4.5
+# Fri, 04 Oct 2024 12:48:42 GMT
+ENV LIGHTSTREAMER_URL_DOWNLOAD=https://lightstreamer.com/distros/ls-server/7.4.5/Lightstreamer-7.4.5.tar.gz
+# Fri, 04 Oct 2024 12:48:42 GMT
+RUN set -ex;         mkdir /lightstreamer && cd /lightstreamer         && curl -fSL -o Lightstreamer.tar.gz ${LIGHTSTREAMER_URL_DOWNLOAD}         && curl -fSL -o Lightstreamer.tar.gz.asc ${LIGHTSTREAMER_URL_DOWNLOAD}.asc         && gpg --batch --verify Lightstreamer.tar.gz.asc Lightstreamer.tar.gz         && tar -xvf Lightstreamer.tar.gz --strip-components=1         && sed -i -e 's/<appender-ref ref="LSDailyRolling" \/>/<appender-ref ref="LSConsole" \/>/'                   -e '/<logger name="LightstreamerLogger.init/,+2s/<appender-ref ref="LSConsole" \/>/<!-- <appender-ref ref="LSConsole" \/> -->/'                   -e '/<logger name="LightstreamerLogger.license/,+2s/<appender-ref ref="LSConsole" \/>/<!-- <appender-ref ref="LSConsole" \/> -->/'                   -e '/<logger name="LightstreamerProxyAdapters/,+2s/<appender-ref ref="LSConsole" \/>/<!-- <appender-ref ref="LSConsole" \/> -->/'                   conf/lightstreamer_log_conf.xml         && groupadd -r -g 10000 lightstreamer         && useradd --no-log-init -r -g lightstreamer -u 10000 lightstreamer         && chown -R lightstreamer:lightstreamer ../lightstreamer         && rm Lightstreamer.tar.gz Lightstreamer.tar.gz.asc # buildkit
+# Fri, 04 Oct 2024 12:48:42 GMT
+USER lightstreamer
+# Fri, 04 Oct 2024 12:48:42 GMT
+EXPOSE map[8080/tcp:{}]
+# Fri, 04 Oct 2024 12:48:42 GMT
+WORKDIR /lightstreamer/bin/unix-like
+# Fri, 04 Oct 2024 12:48:42 GMT
+CMD ["./LS.sh" "run"]
+```
+
+-	Layers:
+	-	`sha256:8bb55f0677778c3027fcc4253dc452bc9c22de989a696391e739fb1cdbbdb4c2`  
+		Last Modified: Tue, 19 Nov 2024 17:38:33 GMT  
+		Size: 28.9 MB (28892671 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:4710d3748e6eecf27ed172c1655ce54d98b0ba8e89dbcfe941361161b2a0618c`  
+		Last Modified: Tue, 03 Dec 2024 05:50:57 GMT  
+		Size: 24.2 MB (24159369 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:541c9eefc8a3c1cb3f8f2bb6e1fd1bcc202032a6c2d25405a46289388e7ffa3b`  
+		Last Modified: Tue, 03 Dec 2024 05:50:59 GMT  
+		Size: 143.4 MB (143368186 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:8f75a3586fbf1ee58ff56c3fe189c7fe5a1ae073fcca833d607508b8c098967b`  
+		Last Modified: Tue, 03 Dec 2024 05:50:56 GMT  
+		Size: 158.0 B  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:ae76379d9fa81ce9f3f8eaf6297921926bd624e57d53568aff0ff97ed801ed73`  
+		Last Modified: Tue, 03 Dec 2024 05:50:56 GMT  
+		Size: 2.3 KB (2282 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1`  
+		Last Modified: Tue, 07 Mar 2017 15:01:14 GMT  
+		Size: 32.0 B  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:d0ce535c49b06d556b56e1989b318139d7a261ee314935aad9bb208155889184`  
+		Last Modified: Tue, 03 Dec 2024 13:26:21 GMT  
+		Size: 2.6 KB (2637 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:63aec8f6b1388f2aad7df75e35e958760a28cd8abe3bb42df1b28dd7733544c8`  
+		Last Modified: Tue, 03 Dec 2024 13:26:23 GMT  
+		Size: 59.0 MB (58959860 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1`  
+		Last Modified: Tue, 07 Mar 2017 15:01:14 GMT  
+		Size: 32.0 B  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+
+### `lightstreamer:7-jdk17-temurin` - unknown; unknown
+
+```console
+$ docker pull lightstreamer@sha256:a917c950b0cc689c3347474d214d50f733a81d89f652bb62016384b99dd08e8e
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **19.7 KB (19722 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:f65c90fd7b766cacdd868a6ff151dd7d7e63fd30eeb7103c9c862fcbe334cd91`
+
+```dockerfile
+```
+
+-	Layers:
+	-	`sha256:967526a5ee8312f3c963396349f43a6526540ce00f7a7483b54f83eb2f394b11`  
+		Last Modified: Tue, 03 Dec 2024 13:26:21 GMT  
+		Size: 19.7 KB (19722 bytes)  
+		MIME: application/vnd.in-toto+json

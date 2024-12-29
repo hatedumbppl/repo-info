@@ -1,0 +1,251 @@
+## `rethinkdb:2-bookworm-slim`
+
+```console
+$ docker pull rethinkdb@sha256:8ab285073e3ad30c6cbdad862cbc80041938be0adbe1057e438145b53f7c6668
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 6
+	-	linux; amd64
+	-	unknown; unknown
+	-	linux; arm64 variant v8
+	-	unknown; unknown
+	-	linux; s390x
+	-	unknown; unknown
+
+### `rethinkdb:2-bookworm-slim` - linux; amd64
+
+```console
+$ docker pull rethinkdb@sha256:b56f4485773f24a8689492ebd10481e49850162943b1cf5c8e65ea507f6cada1
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **47.8 MB (47824877 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:2a1b528cc8823dc90febf17201e7f99600fad211ca3a000189be416da5db16b7`
+-	Default Command: `["rethinkdb","--bind","all"]`
+
+```dockerfile
+# Wed, 13 Dec 2023 22:17:20 GMT
+RUN # debian.sh --arch 'amd64' out/ 'bookworm' '@1734912000'
+# Wed, 13 Dec 2023 22:17:20 GMT
+RUN apt-get -qqy update     && apt-get install -y --no-install-recommends ca-certificates gnupg2 curl     && rm -rf /var/lib/apt/lists/* # buildkit
+# Wed, 13 Dec 2023 22:17:20 GMT
+RUN GNUPGHOME="$(mktemp -d)" && export GNUPGHOME     && gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys 539A3A8C6692E6E3F69B3FE81D85E93F801BB43F     && gpg --batch --export 539A3A8C6692E6E3F69B3FE81D85E93F801BB43F > /usr/share/keyrings/rethinkdb.gpg     && gpgconf --kill all && rm -rf "$GNUPGHOME"     && echo "deb [signed-by=/usr/share/keyrings/rethinkdb.gpg] https://download.rethinkdb.com/repository/debian-bookworm bookworm main" > /etc/apt/sources.list.d/rethinkdb.list # buildkit
+# Wed, 13 Dec 2023 22:17:20 GMT
+ENV RETHINKDB_PACKAGE_VERSION=2.4.4~0bookworm
+# Wed, 13 Dec 2023 22:17:20 GMT
+RUN apt-get -qqy update 	&& apt-get install -y rethinkdb=$RETHINKDB_PACKAGE_VERSION 	&& rm -rf /var/lib/apt/lists/* # buildkit
+# Wed, 13 Dec 2023 22:17:20 GMT
+VOLUME [/data]
+# Wed, 13 Dec 2023 22:17:20 GMT
+WORKDIR /data
+# Wed, 13 Dec 2023 22:17:20 GMT
+CMD ["rethinkdb" "--bind" "all"]
+# Wed, 13 Dec 2023 22:17:20 GMT
+EXPOSE map[28015/tcp:{} 29015/tcp:{} 8080/tcp:{}]
+```
+
+-	Layers:
+	-	`sha256:fd674058ff8f8cfa7fb8a20c006fc0128541cbbad7f7f7f28df570d08f9e4d92`  
+		Last Modified: Tue, 24 Dec 2024 21:32:20 GMT  
+		Size: 28.2 MB (28231581 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:245333dec8260dfb632d55f491ac21efe469ed53a81c23122f172d6792043dd7`  
+		Last Modified: Tue, 24 Dec 2024 22:15:18 GMT  
+		Size: 9.6 MB (9597763 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:c23acd31796d72444b6e46a28b1f4df0d88eeeeb4411a22a0b2b6bfcd2d273e9`  
+		Last Modified: Tue, 24 Dec 2024 22:15:18 GMT  
+		Size: 2.7 KB (2668 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:8b7a202419b7eca34e89649790093760effb321c171213b0cb16d53b43f609a9`  
+		Last Modified: Tue, 24 Dec 2024 22:15:18 GMT  
+		Size: 10.0 MB (9992771 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:22e6b472ea38e71936524d1cb09372f911260426d69db8b776763176f565da25`  
+		Last Modified: Tue, 24 Dec 2024 22:15:18 GMT  
+		Size: 94.0 B  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+
+### `rethinkdb:2-bookworm-slim` - unknown; unknown
+
+```console
+$ docker pull rethinkdb@sha256:eee9b2a22c40a2e7fb4aa38e63a57231b78f174fba8b4e30d30cea1ba12cb139
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **2.6 MB (2639572 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:f82dfa50fe40c80830606fab3b153df9932378dec1283e7fdb495a923594081b`
+
+```dockerfile
+```
+
+-	Layers:
+	-	`sha256:910c673c4f89b7fcb42d29b5ad875176a62a545e549b839dd189b01f4fa73a91`  
+		Last Modified: Tue, 24 Dec 2024 22:15:18 GMT  
+		Size: 2.6 MB (2626125 bytes)  
+		MIME: application/vnd.in-toto+json
+	-	`sha256:cb9da20885f4de2598f2baa7725f27e5cc9e0a2625897a5ec729a9f9ae35035e`  
+		Last Modified: Tue, 24 Dec 2024 22:15:18 GMT  
+		Size: 13.4 KB (13447 bytes)  
+		MIME: application/vnd.in-toto+json
+
+### `rethinkdb:2-bookworm-slim` - linux; arm64 variant v8
+
+```console
+$ docker pull rethinkdb@sha256:2079b19527565dbf09f4ae1cb4ef2505608520d9a6262271468e0e5c54c2d6a2
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **46.8 MB (46819190 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:ead019e91e64521fa19d715ee1ac1cc03a3f0a1e6d8fc27cf2fab6f4937fb112`
+-	Default Command: `["rethinkdb","--bind","all"]`
+
+```dockerfile
+# Wed, 13 Dec 2023 22:17:20 GMT
+RUN # debian.sh --arch 'arm64' out/ 'bookworm' '@1734912000'
+# Wed, 13 Dec 2023 22:17:20 GMT
+RUN apt-get -qqy update     && apt-get install -y --no-install-recommends ca-certificates gnupg2 curl     && rm -rf /var/lib/apt/lists/* # buildkit
+# Wed, 13 Dec 2023 22:17:20 GMT
+RUN GNUPGHOME="$(mktemp -d)" && export GNUPGHOME     && gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys 539A3A8C6692E6E3F69B3FE81D85E93F801BB43F     && gpg --batch --export 539A3A8C6692E6E3F69B3FE81D85E93F801BB43F > /usr/share/keyrings/rethinkdb.gpg     && gpgconf --kill all && rm -rf "$GNUPGHOME"     && echo "deb [signed-by=/usr/share/keyrings/rethinkdb.gpg] https://download.rethinkdb.com/repository/debian-bookworm bookworm main" > /etc/apt/sources.list.d/rethinkdb.list # buildkit
+# Wed, 13 Dec 2023 22:17:20 GMT
+ENV RETHINKDB_PACKAGE_VERSION=2.4.4~0bookworm
+# Wed, 13 Dec 2023 22:17:20 GMT
+RUN apt-get -qqy update 	&& apt-get install -y rethinkdb=$RETHINKDB_PACKAGE_VERSION 	&& rm -rf /var/lib/apt/lists/* # buildkit
+# Wed, 13 Dec 2023 22:17:20 GMT
+VOLUME [/data]
+# Wed, 13 Dec 2023 22:17:20 GMT
+WORKDIR /data
+# Wed, 13 Dec 2023 22:17:20 GMT
+CMD ["rethinkdb" "--bind" "all"]
+# Wed, 13 Dec 2023 22:17:20 GMT
+EXPOSE map[28015/tcp:{} 29015/tcp:{} 8080/tcp:{}]
+```
+
+-	Layers:
+	-	`sha256:f5c6876bb3d7d368455916fa98c705330bd8a8d9c080ccea8fe4c4b35a2ecb1f`  
+		Last Modified: Tue, 24 Dec 2024 21:34:20 GMT  
+		Size: 28.1 MB (28058723 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:4e1a8a39de7f3497498e7c3c79c79b7d1712f86eb381b98b5f467b3516ffe0f3`  
+		Last Modified: Wed, 25 Dec 2024 01:27:36 GMT  
+		Size: 9.4 MB (9395229 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:ec592a239a5f0d9d0bb8a893fa63f4d70f14d590f8255b52aeba94377063b833`  
+		Last Modified: Wed, 25 Dec 2024 01:27:35 GMT  
+		Size: 2.7 KB (2670 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:d85a422ea6df21c4ad3d9dd9a7f26400e624290d51d04dd0f5235904213e021a`  
+		Last Modified: Wed, 25 Dec 2024 01:27:36 GMT  
+		Size: 9.4 MB (9362474 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:3e57609b16f7d1399c0f6df631b9e8b7cd917c44b6193fbe6e0bf1417a6beb94`  
+		Last Modified: Wed, 25 Dec 2024 01:27:35 GMT  
+		Size: 94.0 B  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+
+### `rethinkdb:2-bookworm-slim` - unknown; unknown
+
+```console
+$ docker pull rethinkdb@sha256:e53cb05ccecf79d87be9513aeb005bfd7e09521a149fdc4beeb2e1d6d5781ef5
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **2.6 MB (2640089 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:ec2f28d2734008597e9905088ac3166f3d5ede65bf6bacc9cf534c7eb036b8db`
+
+```dockerfile
+```
+
+-	Layers:
+	-	`sha256:3a9f2d3c05bd692251607d2de68a119b2ff2b55ad343a8d7f2edf8bb734fb4a5`  
+		Last Modified: Wed, 25 Dec 2024 01:27:36 GMT  
+		Size: 2.6 MB (2626460 bytes)  
+		MIME: application/vnd.in-toto+json
+	-	`sha256:5ca909f6809574824350ff13880f0107a24ec61c3716a61678d1036386420144`  
+		Last Modified: Wed, 25 Dec 2024 01:27:35 GMT  
+		Size: 13.6 KB (13629 bytes)  
+		MIME: application/vnd.in-toto+json
+
+### `rethinkdb:2-bookworm-slim` - linux; s390x
+
+```console
+$ docker pull rethinkdb@sha256:f55e2b4496de1a387b3dc185a32098bb719aafc20c62fbf2a5a957fb51647988
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **45.3 MB (45281287 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:6fda4e444a757fa70c83e2b95e722b2034aa170c6f71e6e994056cd776dc0312`
+-	Default Command: `["rethinkdb","--bind","all"]`
+
+```dockerfile
+# Wed, 13 Dec 2023 22:17:20 GMT
+RUN # debian.sh --arch 's390x' out/ 'bookworm' '@1734912000'
+# Wed, 13 Dec 2023 22:17:20 GMT
+RUN apt-get -qqy update     && apt-get install -y --no-install-recommends ca-certificates gnupg2 curl     && rm -rf /var/lib/apt/lists/* # buildkit
+# Wed, 13 Dec 2023 22:17:20 GMT
+RUN GNUPGHOME="$(mktemp -d)" && export GNUPGHOME     && gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys 539A3A8C6692E6E3F69B3FE81D85E93F801BB43F     && gpg --batch --export 539A3A8C6692E6E3F69B3FE81D85E93F801BB43F > /usr/share/keyrings/rethinkdb.gpg     && gpgconf --kill all && rm -rf "$GNUPGHOME"     && echo "deb [signed-by=/usr/share/keyrings/rethinkdb.gpg] https://download.rethinkdb.com/repository/debian-bookworm bookworm main" > /etc/apt/sources.list.d/rethinkdb.list # buildkit
+# Wed, 13 Dec 2023 22:17:20 GMT
+ENV RETHINKDB_PACKAGE_VERSION=2.4.4~0bookworm
+# Wed, 13 Dec 2023 22:17:20 GMT
+RUN apt-get -qqy update 	&& apt-get install -y rethinkdb=$RETHINKDB_PACKAGE_VERSION 	&& rm -rf /var/lib/apt/lists/* # buildkit
+# Wed, 13 Dec 2023 22:17:20 GMT
+VOLUME [/data]
+# Wed, 13 Dec 2023 22:17:20 GMT
+WORKDIR /data
+# Wed, 13 Dec 2023 22:17:20 GMT
+CMD ["rethinkdb" "--bind" "all"]
+# Wed, 13 Dec 2023 22:17:20 GMT
+EXPOSE map[28015/tcp:{} 29015/tcp:{} 8080/tcp:{}]
+```
+
+-	Layers:
+	-	`sha256:0e7e84bd4cca9e29f08dfac96d436e65bdd31929520e73147137b382fbc89b70`  
+		Last Modified: Tue, 24 Dec 2024 21:33:49 GMT  
+		Size: 26.9 MB (26878901 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:0fde25bec0ebe6006fc5ce880268a231da6a7d54562aad8ccfe115670e822ba6`  
+		Last Modified: Wed, 25 Dec 2024 00:05:43 GMT  
+		Size: 9.1 MB (9096092 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:e17ebabc1ecff26e2461c1f49b0c880f705ca4b1e955ad127bb732f489732cbc`  
+		Last Modified: Wed, 25 Dec 2024 00:05:42 GMT  
+		Size: 2.7 KB (2667 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:5b664a679b0abe4a3e6dfe8ceafa280be3e37869acbb14d061f97e3708f79ddd`  
+		Last Modified: Wed, 25 Dec 2024 00:05:42 GMT  
+		Size: 9.3 MB (9303533 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:7cc6ae46073ac3174136743465dc26c20e1f6d845fba12246c1026c47481cea8`  
+		Last Modified: Wed, 25 Dec 2024 00:05:42 GMT  
+		Size: 94.0 B  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+
+### `rethinkdb:2-bookworm-slim` - unknown; unknown
+
+```console
+$ docker pull rethinkdb@sha256:f31a9baad1e3ef48b44ebe0fdc2923431d0b9a3f23fc38cda1b53b282a5169d3
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **2.6 MB (2638666 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:8704948737e302189a8e0b41e221e8bf90f9a0bdbc64be85de1cc2e0cda9754b`
+
+```dockerfile
+```
+
+-	Layers:
+	-	`sha256:d4c36dc32417a39c274c27b983db29f91e42abda424e7b7bad109ba411e231b3`  
+		Last Modified: Wed, 25 Dec 2024 00:05:42 GMT  
+		Size: 2.6 MB (2625219 bytes)  
+		MIME: application/vnd.in-toto+json
+	-	`sha256:101b58b976a9ca670add6841a0f979641de0d33562ce159b5ada1131057415f8`  
+		Last Modified: Wed, 25 Dec 2024 00:05:42 GMT  
+		Size: 13.4 KB (13447 bytes)  
+		MIME: application/vnd.in-toto+json

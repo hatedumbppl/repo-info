@@ -2,11 +2,13 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:ff2762c6c8cc9468e0651364e4347aa5c769d78541406209e9ab74717f29e641`
-- Created: `2022-11-15T01:19:49.029128138Z`
-- Virtual Size: ~ 114.20 Mb  
+- Image ID: `sha256:f407182509fea72dd4f82b597674b168f692fc7dcd8cdec94af340c928f37239`
+- Created: `2024-12-16T14:36:57Z`
+- Virtual Size: ~ 131.81 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["/bin/bash"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
+- Labels:
+  - `org.opencontainers.image.licenses=ALT-Container or GPLv3`

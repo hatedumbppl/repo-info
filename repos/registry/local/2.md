@@ -1,10 +1,10 @@
-# `registry:2.8.2`
+# `registry:2.8.3`
 
 ## Docker Metadata
 
-- Image ID: `sha256:65f3b3441f044d142ca365389fe0532900b4f4c7ffc47cb65f7bc7bd45857f06`
-- Created: `2023-05-11T17:20:07.283605473Z`
-- Virtual Size: ~ 24.04 Mb  
+- Image ID: `sha256:c18a86d35e983225b84aae3bb15c84bd9e47506dd0102975c0ed97958703bb73`
+- Created: `2023-10-02T18:42:41Z`
+- Virtual Size: ~ 25.43 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -68,16 +68,16 @@ MIT
 ### `apk` package: `apk-tools`
 
 ```console
-apk-tools-2.14.0-r0 description:
+apk-tools-2.14.4-r0 description:
 Alpine Package Keeper - package manager for alpine
 
-apk-tools-2.14.0-r0 webpage:
+apk-tools-2.14.4-r0 webpage:
 https://gitlab.alpinelinux.org/alpine/apk-tools
 
-apk-tools-2.14.0-r0 installed size:
-304 KiB
+apk-tools-2.14.4-r0 installed size:
+296 KiB
 
-apk-tools-2.14.0-r0 license:
+apk-tools-2.14.4-r0 license:
 GPL-2.0-only
 
 ```
@@ -85,16 +85,16 @@ GPL-2.0-only
 ### `apk` package: `busybox`
 
 ```console
-busybox-1.36.0-r9 description:
+busybox-1.36.1-r7 description:
 Size optimized toolbox of many common UNIX utilities
 
-busybox-1.36.0-r9 webpage:
+busybox-1.36.1-r7 webpage:
 https://busybox.net/
 
-busybox-1.36.0-r9 installed size:
+busybox-1.36.1-r7 installed size:
 924 KiB
 
-busybox-1.36.0-r9 license:
+busybox-1.36.1-r7 license:
 GPL-2.0-only
 
 ```
@@ -102,16 +102,16 @@ GPL-2.0-only
 ### `apk` package: `busybox-binsh`
 
 ```console
-busybox-binsh-1.36.0-r9 description:
+busybox-binsh-1.36.1-r7 description:
 busybox ash /bin/sh
 
-busybox-binsh-1.36.0-r9 webpage:
+busybox-binsh-1.36.1-r7 webpage:
 https://busybox.net/
 
-busybox-binsh-1.36.0-r9 installed size:
+busybox-binsh-1.36.1-r7 installed size:
 8192 B
 
-busybox-binsh-1.36.0-r9 license:
+busybox-binsh-1.36.1-r7 license:
 GPL-2.0-only
 
 ```
@@ -119,16 +119,16 @@ GPL-2.0-only
 ### `apk` package: `ca-certificates`
 
 ```console
-ca-certificates-20230506-r0 description:
+ca-certificates-20240226-r0 description:
 Common CA certificates PEM files from Mozilla
 
-ca-certificates-20230506-r0 webpage:
+ca-certificates-20240226-r0 webpage:
 https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/
 
-ca-certificates-20230506-r0 installed size:
-688 KiB
+ca-certificates-20240226-r0 installed size:
+712 KiB
 
-ca-certificates-20230506-r0 license:
+ca-certificates-20240226-r0 license:
 MPL-2.0 AND MIT
 
 ```
@@ -136,16 +136,16 @@ MPL-2.0 AND MIT
 ### `apk` package: `ca-certificates-bundle`
 
 ```console
-ca-certificates-bundle-20230506-r0 description:
+ca-certificates-bundle-20240226-r0 description:
 Pre generated bundle of Mozilla certificates
 
-ca-certificates-bundle-20230506-r0 webpage:
+ca-certificates-bundle-20240226-r0 webpage:
 https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/
 
-ca-certificates-bundle-20230506-r0 installed size:
-232 KiB
+ca-certificates-bundle-20240226-r0 installed size:
+236 KiB
 
-ca-certificates-bundle-20230506-r0 license:
+ca-certificates-bundle-20240226-r0 license:
 MPL-2.0 AND MIT
 
 ```
@@ -170,16 +170,16 @@ BSD-2-Clause AND BSD-3-Clause
 ### `apk` package: `libcrypto3`
 
 ```console
-libcrypto3-3.1.0-r4 description:
+libcrypto3-3.1.7-r0 description:
 Crypto library from openssl
 
-libcrypto3-3.1.0-r4 webpage:
+libcrypto3-3.1.7-r0 webpage:
 https://www.openssl.org/
 
-libcrypto3-3.1.0-r4 installed size:
-4460 KiB
+libcrypto3-3.1.7-r0 installed size:
+4480 KiB
 
-libcrypto3-3.1.0-r4 license:
+libcrypto3-3.1.7-r0 license:
 Apache-2.0
 
 ```
@@ -187,16 +187,16 @@ Apache-2.0
 ### `apk` package: `libssl3`
 
 ```console
-libssl3-3.1.0-r4 description:
+libssl3-3.1.7-r0 description:
 SSL shared libraries
 
-libssl3-3.1.0-r4 webpage:
+libssl3-3.1.7-r0 webpage:
 https://www.openssl.org/
 
-libssl3-3.1.0-r4 installed size:
+libssl3-3.1.7-r0 installed size:
 552 KiB
 
-libssl3-3.1.0-r4 license:
+libssl3-3.1.7-r0 license:
 Apache-2.0
 
 ```
@@ -204,16 +204,16 @@ Apache-2.0
 ### `apk` package: `musl`
 
 ```console
-musl-1.2.4-r0 description:
+musl-1.2.4-r2 description:
 the musl c library (libc) implementation
 
-musl-1.2.4-r0 webpage:
+musl-1.2.4-r2 webpage:
 https://musl.libc.org/
 
-musl-1.2.4-r0 installed size:
+musl-1.2.4-r2 installed size:
 620 KiB
 
-musl-1.2.4-r0 license:
+musl-1.2.4-r2 license:
 MIT
 
 ```
@@ -221,16 +221,16 @@ MIT
 ### `apk` package: `musl-utils`
 
 ```console
-musl-utils-1.2.4-r0 description:
+musl-utils-1.2.4-r2 description:
 the musl c library (libc) implementation
 
-musl-utils-1.2.4-r0 webpage:
+musl-utils-1.2.4-r2 webpage:
 https://musl.libc.org/
 
-musl-utils-1.2.4-r0 installed size:
+musl-utils-1.2.4-r2 installed size:
 132 KiB
 
-musl-utils-1.2.4-r0 license:
+musl-utils-1.2.4-r2 license:
 MIT AND BSD-2-Clause AND GPL-2.0-or-later
 
 ```
@@ -255,16 +255,16 @@ GPL-2.0-only
 ### `apk` package: `ssl_client`
 
 ```console
-ssl_client-1.36.0-r9 description:
+ssl_client-1.36.1-r7 description:
 EXternal ssl_client for busybox wget
 
-ssl_client-1.36.0-r9 webpage:
+ssl_client-1.36.1-r7 webpage:
 https://busybox.net/
 
-ssl_client-1.36.0-r9 installed size:
+ssl_client-1.36.1-r7 installed size:
 28 KiB
 
-ssl_client-1.36.0-r9 license:
+ssl_client-1.36.1-r7 license:
 GPL-2.0-only
 
 ```

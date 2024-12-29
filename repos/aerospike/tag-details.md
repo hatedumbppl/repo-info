@@ -2,571 +2,843 @@
 
 # Tags of `aerospike`
 
--	[`aerospike:ce-6.3.0.4`](#aerospikece-6304)
--	[`aerospike:ce-6.3.0.4_1`](#aerospikece-6304_1)
--	[`aerospike:ee-6.3.0.4`](#aerospikeee-6304)
--	[`aerospike:ee-6.3.0.4_1`](#aerospikeee-6304_1)
+-	[`aerospike:ce-7.2.0.4`](#aerospikece-7204)
+-	[`aerospike:ce-7.2.0.4_1`](#aerospikece-7204_1)
+-	[`aerospike:ee-7.2.0.4`](#aerospikeee-7204)
+-	[`aerospike:ee-7.2.0.4_1`](#aerospikeee-7204_1)
 
-## `aerospike:ce-6.3.0.4`
+## `aerospike:ce-7.2.0.4`
 
 ```console
-$ docker pull aerospike@sha256:65f0e28c3880adf5c74750f8d86dc7ddfdf137c27cf91056dd0be0622289e77a
+$ docker pull aerospike@sha256:f371c5264efbad9072eb7013a641c7e0624cd24263143d34170902d4f61db4f2
 ```
 
--	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms: 2
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 4
 	-	linux; amd64
+	-	unknown; unknown
 	-	linux; arm64 variant v8
+	-	unknown; unknown
 
-### `aerospike:ce-6.3.0.4` - linux; amd64
+### `aerospike:ce-7.2.0.4` - linux; amd64
 
 ```console
-$ docker pull aerospike@sha256:71041588dfd59e1d71d098c3e99468623ef081e3c4746709c62aca2dda9b4c6b
+$ docker pull aerospike@sha256:c7a7927e288abd7419cbd53e38cbc2cb31c2ae6301980b1b8ea35cb00782f5c8
 ```
 
--	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **78.2 MB (78234838 bytes)**  
+-	Total Size: **77.5 MB (77539925 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:4571be9e48f2fc33dfb750b0de8642c3b9efeb6e51d137cee424fe712717c021`
+-	Image ID: `sha256:b41440d9efd383bac03caed62c06b6fd01f73b38265d3a611ff81117f18f2c9c`
 -	Entrypoint: `["\/usr\/bin\/as-tini-static","-r","SIGUSR1","-t","SIGTERM","--","\/entrypoint.sh"]`
 -	Default Command: `["asd"]`
 -	`SHELL`: `["\/bin\/bash","-Eeuo","pipefail","-c"]`
 
 ```dockerfile
-# Tue, 23 May 2023 01:20:14 GMT
-ADD file:88252a7f118b4d6f55dd5baf49dbcaa053c9d6172c652963c1151fa76f625e44 in / 
-# Tue, 23 May 2023 01:20:14 GMT
-CMD ["bash"]
-# Tue, 23 May 2023 08:03:02 GMT
+# Tue, 19 Nov 2024 17:29:23 GMT
+ARG RELEASE
+# Tue, 19 Nov 2024 17:29:23 GMT
+ARG LAUNCHPAD_BUILD_ARCH
+# Tue, 19 Nov 2024 17:29:23 GMT
+LABEL org.opencontainers.image.ref.name=ubuntu
+# Tue, 19 Nov 2024 17:29:23 GMT
+LABEL org.opencontainers.image.version=24.04
+# Tue, 19 Nov 2024 17:29:25 GMT
+ADD file:bcebbf0fddcba5b864d5d267b68dd23bcfb01275e6ec7bcab69bf8b56af14804 in / 
+# Tue, 19 Nov 2024 17:29:25 GMT
+CMD ["/bin/bash"]
+# Thu, 21 Nov 2024 04:27:43 GMT
+LABEL org.opencontainers.image.title=Aerospike Community Server org.opencontainers.image.description=Aerospike is a real-time database with predictable performance at petabyte scale with microsecond latency over billions of transactions. org.opencontainers.image.documentation=https://hub.docker.com/_/aerospike org.opencontainers.image.base.name=docker.io/library/ubuntu:24.04 org.opencontainers.image.source=https://github.com/aerospike/aerospike-server.docker org.opencontainers.image.vendor=Aerospike org.opencontainers.image.version=7.2.0.4 org.opencontainers.image.url=https://github.com/aerospike/aerospike-server.docker
+# Thu, 21 Nov 2024 04:27:43 GMT
 ARG AEROSPIKE_EDITION=community
-# Fri, 26 May 2023 22:46:48 GMT
-ARG AEROSPIKE_X86_64_LINK=https://artifacts.aerospike.com/aerospike-server-community/6.3.0.4/aerospike-server-community_6.3.0.4_tools-8.3.0_debian11_x86_64.tgz
-# Fri, 26 May 2023 22:46:48 GMT
-ARG AEROSPIKE_SHA_X86_64=22725b99f150bdaeaa9af944f9cbba6810d470156f3665ef427d10d0098f08f0
-# Fri, 26 May 2023 22:46:48 GMT
-ARG AEROSPIKE_AARCH64_LINK=https://artifacts.aerospike.com/aerospike-server-community/6.3.0.4/aerospike-server-community_6.3.0.4_tools-8.3.0_debian11_aarch64.tgz
-# Fri, 26 May 2023 22:46:48 GMT
-ARG AEROSPIKE_SHA_AARCH64=93dff36ecd4420e66d624bb597bcc5d23025bad7b24e67a03c69ae1dc5c45162
-# Fri, 26 May 2023 22:46:48 GMT
+# Thu, 21 Nov 2024 04:27:43 GMT
+ARG AEROSPIKE_X86_64_LINK=https://artifacts.aerospike.com/aerospike-server-community/7.2.0.4/aerospike-server-community_7.2.0.4_tools-11.1.1_ubuntu24.04_x86_64.tgz
+# Thu, 21 Nov 2024 04:27:43 GMT
+ARG AEROSPIKE_SHA_X86_64=381f61a93eea93d436ed3d4a810da15d90d7f5db7bfda51e807bb90a59263fb8
+# Thu, 21 Nov 2024 04:27:43 GMT
+ARG AEROSPIKE_AARCH64_LINK=https://artifacts.aerospike.com/aerospike-server-community/7.2.0.4/aerospike-server-community_7.2.0.4_tools-11.1.1_ubuntu24.04_aarch64.tgz
+# Thu, 21 Nov 2024 04:27:43 GMT
+ARG AEROSPIKE_SHA_AARCH64=acdc3070ccdb7f24fc8b1fc1762eb803770a73db93d84d4eb3cdffdbccebf89a
+# Thu, 21 Nov 2024 04:27:43 GMT
 SHELL [/bin/bash -Eeuo pipefail -c]
-# Fri, 26 May 2023 22:47:06 GMT
-# ARGS: AEROSPIKE_AARCH64_LINK=https://artifacts.aerospike.com/aerospike-server-community/6.3.0.4/aerospike-server-community_6.3.0.4_tools-8.3.0_debian11_aarch64.tgz AEROSPIKE_EDITION=community AEROSPIKE_SHA_AARCH64=93dff36ecd4420e66d624bb597bcc5d23025bad7b24e67a03c69ae1dc5c45162 AEROSPIKE_SHA_X86_64=22725b99f150bdaeaa9af944f9cbba6810d470156f3665ef427d10d0098f08f0 AEROSPIKE_X86_64_LINK=https://artifacts.aerospike.com/aerospike-server-community/6.3.0.4/aerospike-server-community_6.3.0.4_tools-8.3.0_debian11_x86_64.tgz
-RUN {     export DEBIAN_FRONTEND=noninteractive;     apt-get update -y;     apt-get install -y --no-install-recommends apt-utils;     apt-get install -y --no-install-recommends       binutils       ca-certificates       curl       xz-utils;   };   {     apt-get install -y --no-install-recommends procps;   };   {     VERSION="$(grep -oE "/[0-9]+[.][0-9]+[.][0-9]+([.][0-9]+)+(-rc[0-9]+)*/" <<<"${AEROSPIKE_X86_64_LINK}" | tr -d '/')";   };   {     ARCH="$(dpkg --print-architecture)";     if [ "${ARCH}" = "amd64" ]; then       sha256=d1f6826dd70cdd88dde3d5a20d8ed248883a3bc2caba3071c8a3a9b0e0de5940;       suffix="";     elif [ "${ARCH}" = "arm64" ]; then       sha256=1c398e5283af2f33888b7d8ac5b01ac89f777ea27c85d25866a40d1e64d0341b;       suffix="-arm64";     else       echo "Unsuported architecture - ${ARCH}" >&2;       exit 1;     fi;     curl -fsSL "https://github.com/aerospike/tini/releases/download/1.0.1/as-tini-static${suffix}" --output /usr/bin/as-tini-static;     echo "${sha256} /usr/bin/as-tini-static" | sha256sum -c -;     chmod +x /usr/bin/as-tini-static;   };   {     ARCH="$(dpkg --print-architecture)";     mkdir -p aerospike/pkg;     if [ "${ARCH}" = "amd64" ]; then       pkg_link="${AEROSPIKE_X86_64_LINK}";       sha256="${AEROSPIKE_SHA_X86_64}";     elif [ "${ARCH}" = "arm64" ]; then       pkg_link="${AEROSPIKE_AARCH64_LINK}";       sha256="${AEROSPIKE_SHA_AARCH64}";     else       echo "Unsuported architecture - ${ARCH}" >&2;       exit 1;     fi;     if ! curl -fsSL "${pkg_link}" --output aerospike-server.tgz; then       echo "Could not fetch pkg - ${pkg_link}" >&2;       exit 1;     fi;     echo "${sha256} aerospike-server.tgz" | sha256sum -c -;     tar xzf aerospike-server.tgz --strip-components=1 -C aerospike;     rm aerospike-server.tgz;     mkdir -p /var/{log,run}/aerospike;     mkdir -p /licenses;     cp aerospike/LICENSE /licenses;   };   {     if [ "${AEROSPIKE_EDITION}" = "enterprise" ]; then       apt-get install -y --no-install-recommends         libcurl4         libldap-2.4.2;     elif ! [ "$(printf "%s\n%s" "${VERSION}" "6.0" | sort -V | head -1)" != "${VERSION}" ]; then       apt-get install -y --no-install-recommends         libcurl4;     fi;     dpkg -i aerospike/aerospike-server-*.deb;     rm -rf /opt/aerospike/bin;   };   {     if ! [ "$(printf "%s\n%s" "${VERSION}" "5.1" | sort -V | head -1)" != "${VERSION}" ]; then       apt-get install -y --no-install-recommends         python2;     elif ! [ "$(printf "%s\n%s" "${VERSION}" "6.2.0.3" | sort -V | head -1)" != "${VERSION}" ]; then       apt-get install -y --no-install-recommends         python3         python3-distutils;     fi;   };   {     pushd aerospike/pkg || exit 1;     ar -x ../aerospike-tools*.deb;     popd || exit 1;     tar xf aerospike/pkg/data.tar.xz -C aerospike/pkg/;   };   {     find aerospike/pkg/opt/aerospike/bin/ -user aerospike -group aerospike -exec chown root:root {} +;     mv aerospike/pkg/etc/aerospike/astools.conf /etc/aerospike;     if ! [ "$(printf "%s\n%s" "${VERSION}" "6.2" | sort -V | head -1)" != "${VERSION}" ]; then        mv aerospike/pkg/opt/aerospike/bin/aql /usr/bin;     fi;     if [ -d 'aerospike/pkg/opt/aerospike/bin/asadm' ]; then       mv aerospike/pkg/opt/aerospike/bin/asadm /usr/lib/;     else       mkdir /usr/lib/asadm;       mv aerospike/pkg/opt/aerospike/bin/asadm /usr/lib/asadm/;     fi;     ln -s /usr/lib/asadm/asadm /usr/bin/asadm;     if [ -f 'aerospike/pkg/opt/aerospike/bin/asinfo' ]; then       mv aerospike/pkg/opt/aerospike/bin/asinfo /usr/lib/asadm/;     fi;     ln -s /usr/lib/asadm/asinfo /usr/bin/asinfo;   };   {     rm -rf aerospike;   };   {     rm -rf /var/lib/apt/lists/*;     dpkg --purge       apt-utils       binutils       ca-certificates       curl       xz-utils 2>&1;     apt-get purge -y;     apt-get autoremove -y;     unset DEBIAN_FRONTEND;   };   echo "done";
-# Fri, 26 May 2023 22:47:06 GMT
-COPY file:c76954551192450f2d9e2a428b0b3a3daeba46fccf29d07ceabb675e275a068e in /etc/aerospike/aerospike.template.conf 
-# Fri, 26 May 2023 22:47:06 GMT
-EXPOSE 3000 3001 3002
-# Fri, 26 May 2023 22:47:06 GMT
-COPY file:57ed4c0390f91371a6d5ddbdf0ecf475b40dc8871b369f3100b157df0d753fc5 in /entrypoint.sh 
-# Fri, 26 May 2023 22:47:06 GMT
+# Thu, 21 Nov 2024 04:27:43 GMT
+# ARGS: AEROSPIKE_EDITION=community AEROSPIKE_X86_64_LINK=https://artifacts.aerospike.com/aerospike-server-community/7.2.0.4/aerospike-server-community_7.2.0.4_tools-11.1.1_ubuntu24.04_x86_64.tgz AEROSPIKE_SHA_X86_64=381f61a93eea93d436ed3d4a810da15d90d7f5db7bfda51e807bb90a59263fb8 AEROSPIKE_AARCH64_LINK=https://artifacts.aerospike.com/aerospike-server-community/7.2.0.4/aerospike-server-community_7.2.0.4_tools-11.1.1_ubuntu24.04_aarch64.tgz AEROSPIKE_SHA_AARCH64=acdc3070ccdb7f24fc8b1fc1762eb803770a73db93d84d4eb3cdffdbccebf89a
+RUN {     export DEBIAN_FRONTEND=noninteractive;     apt-get update -y;     apt-get install -y --no-install-recommends apt-utils;     apt-get install -y --no-install-recommends       binutils       ca-certificates       curl       xz-utils;   };   {     apt-get install -y --no-install-recommends procps;   };   {     VERSION="$(grep -oE "/[0-9]+[.][0-9]+[.][0-9]+([.][0-9]+)+(-[a-z0-9]+)?([-][0-9]+[-]g[0-9a-z]*)?/" <<<"${AEROSPIKE_X86_64_LINK}" | tr -d '/' | tail -1)";   };   {     ARCH="$(dpkg --print-architecture)";     if [ "${ARCH}" = "amd64" ]; then       sha256=d1f6826dd70cdd88dde3d5a20d8ed248883a3bc2caba3071c8a3a9b0e0de5940;       suffix="";     elif [ "${ARCH}" = "arm64" ]; then       sha256=1c398e5283af2f33888b7d8ac5b01ac89f777ea27c85d25866a40d1e64d0341b;       suffix="-arm64";     else       echo "Unsuported architecture - ${ARCH}" >&2;       exit 1;     fi;     curl -fsSL "https://github.com/aerospike/tini/releases/download/1.0.1/as-tini-static${suffix}" --output /usr/bin/as-tini-static;     echo "${sha256} /usr/bin/as-tini-static" | sha256sum -c -;     chmod +x /usr/bin/as-tini-static;   };   {     ARCH="$(dpkg --print-architecture)";     mkdir -p aerospike/pkg;     if [ "${ARCH}" = "amd64" ]; then       pkg_link="${AEROSPIKE_X86_64_LINK}";       sha256="${AEROSPIKE_SHA_X86_64}";     elif [ "${ARCH}" = "arm64" ]; then       pkg_link="${AEROSPIKE_AARCH64_LINK}";       sha256="${AEROSPIKE_SHA_AARCH64}";     else       echo "Unsuported architecture - ${ARCH}" >&2;       exit 1;     fi;     if ! curl -fsSL "${pkg_link}" --output aerospike-server.tgz; then       echo "Could not fetch pkg - ${pkg_link}" >&2;       exit 1;     fi;     echo "${sha256} aerospike-server.tgz" | sha256sum -c -;     tar xzf aerospike-server.tgz --strip-components=1 -C aerospike;     rm aerospike-server.tgz;     mkdir -p /var/{log,run}/aerospike;     mkdir -p /licenses;     cp aerospike/LICENSE /licenses;   };   {     if [ "${AEROSPIKE_EDITION}" = "enterprise" ]; then       apt-get install -y --no-install-recommends         libcurl4         libldap-2.4.2;     elif ! [ "$(printf "%s\n%s" "${VERSION}" "6.0" | sort -V | head -1)" != "${VERSION}" ]; then       apt-get install -y --no-install-recommends         libcurl4;     fi;     dpkg -i aerospike/aerospike-server-*.deb;     rm -rf /opt/aerospike/bin;   };   {     if ! [ "$(printf "%s\n%s" "${VERSION}" "5.1" | sort -V | head -1)" != "${VERSION}" ]; then       apt-get install -y --no-install-recommends         python2;     elif ! [ "$(printf "%s\n%s" "${VERSION}" "6.2.0.3" | sort -V | head -1)" != "${VERSION}" ]; then       apt-get install -y --no-install-recommends         python3         python3-distutils;     fi;   };   {     ar -x aerospike/aerospike-tools*.deb --output aerospike/pkg;     tar xf aerospike/pkg/data.tar.xz -C aerospike/pkg/;   };   {     find aerospike/pkg/opt/aerospike/bin/ -user aerospike -group aerospike -exec chown root:root {} +;     mv aerospike/pkg/etc/aerospike/astools.conf /etc/aerospike;     if ! [ "$(printf "%s\n%s" "${VERSION}" "6.2" | sort -V | head -1)" != "${VERSION}" ]; then        mv aerospike/pkg/opt/aerospike/bin/aql /usr/bin;     fi;     if [ -d 'aerospike/pkg/opt/aerospike/bin/asadm' ]; then       mv aerospike/pkg/opt/aerospike/bin/asadm /usr/lib/;     else       mkdir /usr/lib/asadm;       mv aerospike/pkg/opt/aerospike/bin/asadm /usr/lib/asadm/;     fi;     ln -s /usr/lib/asadm/asadm /usr/bin/asadm;     if [ -f 'aerospike/pkg/opt/aerospike/bin/asinfo' ]; then       mv aerospike/pkg/opt/aerospike/bin/asinfo /usr/lib/asadm/;     fi;     ln -s /usr/lib/asadm/asinfo /usr/bin/asinfo;   };   {     rm -rf aerospike;   };   {     rm -rf /var/lib/apt/lists/*;     dpkg --purge       apt-utils       binutils       ca-certificates       curl       xz-utils 2>&1;     apt-get purge -y;     apt-get autoremove -y;     unset DEBIAN_FRONTEND;   };   echo "done"; # buildkit
+# Thu, 21 Nov 2024 04:27:43 GMT
+COPY aerospike.template.conf /etc/aerospike/aerospike.template.conf # buildkit
+# Thu, 21 Nov 2024 04:27:43 GMT
+EXPOSE map[3000/tcp:{} 3001/tcp:{} 3002/tcp:{}]
+# Thu, 21 Nov 2024 04:27:43 GMT
+COPY entrypoint.sh /entrypoint.sh # buildkit
+# Thu, 21 Nov 2024 04:27:43 GMT
 ENTRYPOINT ["/usr/bin/as-tini-static" "-r" "SIGUSR1" "-t" "SIGTERM" "--" "/entrypoint.sh"]
-# Fri, 26 May 2023 22:47:06 GMT
+# Thu, 21 Nov 2024 04:27:43 GMT
 CMD ["asd"]
 ```
 
 -	Layers:
-	-	`sha256:f03b40093957615593f2ed142961afb6b540507e0b47e3f7626ba5e02efbbbf1`  
-		Last Modified: Tue, 23 May 2023 01:24:08 GMT  
-		Size: 31.4 MB (31403586 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3fe3036290b95616aff09ceb00089e2efb0f4b84c53f718677fe37fbfb01a24b`  
-		Last Modified: Fri, 26 May 2023 22:47:41 GMT  
-		Size: 46.8 MB (46829066 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1382196fb6e271f3fac6ff2df297b137f1ba3ea3105ab12ab50d61ced8237ba3`  
-		Last Modified: Fri, 26 May 2023 22:47:34 GMT  
-		Size: 1.1 KB (1089 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:680745d6f08d2a3957ef5f901797727a4e8d01c8b7c6ba711ccaa4ef045bb9c7`  
-		Last Modified: Fri, 26 May 2023 22:47:35 GMT  
-		Size: 1.1 KB (1097 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:de44b265507ae44b212defcb50694d666f136b35c1090d9709068bc861bb2d64`  
+		Last Modified: Tue, 19 Nov 2024 17:38:27 GMT  
+		Size: 29.8 MB (29751968 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:449d17590cad94c7955a2e39cf4ca63d1a089cc996e65101a163d5a106adb5ec`  
+		Last Modified: Tue, 03 Dec 2024 02:16:03 GMT  
+		Size: 47.8 MB (47785652 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:95af2c8207a15d7f79b97c44c92e07c7b4908b6827ed0bb7026a880337d9f2f9`  
+		Last Modified: Tue, 03 Dec 2024 02:16:01 GMT  
+		Size: 1.2 KB (1198 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:9b9f204dada651e4275a9e2e90afa449394662124cab8f3c9f8bc23e8700d372`  
+		Last Modified: Tue, 03 Dec 2024 02:16:01 GMT  
+		Size: 1.1 KB (1107 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
 
-### `aerospike:ce-6.3.0.4` - linux; arm64 variant v8
+### `aerospike:ce-7.2.0.4` - unknown; unknown
 
 ```console
-$ docker pull aerospike@sha256:966f90b0326556623a8fe6ea857baac4bf91cc85b21110d33cee8e519c47d84d
+$ docker pull aerospike@sha256:8be4f65adc88844449881bf6f4fe066c50cfe37a82bbab13b16e962cfb54c28e
 ```
 
--	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **76.3 MB (76342168 bytes)**  
+-	Total Size: **1.9 MB (1892021 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:2507d6680b85a440daa8379ec0ac551273a5238fae8d8b6bde2f5a081993ea54`
+-	Image ID: `sha256:cf89dcce435f8c1c2f6a49e98135754112c0042ccd1ddfd53ff3df8847cdaa99`
+
+```dockerfile
+```
+
+-	Layers:
+	-	`sha256:b720efc4a670f5aff71d62721c03b3fc43d5c599b58490d4956cc0f19db58392`  
+		Last Modified: Tue, 03 Dec 2024 02:16:02 GMT  
+		Size: 1.9 MB (1862875 bytes)  
+		MIME: application/vnd.in-toto+json
+	-	`sha256:4a4be66e9d90cb9312009049850e086f568a6bb07e44ca04b1842d872f33905a`  
+		Last Modified: Tue, 03 Dec 2024 02:16:01 GMT  
+		Size: 29.1 KB (29146 bytes)  
+		MIME: application/vnd.in-toto+json
+
+### `aerospike:ce-7.2.0.4` - linux; arm64 variant v8
+
+```console
+$ docker pull aerospike@sha256:ffeac88e4e979890dba4f4d91b74d6fd7dcf362d66ada31fe9d460b5c48985d9
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **76.1 MB (76106657 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:b7a8e98bee563dfd4da46cf1d3cb2df3e89d16d31feb8314cec6d30708aa5ab9`
 -	Entrypoint: `["\/usr\/bin\/as-tini-static","-r","SIGUSR1","-t","SIGTERM","--","\/entrypoint.sh"]`
 -	Default Command: `["asd"]`
 -	`SHELL`: `["\/bin\/bash","-Eeuo","pipefail","-c"]`
 
 ```dockerfile
-# Tue, 23 May 2023 00:43:15 GMT
-ADD file:0fee550e337f1bd111a7ef785a9553674f25649f37deffa4aa8107ef6445d259 in / 
-# Tue, 23 May 2023 00:43:15 GMT
-CMD ["bash"]
-# Tue, 23 May 2023 01:23:08 GMT
+# Tue, 19 Nov 2024 16:18:45 GMT
+ARG RELEASE
+# Tue, 19 Nov 2024 16:18:45 GMT
+ARG LAUNCHPAD_BUILD_ARCH
+# Tue, 19 Nov 2024 16:18:45 GMT
+LABEL org.opencontainers.image.ref.name=ubuntu
+# Tue, 19 Nov 2024 16:18:45 GMT
+LABEL org.opencontainers.image.version=24.04
+# Tue, 19 Nov 2024 16:18:47 GMT
+ADD file:765dfd09ec2ac4870c8b3efd6ef4a994f99695c574d546d7a9a0e69bbb970b03 in / 
+# Tue, 19 Nov 2024 16:18:47 GMT
+CMD ["/bin/bash"]
+# Thu, 21 Nov 2024 04:27:43 GMT
+LABEL org.opencontainers.image.title=Aerospike Community Server org.opencontainers.image.description=Aerospike is a real-time database with predictable performance at petabyte scale with microsecond latency over billions of transactions. org.opencontainers.image.documentation=https://hub.docker.com/_/aerospike org.opencontainers.image.base.name=docker.io/library/ubuntu:24.04 org.opencontainers.image.source=https://github.com/aerospike/aerospike-server.docker org.opencontainers.image.vendor=Aerospike org.opencontainers.image.version=7.2.0.4 org.opencontainers.image.url=https://github.com/aerospike/aerospike-server.docker
+# Thu, 21 Nov 2024 04:27:43 GMT
 ARG AEROSPIKE_EDITION=community
-# Thu, 25 May 2023 22:40:47 GMT
-ARG AEROSPIKE_X86_64_LINK=https://artifacts.aerospike.com/aerospike-server-community/6.3.0.4/aerospike-server-community_6.3.0.4_tools-8.3.0_debian11_x86_64.tgz
-# Thu, 25 May 2023 22:40:47 GMT
-ARG AEROSPIKE_SHA_X86_64=22725b99f150bdaeaa9af944f9cbba6810d470156f3665ef427d10d0098f08f0
-# Thu, 25 May 2023 22:40:47 GMT
-ARG AEROSPIKE_AARCH64_LINK=https://artifacts.aerospike.com/aerospike-server-community/6.3.0.4/aerospike-server-community_6.3.0.4_tools-8.3.0_debian11_aarch64.tgz
-# Thu, 25 May 2023 22:40:47 GMT
-ARG AEROSPIKE_SHA_AARCH64=93dff36ecd4420e66d624bb597bcc5d23025bad7b24e67a03c69ae1dc5c45162
-# Thu, 25 May 2023 22:40:47 GMT
+# Thu, 21 Nov 2024 04:27:43 GMT
+ARG AEROSPIKE_X86_64_LINK=https://artifacts.aerospike.com/aerospike-server-community/7.2.0.4/aerospike-server-community_7.2.0.4_tools-11.1.1_ubuntu24.04_x86_64.tgz
+# Thu, 21 Nov 2024 04:27:43 GMT
+ARG AEROSPIKE_SHA_X86_64=381f61a93eea93d436ed3d4a810da15d90d7f5db7bfda51e807bb90a59263fb8
+# Thu, 21 Nov 2024 04:27:43 GMT
+ARG AEROSPIKE_AARCH64_LINK=https://artifacts.aerospike.com/aerospike-server-community/7.2.0.4/aerospike-server-community_7.2.0.4_tools-11.1.1_ubuntu24.04_aarch64.tgz
+# Thu, 21 Nov 2024 04:27:43 GMT
+ARG AEROSPIKE_SHA_AARCH64=acdc3070ccdb7f24fc8b1fc1762eb803770a73db93d84d4eb3cdffdbccebf89a
+# Thu, 21 Nov 2024 04:27:43 GMT
 SHELL [/bin/bash -Eeuo pipefail -c]
-# Thu, 25 May 2023 22:41:02 GMT
-# ARGS: AEROSPIKE_AARCH64_LINK=https://artifacts.aerospike.com/aerospike-server-community/6.3.0.4/aerospike-server-community_6.3.0.4_tools-8.3.0_debian11_aarch64.tgz AEROSPIKE_EDITION=community AEROSPIKE_SHA_AARCH64=93dff36ecd4420e66d624bb597bcc5d23025bad7b24e67a03c69ae1dc5c45162 AEROSPIKE_SHA_X86_64=22725b99f150bdaeaa9af944f9cbba6810d470156f3665ef427d10d0098f08f0 AEROSPIKE_X86_64_LINK=https://artifacts.aerospike.com/aerospike-server-community/6.3.0.4/aerospike-server-community_6.3.0.4_tools-8.3.0_debian11_x86_64.tgz
-RUN {     export DEBIAN_FRONTEND=noninteractive;     apt-get update -y;     apt-get install -y --no-install-recommends apt-utils;     apt-get install -y --no-install-recommends       binutils       ca-certificates       curl       xz-utils;   };   {     apt-get install -y --no-install-recommends procps;   };   {     VERSION="$(grep -oE "/[0-9]+[.][0-9]+[.][0-9]+([.][0-9]+)+(-rc[0-9]+)*/" <<<"${AEROSPIKE_X86_64_LINK}" | tr -d '/')";   };   {     ARCH="$(dpkg --print-architecture)";     if [ "${ARCH}" = "amd64" ]; then       sha256=d1f6826dd70cdd88dde3d5a20d8ed248883a3bc2caba3071c8a3a9b0e0de5940;       suffix="";     elif [ "${ARCH}" = "arm64" ]; then       sha256=1c398e5283af2f33888b7d8ac5b01ac89f777ea27c85d25866a40d1e64d0341b;       suffix="-arm64";     else       echo "Unsuported architecture - ${ARCH}" >&2;       exit 1;     fi;     curl -fsSL "https://github.com/aerospike/tini/releases/download/1.0.1/as-tini-static${suffix}" --output /usr/bin/as-tini-static;     echo "${sha256} /usr/bin/as-tini-static" | sha256sum -c -;     chmod +x /usr/bin/as-tini-static;   };   {     ARCH="$(dpkg --print-architecture)";     mkdir -p aerospike/pkg;     if [ "${ARCH}" = "amd64" ]; then       pkg_link="${AEROSPIKE_X86_64_LINK}";       sha256="${AEROSPIKE_SHA_X86_64}";     elif [ "${ARCH}" = "arm64" ]; then       pkg_link="${AEROSPIKE_AARCH64_LINK}";       sha256="${AEROSPIKE_SHA_AARCH64}";     else       echo "Unsuported architecture - ${ARCH}" >&2;       exit 1;     fi;     if ! curl -fsSL "${pkg_link}" --output aerospike-server.tgz; then       echo "Could not fetch pkg - ${pkg_link}" >&2;       exit 1;     fi;     echo "${sha256} aerospike-server.tgz" | sha256sum -c -;     tar xzf aerospike-server.tgz --strip-components=1 -C aerospike;     rm aerospike-server.tgz;     mkdir -p /var/{log,run}/aerospike;     mkdir -p /licenses;     cp aerospike/LICENSE /licenses;   };   {     if [ "${AEROSPIKE_EDITION}" = "enterprise" ]; then       apt-get install -y --no-install-recommends         libcurl4         libldap-2.4.2;     elif ! [ "$(printf "%s\n%s" "${VERSION}" "6.0" | sort -V | head -1)" != "${VERSION}" ]; then       apt-get install -y --no-install-recommends         libcurl4;     fi;     dpkg -i aerospike/aerospike-server-*.deb;     rm -rf /opt/aerospike/bin;   };   {     if ! [ "$(printf "%s\n%s" "${VERSION}" "5.1" | sort -V | head -1)" != "${VERSION}" ]; then       apt-get install -y --no-install-recommends         python2;     elif ! [ "$(printf "%s\n%s" "${VERSION}" "6.2.0.3" | sort -V | head -1)" != "${VERSION}" ]; then       apt-get install -y --no-install-recommends         python3         python3-distutils;     fi;   };   {     pushd aerospike/pkg || exit 1;     ar -x ../aerospike-tools*.deb;     popd || exit 1;     tar xf aerospike/pkg/data.tar.xz -C aerospike/pkg/;   };   {     find aerospike/pkg/opt/aerospike/bin/ -user aerospike -group aerospike -exec chown root:root {} +;     mv aerospike/pkg/etc/aerospike/astools.conf /etc/aerospike;     if ! [ "$(printf "%s\n%s" "${VERSION}" "6.2" | sort -V | head -1)" != "${VERSION}" ]; then        mv aerospike/pkg/opt/aerospike/bin/aql /usr/bin;     fi;     if [ -d 'aerospike/pkg/opt/aerospike/bin/asadm' ]; then       mv aerospike/pkg/opt/aerospike/bin/asadm /usr/lib/;     else       mkdir /usr/lib/asadm;       mv aerospike/pkg/opt/aerospike/bin/asadm /usr/lib/asadm/;     fi;     ln -s /usr/lib/asadm/asadm /usr/bin/asadm;     if [ -f 'aerospike/pkg/opt/aerospike/bin/asinfo' ]; then       mv aerospike/pkg/opt/aerospike/bin/asinfo /usr/lib/asadm/;     fi;     ln -s /usr/lib/asadm/asinfo /usr/bin/asinfo;   };   {     rm -rf aerospike;   };   {     rm -rf /var/lib/apt/lists/*;     dpkg --purge       apt-utils       binutils       ca-certificates       curl       xz-utils 2>&1;     apt-get purge -y;     apt-get autoremove -y;     unset DEBIAN_FRONTEND;   };   echo "done";
-# Thu, 25 May 2023 22:41:02 GMT
-COPY file:c76954551192450f2d9e2a428b0b3a3daeba46fccf29d07ceabb675e275a068e in /etc/aerospike/aerospike.template.conf 
-# Thu, 25 May 2023 22:41:02 GMT
-EXPOSE 3000 3001 3002
-# Thu, 25 May 2023 22:41:02 GMT
-COPY file:57ed4c0390f91371a6d5ddbdf0ecf475b40dc8871b369f3100b157df0d753fc5 in /entrypoint.sh 
-# Thu, 25 May 2023 22:41:02 GMT
+# Thu, 21 Nov 2024 04:27:43 GMT
+# ARGS: AEROSPIKE_EDITION=community AEROSPIKE_X86_64_LINK=https://artifacts.aerospike.com/aerospike-server-community/7.2.0.4/aerospike-server-community_7.2.0.4_tools-11.1.1_ubuntu24.04_x86_64.tgz AEROSPIKE_SHA_X86_64=381f61a93eea93d436ed3d4a810da15d90d7f5db7bfda51e807bb90a59263fb8 AEROSPIKE_AARCH64_LINK=https://artifacts.aerospike.com/aerospike-server-community/7.2.0.4/aerospike-server-community_7.2.0.4_tools-11.1.1_ubuntu24.04_aarch64.tgz AEROSPIKE_SHA_AARCH64=acdc3070ccdb7f24fc8b1fc1762eb803770a73db93d84d4eb3cdffdbccebf89a
+RUN {     export DEBIAN_FRONTEND=noninteractive;     apt-get update -y;     apt-get install -y --no-install-recommends apt-utils;     apt-get install -y --no-install-recommends       binutils       ca-certificates       curl       xz-utils;   };   {     apt-get install -y --no-install-recommends procps;   };   {     VERSION="$(grep -oE "/[0-9]+[.][0-9]+[.][0-9]+([.][0-9]+)+(-[a-z0-9]+)?([-][0-9]+[-]g[0-9a-z]*)?/" <<<"${AEROSPIKE_X86_64_LINK}" | tr -d '/' | tail -1)";   };   {     ARCH="$(dpkg --print-architecture)";     if [ "${ARCH}" = "amd64" ]; then       sha256=d1f6826dd70cdd88dde3d5a20d8ed248883a3bc2caba3071c8a3a9b0e0de5940;       suffix="";     elif [ "${ARCH}" = "arm64" ]; then       sha256=1c398e5283af2f33888b7d8ac5b01ac89f777ea27c85d25866a40d1e64d0341b;       suffix="-arm64";     else       echo "Unsuported architecture - ${ARCH}" >&2;       exit 1;     fi;     curl -fsSL "https://github.com/aerospike/tini/releases/download/1.0.1/as-tini-static${suffix}" --output /usr/bin/as-tini-static;     echo "${sha256} /usr/bin/as-tini-static" | sha256sum -c -;     chmod +x /usr/bin/as-tini-static;   };   {     ARCH="$(dpkg --print-architecture)";     mkdir -p aerospike/pkg;     if [ "${ARCH}" = "amd64" ]; then       pkg_link="${AEROSPIKE_X86_64_LINK}";       sha256="${AEROSPIKE_SHA_X86_64}";     elif [ "${ARCH}" = "arm64" ]; then       pkg_link="${AEROSPIKE_AARCH64_LINK}";       sha256="${AEROSPIKE_SHA_AARCH64}";     else       echo "Unsuported architecture - ${ARCH}" >&2;       exit 1;     fi;     if ! curl -fsSL "${pkg_link}" --output aerospike-server.tgz; then       echo "Could not fetch pkg - ${pkg_link}" >&2;       exit 1;     fi;     echo "${sha256} aerospike-server.tgz" | sha256sum -c -;     tar xzf aerospike-server.tgz --strip-components=1 -C aerospike;     rm aerospike-server.tgz;     mkdir -p /var/{log,run}/aerospike;     mkdir -p /licenses;     cp aerospike/LICENSE /licenses;   };   {     if [ "${AEROSPIKE_EDITION}" = "enterprise" ]; then       apt-get install -y --no-install-recommends         libcurl4         libldap-2.4.2;     elif ! [ "$(printf "%s\n%s" "${VERSION}" "6.0" | sort -V | head -1)" != "${VERSION}" ]; then       apt-get install -y --no-install-recommends         libcurl4;     fi;     dpkg -i aerospike/aerospike-server-*.deb;     rm -rf /opt/aerospike/bin;   };   {     if ! [ "$(printf "%s\n%s" "${VERSION}" "5.1" | sort -V | head -1)" != "${VERSION}" ]; then       apt-get install -y --no-install-recommends         python2;     elif ! [ "$(printf "%s\n%s" "${VERSION}" "6.2.0.3" | sort -V | head -1)" != "${VERSION}" ]; then       apt-get install -y --no-install-recommends         python3         python3-distutils;     fi;   };   {     ar -x aerospike/aerospike-tools*.deb --output aerospike/pkg;     tar xf aerospike/pkg/data.tar.xz -C aerospike/pkg/;   };   {     find aerospike/pkg/opt/aerospike/bin/ -user aerospike -group aerospike -exec chown root:root {} +;     mv aerospike/pkg/etc/aerospike/astools.conf /etc/aerospike;     if ! [ "$(printf "%s\n%s" "${VERSION}" "6.2" | sort -V | head -1)" != "${VERSION}" ]; then        mv aerospike/pkg/opt/aerospike/bin/aql /usr/bin;     fi;     if [ -d 'aerospike/pkg/opt/aerospike/bin/asadm' ]; then       mv aerospike/pkg/opt/aerospike/bin/asadm /usr/lib/;     else       mkdir /usr/lib/asadm;       mv aerospike/pkg/opt/aerospike/bin/asadm /usr/lib/asadm/;     fi;     ln -s /usr/lib/asadm/asadm /usr/bin/asadm;     if [ -f 'aerospike/pkg/opt/aerospike/bin/asinfo' ]; then       mv aerospike/pkg/opt/aerospike/bin/asinfo /usr/lib/asadm/;     fi;     ln -s /usr/lib/asadm/asinfo /usr/bin/asinfo;   };   {     rm -rf aerospike;   };   {     rm -rf /var/lib/apt/lists/*;     dpkg --purge       apt-utils       binutils       ca-certificates       curl       xz-utils 2>&1;     apt-get purge -y;     apt-get autoremove -y;     unset DEBIAN_FRONTEND;   };   echo "done"; # buildkit
+# Thu, 21 Nov 2024 04:27:43 GMT
+COPY aerospike.template.conf /etc/aerospike/aerospike.template.conf # buildkit
+# Thu, 21 Nov 2024 04:27:43 GMT
+EXPOSE map[3000/tcp:{} 3001/tcp:{} 3002/tcp:{}]
+# Thu, 21 Nov 2024 04:27:43 GMT
+COPY entrypoint.sh /entrypoint.sh # buildkit
+# Thu, 21 Nov 2024 04:27:43 GMT
 ENTRYPOINT ["/usr/bin/as-tini-static" "-r" "SIGUSR1" "-t" "SIGTERM" "--" "/entrypoint.sh"]
-# Thu, 25 May 2023 22:41:03 GMT
+# Thu, 21 Nov 2024 04:27:43 GMT
 CMD ["asd"]
 ```
 
 -	Layers:
-	-	`sha256:d981f2c20c93e1c57a46cd87bc5b9a554be5323072a0d0ab4b354aabd237bbcf`  
-		Last Modified: Tue, 23 May 2023 00:46:07 GMT  
-		Size: 30.1 MB (30052747 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:709e102d962998cfa1dbde00fa13d7a6e6d6b56b337571db6ac6351e54b2244a`  
-		Last Modified: Thu, 25 May 2023 22:41:35 GMT  
-		Size: 46.3 MB (46287231 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a0491f1f24bb4f2e6521b61dd98276012e8b982bb51e6dcb2bbf051a4ba8602e`  
-		Last Modified: Thu, 25 May 2023 22:41:29 GMT  
-		Size: 1.1 KB (1091 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:14036b22ea583d8ddc7565a084cb95c7d407e8419455f26ffb9c953a8e8cacf8`  
-		Last Modified: Thu, 25 May 2023 22:41:29 GMT  
-		Size: 1.1 KB (1099 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:8bb55f0677778c3027fcc4253dc452bc9c22de989a696391e739fb1cdbbdb4c2`  
+		Last Modified: Tue, 19 Nov 2024 17:38:33 GMT  
+		Size: 28.9 MB (28892671 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:443e137c0a9f7b1987f41c0aeafd98f438718efd1236cc9e9fb85a1274551e3d`  
+		Last Modified: Tue, 03 Dec 2024 05:38:19 GMT  
+		Size: 47.2 MB (47211684 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:775defc9162795b48df892c38658cc3b93b3944e66a73753fb24897e6cb3eb00`  
+		Last Modified: Tue, 03 Dec 2024 05:38:17 GMT  
+		Size: 1.2 KB (1194 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:29d8de6b8a5143453ac0253f6550f3e6e07685b446396e803e672e2abade86a1`  
+		Last Modified: Tue, 03 Dec 2024 05:38:18 GMT  
+		Size: 1.1 KB (1108 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
 
-## `aerospike:ce-6.3.0.4_1`
+### `aerospike:ce-7.2.0.4` - unknown; unknown
 
 ```console
-$ docker pull aerospike@sha256:65f0e28c3880adf5c74750f8d86dc7ddfdf137c27cf91056dd0be0622289e77a
+$ docker pull aerospike@sha256:8355c46124c7c48d152f3c8a28d10eedc1141de0e42fa8b2417ad4ccb6d271e6
 ```
 
--	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms: 2
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **1.9 MB (1894355 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:1896940732b6d9d48fa9306c9b10d9ed7d56e7d7aa78a4f8bee38d6194f6e251`
+
+```dockerfile
+```
+
+-	Layers:
+	-	`sha256:0572e71bb03a8af0150dc0e6b761c1d9ab6a4d3105697e0cd0ffc9bcc4c17df0`  
+		Last Modified: Tue, 03 Dec 2024 05:38:18 GMT  
+		Size: 1.9 MB (1865128 bytes)  
+		MIME: application/vnd.in-toto+json
+	-	`sha256:ec26767a2999fa69fdc4216e47e1ae4cd7514afb47da2b218c711fa6dbbc188f`  
+		Last Modified: Tue, 03 Dec 2024 05:38:17 GMT  
+		Size: 29.2 KB (29227 bytes)  
+		MIME: application/vnd.in-toto+json
+
+## `aerospike:ce-7.2.0.4_1`
+
+```console
+$ docker pull aerospike@sha256:f371c5264efbad9072eb7013a641c7e0624cd24263143d34170902d4f61db4f2
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 4
 	-	linux; amd64
+	-	unknown; unknown
 	-	linux; arm64 variant v8
+	-	unknown; unknown
 
-### `aerospike:ce-6.3.0.4_1` - linux; amd64
+### `aerospike:ce-7.2.0.4_1` - linux; amd64
 
 ```console
-$ docker pull aerospike@sha256:71041588dfd59e1d71d098c3e99468623ef081e3c4746709c62aca2dda9b4c6b
+$ docker pull aerospike@sha256:c7a7927e288abd7419cbd53e38cbc2cb31c2ae6301980b1b8ea35cb00782f5c8
 ```
 
--	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **78.2 MB (78234838 bytes)**  
+-	Total Size: **77.5 MB (77539925 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:4571be9e48f2fc33dfb750b0de8642c3b9efeb6e51d137cee424fe712717c021`
+-	Image ID: `sha256:b41440d9efd383bac03caed62c06b6fd01f73b38265d3a611ff81117f18f2c9c`
 -	Entrypoint: `["\/usr\/bin\/as-tini-static","-r","SIGUSR1","-t","SIGTERM","--","\/entrypoint.sh"]`
 -	Default Command: `["asd"]`
 -	`SHELL`: `["\/bin\/bash","-Eeuo","pipefail","-c"]`
 
 ```dockerfile
-# Tue, 23 May 2023 01:20:14 GMT
-ADD file:88252a7f118b4d6f55dd5baf49dbcaa053c9d6172c652963c1151fa76f625e44 in / 
-# Tue, 23 May 2023 01:20:14 GMT
-CMD ["bash"]
-# Tue, 23 May 2023 08:03:02 GMT
+# Tue, 19 Nov 2024 17:29:23 GMT
+ARG RELEASE
+# Tue, 19 Nov 2024 17:29:23 GMT
+ARG LAUNCHPAD_BUILD_ARCH
+# Tue, 19 Nov 2024 17:29:23 GMT
+LABEL org.opencontainers.image.ref.name=ubuntu
+# Tue, 19 Nov 2024 17:29:23 GMT
+LABEL org.opencontainers.image.version=24.04
+# Tue, 19 Nov 2024 17:29:25 GMT
+ADD file:bcebbf0fddcba5b864d5d267b68dd23bcfb01275e6ec7bcab69bf8b56af14804 in / 
+# Tue, 19 Nov 2024 17:29:25 GMT
+CMD ["/bin/bash"]
+# Thu, 21 Nov 2024 04:27:43 GMT
+LABEL org.opencontainers.image.title=Aerospike Community Server org.opencontainers.image.description=Aerospike is a real-time database with predictable performance at petabyte scale with microsecond latency over billions of transactions. org.opencontainers.image.documentation=https://hub.docker.com/_/aerospike org.opencontainers.image.base.name=docker.io/library/ubuntu:24.04 org.opencontainers.image.source=https://github.com/aerospike/aerospike-server.docker org.opencontainers.image.vendor=Aerospike org.opencontainers.image.version=7.2.0.4 org.opencontainers.image.url=https://github.com/aerospike/aerospike-server.docker
+# Thu, 21 Nov 2024 04:27:43 GMT
 ARG AEROSPIKE_EDITION=community
-# Fri, 26 May 2023 22:46:48 GMT
-ARG AEROSPIKE_X86_64_LINK=https://artifacts.aerospike.com/aerospike-server-community/6.3.0.4/aerospike-server-community_6.3.0.4_tools-8.3.0_debian11_x86_64.tgz
-# Fri, 26 May 2023 22:46:48 GMT
-ARG AEROSPIKE_SHA_X86_64=22725b99f150bdaeaa9af944f9cbba6810d470156f3665ef427d10d0098f08f0
-# Fri, 26 May 2023 22:46:48 GMT
-ARG AEROSPIKE_AARCH64_LINK=https://artifacts.aerospike.com/aerospike-server-community/6.3.0.4/aerospike-server-community_6.3.0.4_tools-8.3.0_debian11_aarch64.tgz
-# Fri, 26 May 2023 22:46:48 GMT
-ARG AEROSPIKE_SHA_AARCH64=93dff36ecd4420e66d624bb597bcc5d23025bad7b24e67a03c69ae1dc5c45162
-# Fri, 26 May 2023 22:46:48 GMT
+# Thu, 21 Nov 2024 04:27:43 GMT
+ARG AEROSPIKE_X86_64_LINK=https://artifacts.aerospike.com/aerospike-server-community/7.2.0.4/aerospike-server-community_7.2.0.4_tools-11.1.1_ubuntu24.04_x86_64.tgz
+# Thu, 21 Nov 2024 04:27:43 GMT
+ARG AEROSPIKE_SHA_X86_64=381f61a93eea93d436ed3d4a810da15d90d7f5db7bfda51e807bb90a59263fb8
+# Thu, 21 Nov 2024 04:27:43 GMT
+ARG AEROSPIKE_AARCH64_LINK=https://artifacts.aerospike.com/aerospike-server-community/7.2.0.4/aerospike-server-community_7.2.0.4_tools-11.1.1_ubuntu24.04_aarch64.tgz
+# Thu, 21 Nov 2024 04:27:43 GMT
+ARG AEROSPIKE_SHA_AARCH64=acdc3070ccdb7f24fc8b1fc1762eb803770a73db93d84d4eb3cdffdbccebf89a
+# Thu, 21 Nov 2024 04:27:43 GMT
 SHELL [/bin/bash -Eeuo pipefail -c]
-# Fri, 26 May 2023 22:47:06 GMT
-# ARGS: AEROSPIKE_AARCH64_LINK=https://artifacts.aerospike.com/aerospike-server-community/6.3.0.4/aerospike-server-community_6.3.0.4_tools-8.3.0_debian11_aarch64.tgz AEROSPIKE_EDITION=community AEROSPIKE_SHA_AARCH64=93dff36ecd4420e66d624bb597bcc5d23025bad7b24e67a03c69ae1dc5c45162 AEROSPIKE_SHA_X86_64=22725b99f150bdaeaa9af944f9cbba6810d470156f3665ef427d10d0098f08f0 AEROSPIKE_X86_64_LINK=https://artifacts.aerospike.com/aerospike-server-community/6.3.0.4/aerospike-server-community_6.3.0.4_tools-8.3.0_debian11_x86_64.tgz
-RUN {     export DEBIAN_FRONTEND=noninteractive;     apt-get update -y;     apt-get install -y --no-install-recommends apt-utils;     apt-get install -y --no-install-recommends       binutils       ca-certificates       curl       xz-utils;   };   {     apt-get install -y --no-install-recommends procps;   };   {     VERSION="$(grep -oE "/[0-9]+[.][0-9]+[.][0-9]+([.][0-9]+)+(-rc[0-9]+)*/" <<<"${AEROSPIKE_X86_64_LINK}" | tr -d '/')";   };   {     ARCH="$(dpkg --print-architecture)";     if [ "${ARCH}" = "amd64" ]; then       sha256=d1f6826dd70cdd88dde3d5a20d8ed248883a3bc2caba3071c8a3a9b0e0de5940;       suffix="";     elif [ "${ARCH}" = "arm64" ]; then       sha256=1c398e5283af2f33888b7d8ac5b01ac89f777ea27c85d25866a40d1e64d0341b;       suffix="-arm64";     else       echo "Unsuported architecture - ${ARCH}" >&2;       exit 1;     fi;     curl -fsSL "https://github.com/aerospike/tini/releases/download/1.0.1/as-tini-static${suffix}" --output /usr/bin/as-tini-static;     echo "${sha256} /usr/bin/as-tini-static" | sha256sum -c -;     chmod +x /usr/bin/as-tini-static;   };   {     ARCH="$(dpkg --print-architecture)";     mkdir -p aerospike/pkg;     if [ "${ARCH}" = "amd64" ]; then       pkg_link="${AEROSPIKE_X86_64_LINK}";       sha256="${AEROSPIKE_SHA_X86_64}";     elif [ "${ARCH}" = "arm64" ]; then       pkg_link="${AEROSPIKE_AARCH64_LINK}";       sha256="${AEROSPIKE_SHA_AARCH64}";     else       echo "Unsuported architecture - ${ARCH}" >&2;       exit 1;     fi;     if ! curl -fsSL "${pkg_link}" --output aerospike-server.tgz; then       echo "Could not fetch pkg - ${pkg_link}" >&2;       exit 1;     fi;     echo "${sha256} aerospike-server.tgz" | sha256sum -c -;     tar xzf aerospike-server.tgz --strip-components=1 -C aerospike;     rm aerospike-server.tgz;     mkdir -p /var/{log,run}/aerospike;     mkdir -p /licenses;     cp aerospike/LICENSE /licenses;   };   {     if [ "${AEROSPIKE_EDITION}" = "enterprise" ]; then       apt-get install -y --no-install-recommends         libcurl4         libldap-2.4.2;     elif ! [ "$(printf "%s\n%s" "${VERSION}" "6.0" | sort -V | head -1)" != "${VERSION}" ]; then       apt-get install -y --no-install-recommends         libcurl4;     fi;     dpkg -i aerospike/aerospike-server-*.deb;     rm -rf /opt/aerospike/bin;   };   {     if ! [ "$(printf "%s\n%s" "${VERSION}" "5.1" | sort -V | head -1)" != "${VERSION}" ]; then       apt-get install -y --no-install-recommends         python2;     elif ! [ "$(printf "%s\n%s" "${VERSION}" "6.2.0.3" | sort -V | head -1)" != "${VERSION}" ]; then       apt-get install -y --no-install-recommends         python3         python3-distutils;     fi;   };   {     pushd aerospike/pkg || exit 1;     ar -x ../aerospike-tools*.deb;     popd || exit 1;     tar xf aerospike/pkg/data.tar.xz -C aerospike/pkg/;   };   {     find aerospike/pkg/opt/aerospike/bin/ -user aerospike -group aerospike -exec chown root:root {} +;     mv aerospike/pkg/etc/aerospike/astools.conf /etc/aerospike;     if ! [ "$(printf "%s\n%s" "${VERSION}" "6.2" | sort -V | head -1)" != "${VERSION}" ]; then        mv aerospike/pkg/opt/aerospike/bin/aql /usr/bin;     fi;     if [ -d 'aerospike/pkg/opt/aerospike/bin/asadm' ]; then       mv aerospike/pkg/opt/aerospike/bin/asadm /usr/lib/;     else       mkdir /usr/lib/asadm;       mv aerospike/pkg/opt/aerospike/bin/asadm /usr/lib/asadm/;     fi;     ln -s /usr/lib/asadm/asadm /usr/bin/asadm;     if [ -f 'aerospike/pkg/opt/aerospike/bin/asinfo' ]; then       mv aerospike/pkg/opt/aerospike/bin/asinfo /usr/lib/asadm/;     fi;     ln -s /usr/lib/asadm/asinfo /usr/bin/asinfo;   };   {     rm -rf aerospike;   };   {     rm -rf /var/lib/apt/lists/*;     dpkg --purge       apt-utils       binutils       ca-certificates       curl       xz-utils 2>&1;     apt-get purge -y;     apt-get autoremove -y;     unset DEBIAN_FRONTEND;   };   echo "done";
-# Fri, 26 May 2023 22:47:06 GMT
-COPY file:c76954551192450f2d9e2a428b0b3a3daeba46fccf29d07ceabb675e275a068e in /etc/aerospike/aerospike.template.conf 
-# Fri, 26 May 2023 22:47:06 GMT
-EXPOSE 3000 3001 3002
-# Fri, 26 May 2023 22:47:06 GMT
-COPY file:57ed4c0390f91371a6d5ddbdf0ecf475b40dc8871b369f3100b157df0d753fc5 in /entrypoint.sh 
-# Fri, 26 May 2023 22:47:06 GMT
+# Thu, 21 Nov 2024 04:27:43 GMT
+# ARGS: AEROSPIKE_EDITION=community AEROSPIKE_X86_64_LINK=https://artifacts.aerospike.com/aerospike-server-community/7.2.0.4/aerospike-server-community_7.2.0.4_tools-11.1.1_ubuntu24.04_x86_64.tgz AEROSPIKE_SHA_X86_64=381f61a93eea93d436ed3d4a810da15d90d7f5db7bfda51e807bb90a59263fb8 AEROSPIKE_AARCH64_LINK=https://artifacts.aerospike.com/aerospike-server-community/7.2.0.4/aerospike-server-community_7.2.0.4_tools-11.1.1_ubuntu24.04_aarch64.tgz AEROSPIKE_SHA_AARCH64=acdc3070ccdb7f24fc8b1fc1762eb803770a73db93d84d4eb3cdffdbccebf89a
+RUN {     export DEBIAN_FRONTEND=noninteractive;     apt-get update -y;     apt-get install -y --no-install-recommends apt-utils;     apt-get install -y --no-install-recommends       binutils       ca-certificates       curl       xz-utils;   };   {     apt-get install -y --no-install-recommends procps;   };   {     VERSION="$(grep -oE "/[0-9]+[.][0-9]+[.][0-9]+([.][0-9]+)+(-[a-z0-9]+)?([-][0-9]+[-]g[0-9a-z]*)?/" <<<"${AEROSPIKE_X86_64_LINK}" | tr -d '/' | tail -1)";   };   {     ARCH="$(dpkg --print-architecture)";     if [ "${ARCH}" = "amd64" ]; then       sha256=d1f6826dd70cdd88dde3d5a20d8ed248883a3bc2caba3071c8a3a9b0e0de5940;       suffix="";     elif [ "${ARCH}" = "arm64" ]; then       sha256=1c398e5283af2f33888b7d8ac5b01ac89f777ea27c85d25866a40d1e64d0341b;       suffix="-arm64";     else       echo "Unsuported architecture - ${ARCH}" >&2;       exit 1;     fi;     curl -fsSL "https://github.com/aerospike/tini/releases/download/1.0.1/as-tini-static${suffix}" --output /usr/bin/as-tini-static;     echo "${sha256} /usr/bin/as-tini-static" | sha256sum -c -;     chmod +x /usr/bin/as-tini-static;   };   {     ARCH="$(dpkg --print-architecture)";     mkdir -p aerospike/pkg;     if [ "${ARCH}" = "amd64" ]; then       pkg_link="${AEROSPIKE_X86_64_LINK}";       sha256="${AEROSPIKE_SHA_X86_64}";     elif [ "${ARCH}" = "arm64" ]; then       pkg_link="${AEROSPIKE_AARCH64_LINK}";       sha256="${AEROSPIKE_SHA_AARCH64}";     else       echo "Unsuported architecture - ${ARCH}" >&2;       exit 1;     fi;     if ! curl -fsSL "${pkg_link}" --output aerospike-server.tgz; then       echo "Could not fetch pkg - ${pkg_link}" >&2;       exit 1;     fi;     echo "${sha256} aerospike-server.tgz" | sha256sum -c -;     tar xzf aerospike-server.tgz --strip-components=1 -C aerospike;     rm aerospike-server.tgz;     mkdir -p /var/{log,run}/aerospike;     mkdir -p /licenses;     cp aerospike/LICENSE /licenses;   };   {     if [ "${AEROSPIKE_EDITION}" = "enterprise" ]; then       apt-get install -y --no-install-recommends         libcurl4         libldap-2.4.2;     elif ! [ "$(printf "%s\n%s" "${VERSION}" "6.0" | sort -V | head -1)" != "${VERSION}" ]; then       apt-get install -y --no-install-recommends         libcurl4;     fi;     dpkg -i aerospike/aerospike-server-*.deb;     rm -rf /opt/aerospike/bin;   };   {     if ! [ "$(printf "%s\n%s" "${VERSION}" "5.1" | sort -V | head -1)" != "${VERSION}" ]; then       apt-get install -y --no-install-recommends         python2;     elif ! [ "$(printf "%s\n%s" "${VERSION}" "6.2.0.3" | sort -V | head -1)" != "${VERSION}" ]; then       apt-get install -y --no-install-recommends         python3         python3-distutils;     fi;   };   {     ar -x aerospike/aerospike-tools*.deb --output aerospike/pkg;     tar xf aerospike/pkg/data.tar.xz -C aerospike/pkg/;   };   {     find aerospike/pkg/opt/aerospike/bin/ -user aerospike -group aerospike -exec chown root:root {} +;     mv aerospike/pkg/etc/aerospike/astools.conf /etc/aerospike;     if ! [ "$(printf "%s\n%s" "${VERSION}" "6.2" | sort -V | head -1)" != "${VERSION}" ]; then        mv aerospike/pkg/opt/aerospike/bin/aql /usr/bin;     fi;     if [ -d 'aerospike/pkg/opt/aerospike/bin/asadm' ]; then       mv aerospike/pkg/opt/aerospike/bin/asadm /usr/lib/;     else       mkdir /usr/lib/asadm;       mv aerospike/pkg/opt/aerospike/bin/asadm /usr/lib/asadm/;     fi;     ln -s /usr/lib/asadm/asadm /usr/bin/asadm;     if [ -f 'aerospike/pkg/opt/aerospike/bin/asinfo' ]; then       mv aerospike/pkg/opt/aerospike/bin/asinfo /usr/lib/asadm/;     fi;     ln -s /usr/lib/asadm/asinfo /usr/bin/asinfo;   };   {     rm -rf aerospike;   };   {     rm -rf /var/lib/apt/lists/*;     dpkg --purge       apt-utils       binutils       ca-certificates       curl       xz-utils 2>&1;     apt-get purge -y;     apt-get autoremove -y;     unset DEBIAN_FRONTEND;   };   echo "done"; # buildkit
+# Thu, 21 Nov 2024 04:27:43 GMT
+COPY aerospike.template.conf /etc/aerospike/aerospike.template.conf # buildkit
+# Thu, 21 Nov 2024 04:27:43 GMT
+EXPOSE map[3000/tcp:{} 3001/tcp:{} 3002/tcp:{}]
+# Thu, 21 Nov 2024 04:27:43 GMT
+COPY entrypoint.sh /entrypoint.sh # buildkit
+# Thu, 21 Nov 2024 04:27:43 GMT
 ENTRYPOINT ["/usr/bin/as-tini-static" "-r" "SIGUSR1" "-t" "SIGTERM" "--" "/entrypoint.sh"]
-# Fri, 26 May 2023 22:47:06 GMT
+# Thu, 21 Nov 2024 04:27:43 GMT
 CMD ["asd"]
 ```
 
 -	Layers:
-	-	`sha256:f03b40093957615593f2ed142961afb6b540507e0b47e3f7626ba5e02efbbbf1`  
-		Last Modified: Tue, 23 May 2023 01:24:08 GMT  
-		Size: 31.4 MB (31403586 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3fe3036290b95616aff09ceb00089e2efb0f4b84c53f718677fe37fbfb01a24b`  
-		Last Modified: Fri, 26 May 2023 22:47:41 GMT  
-		Size: 46.8 MB (46829066 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1382196fb6e271f3fac6ff2df297b137f1ba3ea3105ab12ab50d61ced8237ba3`  
-		Last Modified: Fri, 26 May 2023 22:47:34 GMT  
-		Size: 1.1 KB (1089 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:680745d6f08d2a3957ef5f901797727a4e8d01c8b7c6ba711ccaa4ef045bb9c7`  
-		Last Modified: Fri, 26 May 2023 22:47:35 GMT  
-		Size: 1.1 KB (1097 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:de44b265507ae44b212defcb50694d666f136b35c1090d9709068bc861bb2d64`  
+		Last Modified: Tue, 19 Nov 2024 17:38:27 GMT  
+		Size: 29.8 MB (29751968 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:449d17590cad94c7955a2e39cf4ca63d1a089cc996e65101a163d5a106adb5ec`  
+		Last Modified: Tue, 03 Dec 2024 02:16:03 GMT  
+		Size: 47.8 MB (47785652 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:95af2c8207a15d7f79b97c44c92e07c7b4908b6827ed0bb7026a880337d9f2f9`  
+		Last Modified: Tue, 03 Dec 2024 02:16:01 GMT  
+		Size: 1.2 KB (1198 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:9b9f204dada651e4275a9e2e90afa449394662124cab8f3c9f8bc23e8700d372`  
+		Last Modified: Tue, 03 Dec 2024 02:16:01 GMT  
+		Size: 1.1 KB (1107 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
 
-### `aerospike:ce-6.3.0.4_1` - linux; arm64 variant v8
+### `aerospike:ce-7.2.0.4_1` - unknown; unknown
 
 ```console
-$ docker pull aerospike@sha256:966f90b0326556623a8fe6ea857baac4bf91cc85b21110d33cee8e519c47d84d
+$ docker pull aerospike@sha256:8be4f65adc88844449881bf6f4fe066c50cfe37a82bbab13b16e962cfb54c28e
 ```
 
--	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **76.3 MB (76342168 bytes)**  
+-	Total Size: **1.9 MB (1892021 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:2507d6680b85a440daa8379ec0ac551273a5238fae8d8b6bde2f5a081993ea54`
+-	Image ID: `sha256:cf89dcce435f8c1c2f6a49e98135754112c0042ccd1ddfd53ff3df8847cdaa99`
+
+```dockerfile
+```
+
+-	Layers:
+	-	`sha256:b720efc4a670f5aff71d62721c03b3fc43d5c599b58490d4956cc0f19db58392`  
+		Last Modified: Tue, 03 Dec 2024 02:16:02 GMT  
+		Size: 1.9 MB (1862875 bytes)  
+		MIME: application/vnd.in-toto+json
+	-	`sha256:4a4be66e9d90cb9312009049850e086f568a6bb07e44ca04b1842d872f33905a`  
+		Last Modified: Tue, 03 Dec 2024 02:16:01 GMT  
+		Size: 29.1 KB (29146 bytes)  
+		MIME: application/vnd.in-toto+json
+
+### `aerospike:ce-7.2.0.4_1` - linux; arm64 variant v8
+
+```console
+$ docker pull aerospike@sha256:ffeac88e4e979890dba4f4d91b74d6fd7dcf362d66ada31fe9d460b5c48985d9
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **76.1 MB (76106657 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:b7a8e98bee563dfd4da46cf1d3cb2df3e89d16d31feb8314cec6d30708aa5ab9`
 -	Entrypoint: `["\/usr\/bin\/as-tini-static","-r","SIGUSR1","-t","SIGTERM","--","\/entrypoint.sh"]`
 -	Default Command: `["asd"]`
 -	`SHELL`: `["\/bin\/bash","-Eeuo","pipefail","-c"]`
 
 ```dockerfile
-# Tue, 23 May 2023 00:43:15 GMT
-ADD file:0fee550e337f1bd111a7ef785a9553674f25649f37deffa4aa8107ef6445d259 in / 
-# Tue, 23 May 2023 00:43:15 GMT
-CMD ["bash"]
-# Tue, 23 May 2023 01:23:08 GMT
+# Tue, 19 Nov 2024 16:18:45 GMT
+ARG RELEASE
+# Tue, 19 Nov 2024 16:18:45 GMT
+ARG LAUNCHPAD_BUILD_ARCH
+# Tue, 19 Nov 2024 16:18:45 GMT
+LABEL org.opencontainers.image.ref.name=ubuntu
+# Tue, 19 Nov 2024 16:18:45 GMT
+LABEL org.opencontainers.image.version=24.04
+# Tue, 19 Nov 2024 16:18:47 GMT
+ADD file:765dfd09ec2ac4870c8b3efd6ef4a994f99695c574d546d7a9a0e69bbb970b03 in / 
+# Tue, 19 Nov 2024 16:18:47 GMT
+CMD ["/bin/bash"]
+# Thu, 21 Nov 2024 04:27:43 GMT
+LABEL org.opencontainers.image.title=Aerospike Community Server org.opencontainers.image.description=Aerospike is a real-time database with predictable performance at petabyte scale with microsecond latency over billions of transactions. org.opencontainers.image.documentation=https://hub.docker.com/_/aerospike org.opencontainers.image.base.name=docker.io/library/ubuntu:24.04 org.opencontainers.image.source=https://github.com/aerospike/aerospike-server.docker org.opencontainers.image.vendor=Aerospike org.opencontainers.image.version=7.2.0.4 org.opencontainers.image.url=https://github.com/aerospike/aerospike-server.docker
+# Thu, 21 Nov 2024 04:27:43 GMT
 ARG AEROSPIKE_EDITION=community
-# Thu, 25 May 2023 22:40:47 GMT
-ARG AEROSPIKE_X86_64_LINK=https://artifacts.aerospike.com/aerospike-server-community/6.3.0.4/aerospike-server-community_6.3.0.4_tools-8.3.0_debian11_x86_64.tgz
-# Thu, 25 May 2023 22:40:47 GMT
-ARG AEROSPIKE_SHA_X86_64=22725b99f150bdaeaa9af944f9cbba6810d470156f3665ef427d10d0098f08f0
-# Thu, 25 May 2023 22:40:47 GMT
-ARG AEROSPIKE_AARCH64_LINK=https://artifacts.aerospike.com/aerospike-server-community/6.3.0.4/aerospike-server-community_6.3.0.4_tools-8.3.0_debian11_aarch64.tgz
-# Thu, 25 May 2023 22:40:47 GMT
-ARG AEROSPIKE_SHA_AARCH64=93dff36ecd4420e66d624bb597bcc5d23025bad7b24e67a03c69ae1dc5c45162
-# Thu, 25 May 2023 22:40:47 GMT
+# Thu, 21 Nov 2024 04:27:43 GMT
+ARG AEROSPIKE_X86_64_LINK=https://artifacts.aerospike.com/aerospike-server-community/7.2.0.4/aerospike-server-community_7.2.0.4_tools-11.1.1_ubuntu24.04_x86_64.tgz
+# Thu, 21 Nov 2024 04:27:43 GMT
+ARG AEROSPIKE_SHA_X86_64=381f61a93eea93d436ed3d4a810da15d90d7f5db7bfda51e807bb90a59263fb8
+# Thu, 21 Nov 2024 04:27:43 GMT
+ARG AEROSPIKE_AARCH64_LINK=https://artifacts.aerospike.com/aerospike-server-community/7.2.0.4/aerospike-server-community_7.2.0.4_tools-11.1.1_ubuntu24.04_aarch64.tgz
+# Thu, 21 Nov 2024 04:27:43 GMT
+ARG AEROSPIKE_SHA_AARCH64=acdc3070ccdb7f24fc8b1fc1762eb803770a73db93d84d4eb3cdffdbccebf89a
+# Thu, 21 Nov 2024 04:27:43 GMT
 SHELL [/bin/bash -Eeuo pipefail -c]
-# Thu, 25 May 2023 22:41:02 GMT
-# ARGS: AEROSPIKE_AARCH64_LINK=https://artifacts.aerospike.com/aerospike-server-community/6.3.0.4/aerospike-server-community_6.3.0.4_tools-8.3.0_debian11_aarch64.tgz AEROSPIKE_EDITION=community AEROSPIKE_SHA_AARCH64=93dff36ecd4420e66d624bb597bcc5d23025bad7b24e67a03c69ae1dc5c45162 AEROSPIKE_SHA_X86_64=22725b99f150bdaeaa9af944f9cbba6810d470156f3665ef427d10d0098f08f0 AEROSPIKE_X86_64_LINK=https://artifacts.aerospike.com/aerospike-server-community/6.3.0.4/aerospike-server-community_6.3.0.4_tools-8.3.0_debian11_x86_64.tgz
-RUN {     export DEBIAN_FRONTEND=noninteractive;     apt-get update -y;     apt-get install -y --no-install-recommends apt-utils;     apt-get install -y --no-install-recommends       binutils       ca-certificates       curl       xz-utils;   };   {     apt-get install -y --no-install-recommends procps;   };   {     VERSION="$(grep -oE "/[0-9]+[.][0-9]+[.][0-9]+([.][0-9]+)+(-rc[0-9]+)*/" <<<"${AEROSPIKE_X86_64_LINK}" | tr -d '/')";   };   {     ARCH="$(dpkg --print-architecture)";     if [ "${ARCH}" = "amd64" ]; then       sha256=d1f6826dd70cdd88dde3d5a20d8ed248883a3bc2caba3071c8a3a9b0e0de5940;       suffix="";     elif [ "${ARCH}" = "arm64" ]; then       sha256=1c398e5283af2f33888b7d8ac5b01ac89f777ea27c85d25866a40d1e64d0341b;       suffix="-arm64";     else       echo "Unsuported architecture - ${ARCH}" >&2;       exit 1;     fi;     curl -fsSL "https://github.com/aerospike/tini/releases/download/1.0.1/as-tini-static${suffix}" --output /usr/bin/as-tini-static;     echo "${sha256} /usr/bin/as-tini-static" | sha256sum -c -;     chmod +x /usr/bin/as-tini-static;   };   {     ARCH="$(dpkg --print-architecture)";     mkdir -p aerospike/pkg;     if [ "${ARCH}" = "amd64" ]; then       pkg_link="${AEROSPIKE_X86_64_LINK}";       sha256="${AEROSPIKE_SHA_X86_64}";     elif [ "${ARCH}" = "arm64" ]; then       pkg_link="${AEROSPIKE_AARCH64_LINK}";       sha256="${AEROSPIKE_SHA_AARCH64}";     else       echo "Unsuported architecture - ${ARCH}" >&2;       exit 1;     fi;     if ! curl -fsSL "${pkg_link}" --output aerospike-server.tgz; then       echo "Could not fetch pkg - ${pkg_link}" >&2;       exit 1;     fi;     echo "${sha256} aerospike-server.tgz" | sha256sum -c -;     tar xzf aerospike-server.tgz --strip-components=1 -C aerospike;     rm aerospike-server.tgz;     mkdir -p /var/{log,run}/aerospike;     mkdir -p /licenses;     cp aerospike/LICENSE /licenses;   };   {     if [ "${AEROSPIKE_EDITION}" = "enterprise" ]; then       apt-get install -y --no-install-recommends         libcurl4         libldap-2.4.2;     elif ! [ "$(printf "%s\n%s" "${VERSION}" "6.0" | sort -V | head -1)" != "${VERSION}" ]; then       apt-get install -y --no-install-recommends         libcurl4;     fi;     dpkg -i aerospike/aerospike-server-*.deb;     rm -rf /opt/aerospike/bin;   };   {     if ! [ "$(printf "%s\n%s" "${VERSION}" "5.1" | sort -V | head -1)" != "${VERSION}" ]; then       apt-get install -y --no-install-recommends         python2;     elif ! [ "$(printf "%s\n%s" "${VERSION}" "6.2.0.3" | sort -V | head -1)" != "${VERSION}" ]; then       apt-get install -y --no-install-recommends         python3         python3-distutils;     fi;   };   {     pushd aerospike/pkg || exit 1;     ar -x ../aerospike-tools*.deb;     popd || exit 1;     tar xf aerospike/pkg/data.tar.xz -C aerospike/pkg/;   };   {     find aerospike/pkg/opt/aerospike/bin/ -user aerospike -group aerospike -exec chown root:root {} +;     mv aerospike/pkg/etc/aerospike/astools.conf /etc/aerospike;     if ! [ "$(printf "%s\n%s" "${VERSION}" "6.2" | sort -V | head -1)" != "${VERSION}" ]; then        mv aerospike/pkg/opt/aerospike/bin/aql /usr/bin;     fi;     if [ -d 'aerospike/pkg/opt/aerospike/bin/asadm' ]; then       mv aerospike/pkg/opt/aerospike/bin/asadm /usr/lib/;     else       mkdir /usr/lib/asadm;       mv aerospike/pkg/opt/aerospike/bin/asadm /usr/lib/asadm/;     fi;     ln -s /usr/lib/asadm/asadm /usr/bin/asadm;     if [ -f 'aerospike/pkg/opt/aerospike/bin/asinfo' ]; then       mv aerospike/pkg/opt/aerospike/bin/asinfo /usr/lib/asadm/;     fi;     ln -s /usr/lib/asadm/asinfo /usr/bin/asinfo;   };   {     rm -rf aerospike;   };   {     rm -rf /var/lib/apt/lists/*;     dpkg --purge       apt-utils       binutils       ca-certificates       curl       xz-utils 2>&1;     apt-get purge -y;     apt-get autoremove -y;     unset DEBIAN_FRONTEND;   };   echo "done";
-# Thu, 25 May 2023 22:41:02 GMT
-COPY file:c76954551192450f2d9e2a428b0b3a3daeba46fccf29d07ceabb675e275a068e in /etc/aerospike/aerospike.template.conf 
-# Thu, 25 May 2023 22:41:02 GMT
-EXPOSE 3000 3001 3002
-# Thu, 25 May 2023 22:41:02 GMT
-COPY file:57ed4c0390f91371a6d5ddbdf0ecf475b40dc8871b369f3100b157df0d753fc5 in /entrypoint.sh 
-# Thu, 25 May 2023 22:41:02 GMT
+# Thu, 21 Nov 2024 04:27:43 GMT
+# ARGS: AEROSPIKE_EDITION=community AEROSPIKE_X86_64_LINK=https://artifacts.aerospike.com/aerospike-server-community/7.2.0.4/aerospike-server-community_7.2.0.4_tools-11.1.1_ubuntu24.04_x86_64.tgz AEROSPIKE_SHA_X86_64=381f61a93eea93d436ed3d4a810da15d90d7f5db7bfda51e807bb90a59263fb8 AEROSPIKE_AARCH64_LINK=https://artifacts.aerospike.com/aerospike-server-community/7.2.0.4/aerospike-server-community_7.2.0.4_tools-11.1.1_ubuntu24.04_aarch64.tgz AEROSPIKE_SHA_AARCH64=acdc3070ccdb7f24fc8b1fc1762eb803770a73db93d84d4eb3cdffdbccebf89a
+RUN {     export DEBIAN_FRONTEND=noninteractive;     apt-get update -y;     apt-get install -y --no-install-recommends apt-utils;     apt-get install -y --no-install-recommends       binutils       ca-certificates       curl       xz-utils;   };   {     apt-get install -y --no-install-recommends procps;   };   {     VERSION="$(grep -oE "/[0-9]+[.][0-9]+[.][0-9]+([.][0-9]+)+(-[a-z0-9]+)?([-][0-9]+[-]g[0-9a-z]*)?/" <<<"${AEROSPIKE_X86_64_LINK}" | tr -d '/' | tail -1)";   };   {     ARCH="$(dpkg --print-architecture)";     if [ "${ARCH}" = "amd64" ]; then       sha256=d1f6826dd70cdd88dde3d5a20d8ed248883a3bc2caba3071c8a3a9b0e0de5940;       suffix="";     elif [ "${ARCH}" = "arm64" ]; then       sha256=1c398e5283af2f33888b7d8ac5b01ac89f777ea27c85d25866a40d1e64d0341b;       suffix="-arm64";     else       echo "Unsuported architecture - ${ARCH}" >&2;       exit 1;     fi;     curl -fsSL "https://github.com/aerospike/tini/releases/download/1.0.1/as-tini-static${suffix}" --output /usr/bin/as-tini-static;     echo "${sha256} /usr/bin/as-tini-static" | sha256sum -c -;     chmod +x /usr/bin/as-tini-static;   };   {     ARCH="$(dpkg --print-architecture)";     mkdir -p aerospike/pkg;     if [ "${ARCH}" = "amd64" ]; then       pkg_link="${AEROSPIKE_X86_64_LINK}";       sha256="${AEROSPIKE_SHA_X86_64}";     elif [ "${ARCH}" = "arm64" ]; then       pkg_link="${AEROSPIKE_AARCH64_LINK}";       sha256="${AEROSPIKE_SHA_AARCH64}";     else       echo "Unsuported architecture - ${ARCH}" >&2;       exit 1;     fi;     if ! curl -fsSL "${pkg_link}" --output aerospike-server.tgz; then       echo "Could not fetch pkg - ${pkg_link}" >&2;       exit 1;     fi;     echo "${sha256} aerospike-server.tgz" | sha256sum -c -;     tar xzf aerospike-server.tgz --strip-components=1 -C aerospike;     rm aerospike-server.tgz;     mkdir -p /var/{log,run}/aerospike;     mkdir -p /licenses;     cp aerospike/LICENSE /licenses;   };   {     if [ "${AEROSPIKE_EDITION}" = "enterprise" ]; then       apt-get install -y --no-install-recommends         libcurl4         libldap-2.4.2;     elif ! [ "$(printf "%s\n%s" "${VERSION}" "6.0" | sort -V | head -1)" != "${VERSION}" ]; then       apt-get install -y --no-install-recommends         libcurl4;     fi;     dpkg -i aerospike/aerospike-server-*.deb;     rm -rf /opt/aerospike/bin;   };   {     if ! [ "$(printf "%s\n%s" "${VERSION}" "5.1" | sort -V | head -1)" != "${VERSION}" ]; then       apt-get install -y --no-install-recommends         python2;     elif ! [ "$(printf "%s\n%s" "${VERSION}" "6.2.0.3" | sort -V | head -1)" != "${VERSION}" ]; then       apt-get install -y --no-install-recommends         python3         python3-distutils;     fi;   };   {     ar -x aerospike/aerospike-tools*.deb --output aerospike/pkg;     tar xf aerospike/pkg/data.tar.xz -C aerospike/pkg/;   };   {     find aerospike/pkg/opt/aerospike/bin/ -user aerospike -group aerospike -exec chown root:root {} +;     mv aerospike/pkg/etc/aerospike/astools.conf /etc/aerospike;     if ! [ "$(printf "%s\n%s" "${VERSION}" "6.2" | sort -V | head -1)" != "${VERSION}" ]; then        mv aerospike/pkg/opt/aerospike/bin/aql /usr/bin;     fi;     if [ -d 'aerospike/pkg/opt/aerospike/bin/asadm' ]; then       mv aerospike/pkg/opt/aerospike/bin/asadm /usr/lib/;     else       mkdir /usr/lib/asadm;       mv aerospike/pkg/opt/aerospike/bin/asadm /usr/lib/asadm/;     fi;     ln -s /usr/lib/asadm/asadm /usr/bin/asadm;     if [ -f 'aerospike/pkg/opt/aerospike/bin/asinfo' ]; then       mv aerospike/pkg/opt/aerospike/bin/asinfo /usr/lib/asadm/;     fi;     ln -s /usr/lib/asadm/asinfo /usr/bin/asinfo;   };   {     rm -rf aerospike;   };   {     rm -rf /var/lib/apt/lists/*;     dpkg --purge       apt-utils       binutils       ca-certificates       curl       xz-utils 2>&1;     apt-get purge -y;     apt-get autoremove -y;     unset DEBIAN_FRONTEND;   };   echo "done"; # buildkit
+# Thu, 21 Nov 2024 04:27:43 GMT
+COPY aerospike.template.conf /etc/aerospike/aerospike.template.conf # buildkit
+# Thu, 21 Nov 2024 04:27:43 GMT
+EXPOSE map[3000/tcp:{} 3001/tcp:{} 3002/tcp:{}]
+# Thu, 21 Nov 2024 04:27:43 GMT
+COPY entrypoint.sh /entrypoint.sh # buildkit
+# Thu, 21 Nov 2024 04:27:43 GMT
 ENTRYPOINT ["/usr/bin/as-tini-static" "-r" "SIGUSR1" "-t" "SIGTERM" "--" "/entrypoint.sh"]
-# Thu, 25 May 2023 22:41:03 GMT
+# Thu, 21 Nov 2024 04:27:43 GMT
 CMD ["asd"]
 ```
 
 -	Layers:
-	-	`sha256:d981f2c20c93e1c57a46cd87bc5b9a554be5323072a0d0ab4b354aabd237bbcf`  
-		Last Modified: Tue, 23 May 2023 00:46:07 GMT  
-		Size: 30.1 MB (30052747 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:709e102d962998cfa1dbde00fa13d7a6e6d6b56b337571db6ac6351e54b2244a`  
-		Last Modified: Thu, 25 May 2023 22:41:35 GMT  
-		Size: 46.3 MB (46287231 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a0491f1f24bb4f2e6521b61dd98276012e8b982bb51e6dcb2bbf051a4ba8602e`  
-		Last Modified: Thu, 25 May 2023 22:41:29 GMT  
-		Size: 1.1 KB (1091 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:14036b22ea583d8ddc7565a084cb95c7d407e8419455f26ffb9c953a8e8cacf8`  
-		Last Modified: Thu, 25 May 2023 22:41:29 GMT  
-		Size: 1.1 KB (1099 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:8bb55f0677778c3027fcc4253dc452bc9c22de989a696391e739fb1cdbbdb4c2`  
+		Last Modified: Tue, 19 Nov 2024 17:38:33 GMT  
+		Size: 28.9 MB (28892671 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:443e137c0a9f7b1987f41c0aeafd98f438718efd1236cc9e9fb85a1274551e3d`  
+		Last Modified: Tue, 03 Dec 2024 05:38:19 GMT  
+		Size: 47.2 MB (47211684 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:775defc9162795b48df892c38658cc3b93b3944e66a73753fb24897e6cb3eb00`  
+		Last Modified: Tue, 03 Dec 2024 05:38:17 GMT  
+		Size: 1.2 KB (1194 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:29d8de6b8a5143453ac0253f6550f3e6e07685b446396e803e672e2abade86a1`  
+		Last Modified: Tue, 03 Dec 2024 05:38:18 GMT  
+		Size: 1.1 KB (1108 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
 
-## `aerospike:ee-6.3.0.4`
+### `aerospike:ce-7.2.0.4_1` - unknown; unknown
 
 ```console
-$ docker pull aerospike@sha256:ec65c99ab1cedd1f109f2af76c612f070649580fde3b9c0c816f0b38f66eef4d
+$ docker pull aerospike@sha256:8355c46124c7c48d152f3c8a28d10eedc1141de0e42fa8b2417ad4ccb6d271e6
 ```
 
--	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms: 2
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **1.9 MB (1894355 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:1896940732b6d9d48fa9306c9b10d9ed7d56e7d7aa78a4f8bee38d6194f6e251`
+
+```dockerfile
+```
+
+-	Layers:
+	-	`sha256:0572e71bb03a8af0150dc0e6b761c1d9ab6a4d3105697e0cd0ffc9bcc4c17df0`  
+		Last Modified: Tue, 03 Dec 2024 05:38:18 GMT  
+		Size: 1.9 MB (1865128 bytes)  
+		MIME: application/vnd.in-toto+json
+	-	`sha256:ec26767a2999fa69fdc4216e47e1ae4cd7514afb47da2b218c711fa6dbbc188f`  
+		Last Modified: Tue, 03 Dec 2024 05:38:17 GMT  
+		Size: 29.2 KB (29227 bytes)  
+		MIME: application/vnd.in-toto+json
+
+## `aerospike:ee-7.2.0.4`
+
+```console
+$ docker pull aerospike@sha256:3de876e61aed9db6de4e74313103a8d20cc43b6777bd687b659e20f63d949235
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 4
 	-	linux; amd64
+	-	unknown; unknown
 	-	linux; arm64 variant v8
+	-	unknown; unknown
 
-### `aerospike:ee-6.3.0.4` - linux; amd64
+### `aerospike:ee-7.2.0.4` - linux; amd64
 
 ```console
-$ docker pull aerospike@sha256:98bc0d8db237e1a1caed06c5ec6450c524110d1878115bab7fc9ca96c91dedab
+$ docker pull aerospike@sha256:b27e69037e07863088279f358ed20ecd437ef9443b13afb23131058808a63374
 ```
 
--	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **81.3 MB (81272883 bytes)**  
+-	Total Size: **81.7 MB (81692986 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:e9bb5dcad8518fe67cb43ad7c1ec0994f3d747429355fb41a882b9be622437aa`
+-	Image ID: `sha256:3b94065e1a1ddb3b68c50e5143b10cf022e0b4be274d54783603a0edcbb72643`
 -	Entrypoint: `["\/usr\/bin\/as-tini-static","-r","SIGUSR1","-t","SIGTERM","--","\/entrypoint.sh"]`
 -	Default Command: `["asd"]`
 -	`SHELL`: `["\/bin\/bash","-Eeuo","pipefail","-c"]`
 
 ```dockerfile
-# Tue, 23 May 2023 01:20:14 GMT
-ADD file:88252a7f118b4d6f55dd5baf49dbcaa053c9d6172c652963c1151fa76f625e44 in / 
-# Tue, 23 May 2023 01:20:14 GMT
-CMD ["bash"]
-# Tue, 23 May 2023 08:02:38 GMT
+# Tue, 19 Nov 2024 17:29:23 GMT
+ARG RELEASE
+# Tue, 19 Nov 2024 17:29:23 GMT
+ARG LAUNCHPAD_BUILD_ARCH
+# Tue, 19 Nov 2024 17:29:23 GMT
+LABEL org.opencontainers.image.ref.name=ubuntu
+# Tue, 19 Nov 2024 17:29:23 GMT
+LABEL org.opencontainers.image.version=24.04
+# Tue, 19 Nov 2024 17:29:25 GMT
+ADD file:bcebbf0fddcba5b864d5d267b68dd23bcfb01275e6ec7bcab69bf8b56af14804 in / 
+# Tue, 19 Nov 2024 17:29:25 GMT
+CMD ["/bin/bash"]
+# Thu, 21 Nov 2024 04:27:43 GMT
+LABEL org.opencontainers.image.title=Aerospike Enterprise Server org.opencontainers.image.description=Aerospike is a real-time database with predictable performance at petabyte scale with microsecond latency over billions of transactions. org.opencontainers.image.documentation=https://hub.docker.com/_/aerospike org.opencontainers.image.base.name=docker.io/library/ubuntu:24.04 org.opencontainers.image.source=https://github.com/aerospike/aerospike-server.docker org.opencontainers.image.vendor=Aerospike org.opencontainers.image.version=7.2.0.4 org.opencontainers.image.url=https://github.com/aerospike/aerospike-server.docker
+# Thu, 21 Nov 2024 04:27:43 GMT
 ARG AEROSPIKE_EDITION=enterprise
-# Fri, 26 May 2023 22:46:20 GMT
-ARG AEROSPIKE_X86_64_LINK=https://artifacts.aerospike.com/aerospike-server-enterprise/6.3.0.4/aerospike-server-enterprise_6.3.0.4_tools-8.3.0_debian11_x86_64.tgz
-# Fri, 26 May 2023 22:46:20 GMT
-ARG AEROSPIKE_SHA_X86_64=85e25980c7e4d69d06cac1d1d17472c3beb2b79d4807232b84bb3dafa9de9ec0
-# Fri, 26 May 2023 22:46:20 GMT
-ARG AEROSPIKE_AARCH64_LINK=https://artifacts.aerospike.com/aerospike-server-enterprise/6.3.0.4/aerospike-server-enterprise_6.3.0.4_tools-8.3.0_debian11_aarch64.tgz
-# Fri, 26 May 2023 22:46:20 GMT
-ARG AEROSPIKE_SHA_AARCH64=74ae4f799b154e6eac9f8df9be3ae8b2d2d3abb5fefc783ee6b2df8dc97080ab
-# Fri, 26 May 2023 22:46:20 GMT
+# Thu, 21 Nov 2024 04:27:43 GMT
+ARG AEROSPIKE_X86_64_LINK=https://artifacts.aerospike.com/aerospike-server-enterprise/7.2.0.4/aerospike-server-enterprise_7.2.0.4_tools-11.1.1_ubuntu24.04_x86_64.tgz
+# Thu, 21 Nov 2024 04:27:43 GMT
+ARG AEROSPIKE_SHA_X86_64=56b9d435b7ad1cabb6ae2af5e3a25d82937bbbce9807f7b54234a41a8b1252ef
+# Thu, 21 Nov 2024 04:27:43 GMT
+ARG AEROSPIKE_AARCH64_LINK=https://artifacts.aerospike.com/aerospike-server-enterprise/7.2.0.4/aerospike-server-enterprise_7.2.0.4_tools-11.1.1_ubuntu24.04_aarch64.tgz
+# Thu, 21 Nov 2024 04:27:43 GMT
+ARG AEROSPIKE_SHA_AARCH64=16bc0a9d9a181ab84fafafcc54849b3de7587522ff279f5ff897c73c953cc068
+# Thu, 21 Nov 2024 04:27:43 GMT
 SHELL [/bin/bash -Eeuo pipefail -c]
-# Fri, 26 May 2023 22:46:43 GMT
-# ARGS: AEROSPIKE_AARCH64_LINK=https://artifacts.aerospike.com/aerospike-server-enterprise/6.3.0.4/aerospike-server-enterprise_6.3.0.4_tools-8.3.0_debian11_aarch64.tgz AEROSPIKE_EDITION=enterprise AEROSPIKE_SHA_AARCH64=74ae4f799b154e6eac9f8df9be3ae8b2d2d3abb5fefc783ee6b2df8dc97080ab AEROSPIKE_SHA_X86_64=85e25980c7e4d69d06cac1d1d17472c3beb2b79d4807232b84bb3dafa9de9ec0 AEROSPIKE_X86_64_LINK=https://artifacts.aerospike.com/aerospike-server-enterprise/6.3.0.4/aerospike-server-enterprise_6.3.0.4_tools-8.3.0_debian11_x86_64.tgz
-RUN {     export DEBIAN_FRONTEND=noninteractive;     apt-get update -y;     apt-get install -y --no-install-recommends apt-utils;     apt-get install -y --no-install-recommends       binutils       ca-certificates       curl       xz-utils;   };   {     apt-get install -y --no-install-recommends procps;   };   {     VERSION="$(grep -oE "/[0-9]+[.][0-9]+[.][0-9]+([.][0-9]+)+(-rc[0-9]+)*/" <<<"${AEROSPIKE_X86_64_LINK}" | tr -d '/')";   };   {     ARCH="$(dpkg --print-architecture)";     if [ "${ARCH}" = "amd64" ]; then       sha256=d1f6826dd70cdd88dde3d5a20d8ed248883a3bc2caba3071c8a3a9b0e0de5940;       suffix="";     elif [ "${ARCH}" = "arm64" ]; then       sha256=1c398e5283af2f33888b7d8ac5b01ac89f777ea27c85d25866a40d1e64d0341b;       suffix="-arm64";     else       echo "Unsuported architecture - ${ARCH}" >&2;       exit 1;     fi;     curl -fsSL "https://github.com/aerospike/tini/releases/download/1.0.1/as-tini-static${suffix}" --output /usr/bin/as-tini-static;     echo "${sha256} /usr/bin/as-tini-static" | sha256sum -c -;     chmod +x /usr/bin/as-tini-static;   };   {     ARCH="$(dpkg --print-architecture)";     mkdir -p aerospike/pkg;     if [ "${ARCH}" = "amd64" ]; then       pkg_link="${AEROSPIKE_X86_64_LINK}";       sha256="${AEROSPIKE_SHA_X86_64}";     elif [ "${ARCH}" = "arm64" ]; then       pkg_link="${AEROSPIKE_AARCH64_LINK}";       sha256="${AEROSPIKE_SHA_AARCH64}";     else       echo "Unsuported architecture - ${ARCH}" >&2;       exit 1;     fi;     if ! curl -fsSL "${pkg_link}" --output aerospike-server.tgz; then       echo "Could not fetch pkg - ${pkg_link}" >&2;       exit 1;     fi;     echo "${sha256} aerospike-server.tgz" | sha256sum -c -;     tar xzf aerospike-server.tgz --strip-components=1 -C aerospike;     rm aerospike-server.tgz;     mkdir -p /var/{log,run}/aerospike;     mkdir -p /licenses;     cp aerospike/LICENSE /licenses;   };   {     if [ "${AEROSPIKE_EDITION}" = "enterprise" ]; then       apt-get install -y --no-install-recommends         libcurl4         libldap-2.4.2;     elif ! [ "$(printf "%s\n%s" "${VERSION}" "6.0" | sort -V | head -1)" != "${VERSION}" ]; then       apt-get install -y --no-install-recommends         libcurl4;     fi;     dpkg -i aerospike/aerospike-server-*.deb;     rm -rf /opt/aerospike/bin;   };   {     if ! [ "$(printf "%s\n%s" "${VERSION}" "5.1" | sort -V | head -1)" != "${VERSION}" ]; then       apt-get install -y --no-install-recommends         python2;     elif ! [ "$(printf "%s\n%s" "${VERSION}" "6.2.0.3" | sort -V | head -1)" != "${VERSION}" ]; then       apt-get install -y --no-install-recommends         python3         python3-distutils;     fi;   };   {     pushd aerospike/pkg || exit 1;     ar -x ../aerospike-tools*.deb;     popd || exit 1;     tar xf aerospike/pkg/data.tar.xz -C aerospike/pkg/;   };   {     find aerospike/pkg/opt/aerospike/bin/ -user aerospike -group aerospike -exec chown root:root {} +;     mv aerospike/pkg/etc/aerospike/astools.conf /etc/aerospike;     if ! [ "$(printf "%s\n%s" "${VERSION}" "6.2" | sort -V | head -1)" != "${VERSION}" ]; then        mv aerospike/pkg/opt/aerospike/bin/aql /usr/bin;     fi;     if [ -d 'aerospike/pkg/opt/aerospike/bin/asadm' ]; then       mv aerospike/pkg/opt/aerospike/bin/asadm /usr/lib/;     else       mkdir /usr/lib/asadm;       mv aerospike/pkg/opt/aerospike/bin/asadm /usr/lib/asadm/;     fi;     ln -s /usr/lib/asadm/asadm /usr/bin/asadm;     if [ -f 'aerospike/pkg/opt/aerospike/bin/asinfo' ]; then       mv aerospike/pkg/opt/aerospike/bin/asinfo /usr/lib/asadm/;     fi;     ln -s /usr/lib/asadm/asinfo /usr/bin/asinfo;   };   {     rm -rf aerospike;   };   {     rm -rf /var/lib/apt/lists/*;     dpkg --purge       apt-utils       binutils       ca-certificates       curl       xz-utils 2>&1;     apt-get purge -y;     apt-get autoremove -y;     unset DEBIAN_FRONTEND;   };   echo "done";
-# Fri, 26 May 2023 22:46:43 GMT
-COPY file:c76954551192450f2d9e2a428b0b3a3daeba46fccf29d07ceabb675e275a068e in /etc/aerospike/aerospike.template.conf 
-# Fri, 26 May 2023 22:46:43 GMT
-EXPOSE 3000 3001 3002
-# Fri, 26 May 2023 22:46:43 GMT
-COPY file:57ed4c0390f91371a6d5ddbdf0ecf475b40dc8871b369f3100b157df0d753fc5 in /entrypoint.sh 
-# Fri, 26 May 2023 22:46:43 GMT
+# Thu, 21 Nov 2024 04:27:43 GMT
+# ARGS: AEROSPIKE_EDITION=enterprise AEROSPIKE_X86_64_LINK=https://artifacts.aerospike.com/aerospike-server-enterprise/7.2.0.4/aerospike-server-enterprise_7.2.0.4_tools-11.1.1_ubuntu24.04_x86_64.tgz AEROSPIKE_SHA_X86_64=56b9d435b7ad1cabb6ae2af5e3a25d82937bbbce9807f7b54234a41a8b1252ef AEROSPIKE_AARCH64_LINK=https://artifacts.aerospike.com/aerospike-server-enterprise/7.2.0.4/aerospike-server-enterprise_7.2.0.4_tools-11.1.1_ubuntu24.04_aarch64.tgz AEROSPIKE_SHA_AARCH64=16bc0a9d9a181ab84fafafcc54849b3de7587522ff279f5ff897c73c953cc068
+RUN {     export DEBIAN_FRONTEND=noninteractive;     apt-get update -y;     apt-get install -y --no-install-recommends apt-utils;     apt-get install -y --no-install-recommends       binutils       ca-certificates       curl       xz-utils;   };   {     apt-get install -y --no-install-recommends procps;   };   {     VERSION="$(grep -oE "/[0-9]+[.][0-9]+[.][0-9]+([.][0-9]+)+(-[a-z0-9]+)?([-][0-9]+[-]g[0-9a-z]*)?/" <<<"${AEROSPIKE_X86_64_LINK}" | tr -d '/' | tail -1)";   };   {     ARCH="$(dpkg --print-architecture)";     if [ "${ARCH}" = "amd64" ]; then       sha256=d1f6826dd70cdd88dde3d5a20d8ed248883a3bc2caba3071c8a3a9b0e0de5940;       suffix="";     elif [ "${ARCH}" = "arm64" ]; then       sha256=1c398e5283af2f33888b7d8ac5b01ac89f777ea27c85d25866a40d1e64d0341b;       suffix="-arm64";     else       echo "Unsuported architecture - ${ARCH}" >&2;       exit 1;     fi;     curl -fsSL "https://github.com/aerospike/tini/releases/download/1.0.1/as-tini-static${suffix}" --output /usr/bin/as-tini-static;     echo "${sha256} /usr/bin/as-tini-static" | sha256sum -c -;     chmod +x /usr/bin/as-tini-static;   };   {     ARCH="$(dpkg --print-architecture)";     mkdir -p aerospike/pkg;     if [ "${ARCH}" = "amd64" ]; then       pkg_link="${AEROSPIKE_X86_64_LINK}";       sha256="${AEROSPIKE_SHA_X86_64}";     elif [ "${ARCH}" = "arm64" ]; then       pkg_link="${AEROSPIKE_AARCH64_LINK}";       sha256="${AEROSPIKE_SHA_AARCH64}";     else       echo "Unsuported architecture - ${ARCH}" >&2;       exit 1;     fi;     if ! curl -fsSL "${pkg_link}" --output aerospike-server.tgz; then       echo "Could not fetch pkg - ${pkg_link}" >&2;       exit 1;     fi;     echo "${sha256} aerospike-server.tgz" | sha256sum -c -;     tar xzf aerospike-server.tgz --strip-components=1 -C aerospike;     rm aerospike-server.tgz;     mkdir -p /var/{log,run}/aerospike;     mkdir -p /licenses;     cp aerospike/LICENSE /licenses;   };   {     if [ "${AEROSPIKE_EDITION}" = "enterprise" ]; then       apt-get install -y --no-install-recommends         libcurl4         libldap-2.4.2;     elif ! [ "$(printf "%s\n%s" "${VERSION}" "6.0" | sort -V | head -1)" != "${VERSION}" ]; then       apt-get install -y --no-install-recommends         libcurl4;     fi;     dpkg -i aerospike/aerospike-server-*.deb;     rm -rf /opt/aerospike/bin;   };   {     if ! [ "$(printf "%s\n%s" "${VERSION}" "5.1" | sort -V | head -1)" != "${VERSION}" ]; then       apt-get install -y --no-install-recommends         python2;     elif ! [ "$(printf "%s\n%s" "${VERSION}" "6.2.0.3" | sort -V | head -1)" != "${VERSION}" ]; then       apt-get install -y --no-install-recommends         python3         python3-distutils;     fi;   };   {     ar -x aerospike/aerospike-tools*.deb --output aerospike/pkg;     tar xf aerospike/pkg/data.tar.xz -C aerospike/pkg/;   };   {     find aerospike/pkg/opt/aerospike/bin/ -user aerospike -group aerospike -exec chown root:root {} +;     mv aerospike/pkg/etc/aerospike/astools.conf /etc/aerospike;     if ! [ "$(printf "%s\n%s" "${VERSION}" "6.2" | sort -V | head -1)" != "${VERSION}" ]; then        mv aerospike/pkg/opt/aerospike/bin/aql /usr/bin;     fi;     if [ -d 'aerospike/pkg/opt/aerospike/bin/asadm' ]; then       mv aerospike/pkg/opt/aerospike/bin/asadm /usr/lib/;     else       mkdir /usr/lib/asadm;       mv aerospike/pkg/opt/aerospike/bin/asadm /usr/lib/asadm/;     fi;     ln -s /usr/lib/asadm/asadm /usr/bin/asadm;     if [ -f 'aerospike/pkg/opt/aerospike/bin/asinfo' ]; then       mv aerospike/pkg/opt/aerospike/bin/asinfo /usr/lib/asadm/;     fi;     ln -s /usr/lib/asadm/asinfo /usr/bin/asinfo;   };   {     rm -rf aerospike;   };   {     rm -rf /var/lib/apt/lists/*;     dpkg --purge       apt-utils       binutils       ca-certificates       curl       xz-utils 2>&1;     apt-get purge -y;     apt-get autoremove -y;     unset DEBIAN_FRONTEND;   };   echo "done"; # buildkit
+# Thu, 21 Nov 2024 04:27:43 GMT
+COPY aerospike.template.conf /etc/aerospike/aerospike.template.conf # buildkit
+# Thu, 21 Nov 2024 04:27:43 GMT
+EXPOSE map[3000/tcp:{} 3001/tcp:{} 3002/tcp:{}]
+# Thu, 21 Nov 2024 04:27:43 GMT
+COPY entrypoint.sh /entrypoint.sh # buildkit
+# Thu, 21 Nov 2024 04:27:43 GMT
 ENTRYPOINT ["/usr/bin/as-tini-static" "-r" "SIGUSR1" "-t" "SIGTERM" "--" "/entrypoint.sh"]
-# Fri, 26 May 2023 22:46:43 GMT
+# Thu, 21 Nov 2024 04:27:43 GMT
 CMD ["asd"]
 ```
 
 -	Layers:
-	-	`sha256:f03b40093957615593f2ed142961afb6b540507e0b47e3f7626ba5e02efbbbf1`  
-		Last Modified: Tue, 23 May 2023 01:24:08 GMT  
-		Size: 31.4 MB (31403586 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c3f05441c39f65403fd6b2f32d7796e3d6e9b98064b73be166facefd9a0bfde3`  
-		Last Modified: Fri, 26 May 2023 22:47:25 GMT  
-		Size: 49.9 MB (49867111 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:26b7c648c9f6935dc34d8a36e752ed8a89b947782b3dccb0e6be2435f30e9476`  
-		Last Modified: Fri, 26 May 2023 22:47:19 GMT  
-		Size: 1.1 KB (1088 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c0d40c4ed9f0fe3a634bba81177e10b3752ddcfaa841fb1ca3f40d7ec44abea0`  
-		Last Modified: Fri, 26 May 2023 22:47:18 GMT  
-		Size: 1.1 KB (1098 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:de44b265507ae44b212defcb50694d666f136b35c1090d9709068bc861bb2d64`  
+		Last Modified: Tue, 19 Nov 2024 17:38:27 GMT  
+		Size: 29.8 MB (29751968 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:972e69c538f28f29a487245b15489d37a39f2b87cd21da9b0c04b5342562eb39`  
+		Last Modified: Tue, 03 Dec 2024 02:15:47 GMT  
+		Size: 51.9 MB (51938715 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:49c31220b40c155714a42b9cdc78e640641f3639d087e4f30dd5805113e62250`  
+		Last Modified: Tue, 03 Dec 2024 02:15:46 GMT  
+		Size: 1.2 KB (1196 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:4de3fee3a919bd81fb722b4429c8191e32da1b8d05e385d25d89dad0358e8ef4`  
+		Last Modified: Tue, 03 Dec 2024 02:15:46 GMT  
+		Size: 1.1 KB (1107 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
 
-### `aerospike:ee-6.3.0.4` - linux; arm64 variant v8
+### `aerospike:ee-7.2.0.4` - unknown; unknown
 
 ```console
-$ docker pull aerospike@sha256:170091f8cc31e6d393ff4eacb7843b3a7144e50d48da4e2fdfc69c1de6291fdc
+$ docker pull aerospike@sha256:09b475f454a6791e7d5a162135365dee529b91a2e29cbf94750422586c572e33
 ```
 
--	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **79.4 MB (79379521 bytes)**  
+-	Total Size: **2.0 MB (1986414 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:7822e91e44f19be8a2d88c94a0baa6fae80eb44118d4fc8bb607ac1d74a31ff4`
+-	Image ID: `sha256:1ef86a0b21d158fb9be948c20444c43501ba755ca7794f2f906c634c9220e9d8`
+
+```dockerfile
+```
+
+-	Layers:
+	-	`sha256:fe9ee30b9083b7bf8d2dedb49b05e5907843d3776b83d6126ca02fea2baf166f`  
+		Last Modified: Tue, 03 Dec 2024 02:15:46 GMT  
+		Size: 2.0 MB (1957251 bytes)  
+		MIME: application/vnd.in-toto+json
+	-	`sha256:4ff996512b67a54be1997a161f5bb31e4bc33a2297884795688e4c2e3c14f596`  
+		Last Modified: Tue, 03 Dec 2024 02:15:46 GMT  
+		Size: 29.2 KB (29163 bytes)  
+		MIME: application/vnd.in-toto+json
+
+### `aerospike:ee-7.2.0.4` - linux; arm64 variant v8
+
+```console
+$ docker pull aerospike@sha256:9ba3751aee6125da065306876125cdf545759a80988314c5237a893d9fdf4d6a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **80.3 MB (80275044 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:0f478f98324c517a69b4f8e2ada14abd50dc95faae7231747d77395fe4cd7318`
 -	Entrypoint: `["\/usr\/bin\/as-tini-static","-r","SIGUSR1","-t","SIGTERM","--","\/entrypoint.sh"]`
 -	Default Command: `["asd"]`
 -	`SHELL`: `["\/bin\/bash","-Eeuo","pipefail","-c"]`
 
 ```dockerfile
-# Tue, 23 May 2023 00:43:15 GMT
-ADD file:0fee550e337f1bd111a7ef785a9553674f25649f37deffa4aa8107ef6445d259 in / 
-# Tue, 23 May 2023 00:43:15 GMT
-CMD ["bash"]
-# Tue, 23 May 2023 01:22:45 GMT
+# Tue, 19 Nov 2024 16:18:45 GMT
+ARG RELEASE
+# Tue, 19 Nov 2024 16:18:45 GMT
+ARG LAUNCHPAD_BUILD_ARCH
+# Tue, 19 Nov 2024 16:18:45 GMT
+LABEL org.opencontainers.image.ref.name=ubuntu
+# Tue, 19 Nov 2024 16:18:45 GMT
+LABEL org.opencontainers.image.version=24.04
+# Tue, 19 Nov 2024 16:18:47 GMT
+ADD file:765dfd09ec2ac4870c8b3efd6ef4a994f99695c574d546d7a9a0e69bbb970b03 in / 
+# Tue, 19 Nov 2024 16:18:47 GMT
+CMD ["/bin/bash"]
+# Thu, 21 Nov 2024 04:27:43 GMT
+LABEL org.opencontainers.image.title=Aerospike Enterprise Server org.opencontainers.image.description=Aerospike is a real-time database with predictable performance at petabyte scale with microsecond latency over billions of transactions. org.opencontainers.image.documentation=https://hub.docker.com/_/aerospike org.opencontainers.image.base.name=docker.io/library/ubuntu:24.04 org.opencontainers.image.source=https://github.com/aerospike/aerospike-server.docker org.opencontainers.image.vendor=Aerospike org.opencontainers.image.version=7.2.0.4 org.opencontainers.image.url=https://github.com/aerospike/aerospike-server.docker
+# Thu, 21 Nov 2024 04:27:43 GMT
 ARG AEROSPIKE_EDITION=enterprise
-# Thu, 25 May 2023 22:40:24 GMT
-ARG AEROSPIKE_X86_64_LINK=https://artifacts.aerospike.com/aerospike-server-enterprise/6.3.0.4/aerospike-server-enterprise_6.3.0.4_tools-8.3.0_debian11_x86_64.tgz
-# Thu, 25 May 2023 22:40:24 GMT
-ARG AEROSPIKE_SHA_X86_64=85e25980c7e4d69d06cac1d1d17472c3beb2b79d4807232b84bb3dafa9de9ec0
-# Thu, 25 May 2023 22:40:24 GMT
-ARG AEROSPIKE_AARCH64_LINK=https://artifacts.aerospike.com/aerospike-server-enterprise/6.3.0.4/aerospike-server-enterprise_6.3.0.4_tools-8.3.0_debian11_aarch64.tgz
-# Thu, 25 May 2023 22:40:24 GMT
-ARG AEROSPIKE_SHA_AARCH64=74ae4f799b154e6eac9f8df9be3ae8b2d2d3abb5fefc783ee6b2df8dc97080ab
-# Thu, 25 May 2023 22:40:24 GMT
+# Thu, 21 Nov 2024 04:27:43 GMT
+ARG AEROSPIKE_X86_64_LINK=https://artifacts.aerospike.com/aerospike-server-enterprise/7.2.0.4/aerospike-server-enterprise_7.2.0.4_tools-11.1.1_ubuntu24.04_x86_64.tgz
+# Thu, 21 Nov 2024 04:27:43 GMT
+ARG AEROSPIKE_SHA_X86_64=56b9d435b7ad1cabb6ae2af5e3a25d82937bbbce9807f7b54234a41a8b1252ef
+# Thu, 21 Nov 2024 04:27:43 GMT
+ARG AEROSPIKE_AARCH64_LINK=https://artifacts.aerospike.com/aerospike-server-enterprise/7.2.0.4/aerospike-server-enterprise_7.2.0.4_tools-11.1.1_ubuntu24.04_aarch64.tgz
+# Thu, 21 Nov 2024 04:27:43 GMT
+ARG AEROSPIKE_SHA_AARCH64=16bc0a9d9a181ab84fafafcc54849b3de7587522ff279f5ff897c73c953cc068
+# Thu, 21 Nov 2024 04:27:43 GMT
 SHELL [/bin/bash -Eeuo pipefail -c]
-# Thu, 25 May 2023 22:40:43 GMT
-# ARGS: AEROSPIKE_AARCH64_LINK=https://artifacts.aerospike.com/aerospike-server-enterprise/6.3.0.4/aerospike-server-enterprise_6.3.0.4_tools-8.3.0_debian11_aarch64.tgz AEROSPIKE_EDITION=enterprise AEROSPIKE_SHA_AARCH64=74ae4f799b154e6eac9f8df9be3ae8b2d2d3abb5fefc783ee6b2df8dc97080ab AEROSPIKE_SHA_X86_64=85e25980c7e4d69d06cac1d1d17472c3beb2b79d4807232b84bb3dafa9de9ec0 AEROSPIKE_X86_64_LINK=https://artifacts.aerospike.com/aerospike-server-enterprise/6.3.0.4/aerospike-server-enterprise_6.3.0.4_tools-8.3.0_debian11_x86_64.tgz
-RUN {     export DEBIAN_FRONTEND=noninteractive;     apt-get update -y;     apt-get install -y --no-install-recommends apt-utils;     apt-get install -y --no-install-recommends       binutils       ca-certificates       curl       xz-utils;   };   {     apt-get install -y --no-install-recommends procps;   };   {     VERSION="$(grep -oE "/[0-9]+[.][0-9]+[.][0-9]+([.][0-9]+)+(-rc[0-9]+)*/" <<<"${AEROSPIKE_X86_64_LINK}" | tr -d '/')";   };   {     ARCH="$(dpkg --print-architecture)";     if [ "${ARCH}" = "amd64" ]; then       sha256=d1f6826dd70cdd88dde3d5a20d8ed248883a3bc2caba3071c8a3a9b0e0de5940;       suffix="";     elif [ "${ARCH}" = "arm64" ]; then       sha256=1c398e5283af2f33888b7d8ac5b01ac89f777ea27c85d25866a40d1e64d0341b;       suffix="-arm64";     else       echo "Unsuported architecture - ${ARCH}" >&2;       exit 1;     fi;     curl -fsSL "https://github.com/aerospike/tini/releases/download/1.0.1/as-tini-static${suffix}" --output /usr/bin/as-tini-static;     echo "${sha256} /usr/bin/as-tini-static" | sha256sum -c -;     chmod +x /usr/bin/as-tini-static;   };   {     ARCH="$(dpkg --print-architecture)";     mkdir -p aerospike/pkg;     if [ "${ARCH}" = "amd64" ]; then       pkg_link="${AEROSPIKE_X86_64_LINK}";       sha256="${AEROSPIKE_SHA_X86_64}";     elif [ "${ARCH}" = "arm64" ]; then       pkg_link="${AEROSPIKE_AARCH64_LINK}";       sha256="${AEROSPIKE_SHA_AARCH64}";     else       echo "Unsuported architecture - ${ARCH}" >&2;       exit 1;     fi;     if ! curl -fsSL "${pkg_link}" --output aerospike-server.tgz; then       echo "Could not fetch pkg - ${pkg_link}" >&2;       exit 1;     fi;     echo "${sha256} aerospike-server.tgz" | sha256sum -c -;     tar xzf aerospike-server.tgz --strip-components=1 -C aerospike;     rm aerospike-server.tgz;     mkdir -p /var/{log,run}/aerospike;     mkdir -p /licenses;     cp aerospike/LICENSE /licenses;   };   {     if [ "${AEROSPIKE_EDITION}" = "enterprise" ]; then       apt-get install -y --no-install-recommends         libcurl4         libldap-2.4.2;     elif ! [ "$(printf "%s\n%s" "${VERSION}" "6.0" | sort -V | head -1)" != "${VERSION}" ]; then       apt-get install -y --no-install-recommends         libcurl4;     fi;     dpkg -i aerospike/aerospike-server-*.deb;     rm -rf /opt/aerospike/bin;   };   {     if ! [ "$(printf "%s\n%s" "${VERSION}" "5.1" | sort -V | head -1)" != "${VERSION}" ]; then       apt-get install -y --no-install-recommends         python2;     elif ! [ "$(printf "%s\n%s" "${VERSION}" "6.2.0.3" | sort -V | head -1)" != "${VERSION}" ]; then       apt-get install -y --no-install-recommends         python3         python3-distutils;     fi;   };   {     pushd aerospike/pkg || exit 1;     ar -x ../aerospike-tools*.deb;     popd || exit 1;     tar xf aerospike/pkg/data.tar.xz -C aerospike/pkg/;   };   {     find aerospike/pkg/opt/aerospike/bin/ -user aerospike -group aerospike -exec chown root:root {} +;     mv aerospike/pkg/etc/aerospike/astools.conf /etc/aerospike;     if ! [ "$(printf "%s\n%s" "${VERSION}" "6.2" | sort -V | head -1)" != "${VERSION}" ]; then        mv aerospike/pkg/opt/aerospike/bin/aql /usr/bin;     fi;     if [ -d 'aerospike/pkg/opt/aerospike/bin/asadm' ]; then       mv aerospike/pkg/opt/aerospike/bin/asadm /usr/lib/;     else       mkdir /usr/lib/asadm;       mv aerospike/pkg/opt/aerospike/bin/asadm /usr/lib/asadm/;     fi;     ln -s /usr/lib/asadm/asadm /usr/bin/asadm;     if [ -f 'aerospike/pkg/opt/aerospike/bin/asinfo' ]; then       mv aerospike/pkg/opt/aerospike/bin/asinfo /usr/lib/asadm/;     fi;     ln -s /usr/lib/asadm/asinfo /usr/bin/asinfo;   };   {     rm -rf aerospike;   };   {     rm -rf /var/lib/apt/lists/*;     dpkg --purge       apt-utils       binutils       ca-certificates       curl       xz-utils 2>&1;     apt-get purge -y;     apt-get autoremove -y;     unset DEBIAN_FRONTEND;   };   echo "done";
-# Thu, 25 May 2023 22:40:44 GMT
-COPY file:c76954551192450f2d9e2a428b0b3a3daeba46fccf29d07ceabb675e275a068e in /etc/aerospike/aerospike.template.conf 
-# Thu, 25 May 2023 22:40:44 GMT
-EXPOSE 3000 3001 3002
-# Thu, 25 May 2023 22:40:44 GMT
-COPY file:57ed4c0390f91371a6d5ddbdf0ecf475b40dc8871b369f3100b157df0d753fc5 in /entrypoint.sh 
-# Thu, 25 May 2023 22:40:44 GMT
+# Thu, 21 Nov 2024 04:27:43 GMT
+# ARGS: AEROSPIKE_EDITION=enterprise AEROSPIKE_X86_64_LINK=https://artifacts.aerospike.com/aerospike-server-enterprise/7.2.0.4/aerospike-server-enterprise_7.2.0.4_tools-11.1.1_ubuntu24.04_x86_64.tgz AEROSPIKE_SHA_X86_64=56b9d435b7ad1cabb6ae2af5e3a25d82937bbbce9807f7b54234a41a8b1252ef AEROSPIKE_AARCH64_LINK=https://artifacts.aerospike.com/aerospike-server-enterprise/7.2.0.4/aerospike-server-enterprise_7.2.0.4_tools-11.1.1_ubuntu24.04_aarch64.tgz AEROSPIKE_SHA_AARCH64=16bc0a9d9a181ab84fafafcc54849b3de7587522ff279f5ff897c73c953cc068
+RUN {     export DEBIAN_FRONTEND=noninteractive;     apt-get update -y;     apt-get install -y --no-install-recommends apt-utils;     apt-get install -y --no-install-recommends       binutils       ca-certificates       curl       xz-utils;   };   {     apt-get install -y --no-install-recommends procps;   };   {     VERSION="$(grep -oE "/[0-9]+[.][0-9]+[.][0-9]+([.][0-9]+)+(-[a-z0-9]+)?([-][0-9]+[-]g[0-9a-z]*)?/" <<<"${AEROSPIKE_X86_64_LINK}" | tr -d '/' | tail -1)";   };   {     ARCH="$(dpkg --print-architecture)";     if [ "${ARCH}" = "amd64" ]; then       sha256=d1f6826dd70cdd88dde3d5a20d8ed248883a3bc2caba3071c8a3a9b0e0de5940;       suffix="";     elif [ "${ARCH}" = "arm64" ]; then       sha256=1c398e5283af2f33888b7d8ac5b01ac89f777ea27c85d25866a40d1e64d0341b;       suffix="-arm64";     else       echo "Unsuported architecture - ${ARCH}" >&2;       exit 1;     fi;     curl -fsSL "https://github.com/aerospike/tini/releases/download/1.0.1/as-tini-static${suffix}" --output /usr/bin/as-tini-static;     echo "${sha256} /usr/bin/as-tini-static" | sha256sum -c -;     chmod +x /usr/bin/as-tini-static;   };   {     ARCH="$(dpkg --print-architecture)";     mkdir -p aerospike/pkg;     if [ "${ARCH}" = "amd64" ]; then       pkg_link="${AEROSPIKE_X86_64_LINK}";       sha256="${AEROSPIKE_SHA_X86_64}";     elif [ "${ARCH}" = "arm64" ]; then       pkg_link="${AEROSPIKE_AARCH64_LINK}";       sha256="${AEROSPIKE_SHA_AARCH64}";     else       echo "Unsuported architecture - ${ARCH}" >&2;       exit 1;     fi;     if ! curl -fsSL "${pkg_link}" --output aerospike-server.tgz; then       echo "Could not fetch pkg - ${pkg_link}" >&2;       exit 1;     fi;     echo "${sha256} aerospike-server.tgz" | sha256sum -c -;     tar xzf aerospike-server.tgz --strip-components=1 -C aerospike;     rm aerospike-server.tgz;     mkdir -p /var/{log,run}/aerospike;     mkdir -p /licenses;     cp aerospike/LICENSE /licenses;   };   {     if [ "${AEROSPIKE_EDITION}" = "enterprise" ]; then       apt-get install -y --no-install-recommends         libcurl4         libldap-2.4.2;     elif ! [ "$(printf "%s\n%s" "${VERSION}" "6.0" | sort -V | head -1)" != "${VERSION}" ]; then       apt-get install -y --no-install-recommends         libcurl4;     fi;     dpkg -i aerospike/aerospike-server-*.deb;     rm -rf /opt/aerospike/bin;   };   {     if ! [ "$(printf "%s\n%s" "${VERSION}" "5.1" | sort -V | head -1)" != "${VERSION}" ]; then       apt-get install -y --no-install-recommends         python2;     elif ! [ "$(printf "%s\n%s" "${VERSION}" "6.2.0.3" | sort -V | head -1)" != "${VERSION}" ]; then       apt-get install -y --no-install-recommends         python3         python3-distutils;     fi;   };   {     ar -x aerospike/aerospike-tools*.deb --output aerospike/pkg;     tar xf aerospike/pkg/data.tar.xz -C aerospike/pkg/;   };   {     find aerospike/pkg/opt/aerospike/bin/ -user aerospike -group aerospike -exec chown root:root {} +;     mv aerospike/pkg/etc/aerospike/astools.conf /etc/aerospike;     if ! [ "$(printf "%s\n%s" "${VERSION}" "6.2" | sort -V | head -1)" != "${VERSION}" ]; then        mv aerospike/pkg/opt/aerospike/bin/aql /usr/bin;     fi;     if [ -d 'aerospike/pkg/opt/aerospike/bin/asadm' ]; then       mv aerospike/pkg/opt/aerospike/bin/asadm /usr/lib/;     else       mkdir /usr/lib/asadm;       mv aerospike/pkg/opt/aerospike/bin/asadm /usr/lib/asadm/;     fi;     ln -s /usr/lib/asadm/asadm /usr/bin/asadm;     if [ -f 'aerospike/pkg/opt/aerospike/bin/asinfo' ]; then       mv aerospike/pkg/opt/aerospike/bin/asinfo /usr/lib/asadm/;     fi;     ln -s /usr/lib/asadm/asinfo /usr/bin/asinfo;   };   {     rm -rf aerospike;   };   {     rm -rf /var/lib/apt/lists/*;     dpkg --purge       apt-utils       binutils       ca-certificates       curl       xz-utils 2>&1;     apt-get purge -y;     apt-get autoremove -y;     unset DEBIAN_FRONTEND;   };   echo "done"; # buildkit
+# Thu, 21 Nov 2024 04:27:43 GMT
+COPY aerospike.template.conf /etc/aerospike/aerospike.template.conf # buildkit
+# Thu, 21 Nov 2024 04:27:43 GMT
+EXPOSE map[3000/tcp:{} 3001/tcp:{} 3002/tcp:{}]
+# Thu, 21 Nov 2024 04:27:43 GMT
+COPY entrypoint.sh /entrypoint.sh # buildkit
+# Thu, 21 Nov 2024 04:27:43 GMT
 ENTRYPOINT ["/usr/bin/as-tini-static" "-r" "SIGUSR1" "-t" "SIGTERM" "--" "/entrypoint.sh"]
-# Thu, 25 May 2023 22:40:44 GMT
+# Thu, 21 Nov 2024 04:27:43 GMT
 CMD ["asd"]
 ```
 
 -	Layers:
-	-	`sha256:d981f2c20c93e1c57a46cd87bc5b9a554be5323072a0d0ab4b354aabd237bbcf`  
-		Last Modified: Tue, 23 May 2023 00:46:07 GMT  
-		Size: 30.1 MB (30052747 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e6dde83835e0ce107c45a1cf6a33198bbeb95cd467612818680f3981bce632a6`  
-		Last Modified: Thu, 25 May 2023 22:41:18 GMT  
-		Size: 49.3 MB (49324584 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6d51ea54a2b115e4a05a212874c17f1cde085c722dceadde1fa33e3be97443fb`  
-		Last Modified: Thu, 25 May 2023 22:41:12 GMT  
-		Size: 1.1 KB (1091 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:24a74d7f989fd60a14f18e4c6fcdb5aa30e480350c7665034561090dbb130784`  
-		Last Modified: Thu, 25 May 2023 22:41:12 GMT  
-		Size: 1.1 KB (1099 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:8bb55f0677778c3027fcc4253dc452bc9c22de989a696391e739fb1cdbbdb4c2`  
+		Last Modified: Tue, 19 Nov 2024 17:38:33 GMT  
+		Size: 28.9 MB (28892671 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:b2d479c431296cfa67b42627d6e5762f86161e2d60cd67cf95b31b93079a65c2`  
+		Last Modified: Tue, 03 Dec 2024 05:37:46 GMT  
+		Size: 51.4 MB (51380071 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:6420c19d9909118068b7cfd2cb19818bcc869f7e0bbfdc4e4dab5f070371d3f1`  
+		Last Modified: Tue, 03 Dec 2024 05:37:44 GMT  
+		Size: 1.2 KB (1196 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:f30084fb2780b4b63dc37a51579d32d39cc9d57a747f3c899d89330593f36515`  
+		Last Modified: Tue, 03 Dec 2024 05:37:44 GMT  
+		Size: 1.1 KB (1106 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
 
-## `aerospike:ee-6.3.0.4_1`
+### `aerospike:ee-7.2.0.4` - unknown; unknown
 
 ```console
-$ docker pull aerospike@sha256:ec65c99ab1cedd1f109f2af76c612f070649580fde3b9c0c816f0b38f66eef4d
+$ docker pull aerospike@sha256:c986563265207bfc853b175472359a5134fa8bc308b59e83d47cdac99202ae74
 ```
 
--	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms: 2
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **2.0 MB (1988765 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:527a49b4f5c016b83241a4294d4077bffbf9a43a896936d5aeb6bc22c27de8db`
+
+```dockerfile
+```
+
+-	Layers:
+	-	`sha256:88880498b02135c05227166c3f553d468388b18b0ecc42ae27888ee5ec1a9ddb`  
+		Last Modified: Tue, 03 Dec 2024 05:37:45 GMT  
+		Size: 2.0 MB (1959522 bytes)  
+		MIME: application/vnd.in-toto+json
+	-	`sha256:40e8027a16412ba3a6aa4dc29e8905f0232f82570ee30ecd2abbe8d0d1cb8412`  
+		Last Modified: Tue, 03 Dec 2024 05:37:44 GMT  
+		Size: 29.2 KB (29243 bytes)  
+		MIME: application/vnd.in-toto+json
+
+## `aerospike:ee-7.2.0.4_1`
+
+```console
+$ docker pull aerospike@sha256:3de876e61aed9db6de4e74313103a8d20cc43b6777bd687b659e20f63d949235
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 4
 	-	linux; amd64
+	-	unknown; unknown
 	-	linux; arm64 variant v8
+	-	unknown; unknown
 
-### `aerospike:ee-6.3.0.4_1` - linux; amd64
+### `aerospike:ee-7.2.0.4_1` - linux; amd64
 
 ```console
-$ docker pull aerospike@sha256:98bc0d8db237e1a1caed06c5ec6450c524110d1878115bab7fc9ca96c91dedab
+$ docker pull aerospike@sha256:b27e69037e07863088279f358ed20ecd437ef9443b13afb23131058808a63374
 ```
 
--	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **81.3 MB (81272883 bytes)**  
+-	Total Size: **81.7 MB (81692986 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:e9bb5dcad8518fe67cb43ad7c1ec0994f3d747429355fb41a882b9be622437aa`
+-	Image ID: `sha256:3b94065e1a1ddb3b68c50e5143b10cf022e0b4be274d54783603a0edcbb72643`
 -	Entrypoint: `["\/usr\/bin\/as-tini-static","-r","SIGUSR1","-t","SIGTERM","--","\/entrypoint.sh"]`
 -	Default Command: `["asd"]`
 -	`SHELL`: `["\/bin\/bash","-Eeuo","pipefail","-c"]`
 
 ```dockerfile
-# Tue, 23 May 2023 01:20:14 GMT
-ADD file:88252a7f118b4d6f55dd5baf49dbcaa053c9d6172c652963c1151fa76f625e44 in / 
-# Tue, 23 May 2023 01:20:14 GMT
-CMD ["bash"]
-# Tue, 23 May 2023 08:02:38 GMT
+# Tue, 19 Nov 2024 17:29:23 GMT
+ARG RELEASE
+# Tue, 19 Nov 2024 17:29:23 GMT
+ARG LAUNCHPAD_BUILD_ARCH
+# Tue, 19 Nov 2024 17:29:23 GMT
+LABEL org.opencontainers.image.ref.name=ubuntu
+# Tue, 19 Nov 2024 17:29:23 GMT
+LABEL org.opencontainers.image.version=24.04
+# Tue, 19 Nov 2024 17:29:25 GMT
+ADD file:bcebbf0fddcba5b864d5d267b68dd23bcfb01275e6ec7bcab69bf8b56af14804 in / 
+# Tue, 19 Nov 2024 17:29:25 GMT
+CMD ["/bin/bash"]
+# Thu, 21 Nov 2024 04:27:43 GMT
+LABEL org.opencontainers.image.title=Aerospike Enterprise Server org.opencontainers.image.description=Aerospike is a real-time database with predictable performance at petabyte scale with microsecond latency over billions of transactions. org.opencontainers.image.documentation=https://hub.docker.com/_/aerospike org.opencontainers.image.base.name=docker.io/library/ubuntu:24.04 org.opencontainers.image.source=https://github.com/aerospike/aerospike-server.docker org.opencontainers.image.vendor=Aerospike org.opencontainers.image.version=7.2.0.4 org.opencontainers.image.url=https://github.com/aerospike/aerospike-server.docker
+# Thu, 21 Nov 2024 04:27:43 GMT
 ARG AEROSPIKE_EDITION=enterprise
-# Fri, 26 May 2023 22:46:20 GMT
-ARG AEROSPIKE_X86_64_LINK=https://artifacts.aerospike.com/aerospike-server-enterprise/6.3.0.4/aerospike-server-enterprise_6.3.0.4_tools-8.3.0_debian11_x86_64.tgz
-# Fri, 26 May 2023 22:46:20 GMT
-ARG AEROSPIKE_SHA_X86_64=85e25980c7e4d69d06cac1d1d17472c3beb2b79d4807232b84bb3dafa9de9ec0
-# Fri, 26 May 2023 22:46:20 GMT
-ARG AEROSPIKE_AARCH64_LINK=https://artifacts.aerospike.com/aerospike-server-enterprise/6.3.0.4/aerospike-server-enterprise_6.3.0.4_tools-8.3.0_debian11_aarch64.tgz
-# Fri, 26 May 2023 22:46:20 GMT
-ARG AEROSPIKE_SHA_AARCH64=74ae4f799b154e6eac9f8df9be3ae8b2d2d3abb5fefc783ee6b2df8dc97080ab
-# Fri, 26 May 2023 22:46:20 GMT
+# Thu, 21 Nov 2024 04:27:43 GMT
+ARG AEROSPIKE_X86_64_LINK=https://artifacts.aerospike.com/aerospike-server-enterprise/7.2.0.4/aerospike-server-enterprise_7.2.0.4_tools-11.1.1_ubuntu24.04_x86_64.tgz
+# Thu, 21 Nov 2024 04:27:43 GMT
+ARG AEROSPIKE_SHA_X86_64=56b9d435b7ad1cabb6ae2af5e3a25d82937bbbce9807f7b54234a41a8b1252ef
+# Thu, 21 Nov 2024 04:27:43 GMT
+ARG AEROSPIKE_AARCH64_LINK=https://artifacts.aerospike.com/aerospike-server-enterprise/7.2.0.4/aerospike-server-enterprise_7.2.0.4_tools-11.1.1_ubuntu24.04_aarch64.tgz
+# Thu, 21 Nov 2024 04:27:43 GMT
+ARG AEROSPIKE_SHA_AARCH64=16bc0a9d9a181ab84fafafcc54849b3de7587522ff279f5ff897c73c953cc068
+# Thu, 21 Nov 2024 04:27:43 GMT
 SHELL [/bin/bash -Eeuo pipefail -c]
-# Fri, 26 May 2023 22:46:43 GMT
-# ARGS: AEROSPIKE_AARCH64_LINK=https://artifacts.aerospike.com/aerospike-server-enterprise/6.3.0.4/aerospike-server-enterprise_6.3.0.4_tools-8.3.0_debian11_aarch64.tgz AEROSPIKE_EDITION=enterprise AEROSPIKE_SHA_AARCH64=74ae4f799b154e6eac9f8df9be3ae8b2d2d3abb5fefc783ee6b2df8dc97080ab AEROSPIKE_SHA_X86_64=85e25980c7e4d69d06cac1d1d17472c3beb2b79d4807232b84bb3dafa9de9ec0 AEROSPIKE_X86_64_LINK=https://artifacts.aerospike.com/aerospike-server-enterprise/6.3.0.4/aerospike-server-enterprise_6.3.0.4_tools-8.3.0_debian11_x86_64.tgz
-RUN {     export DEBIAN_FRONTEND=noninteractive;     apt-get update -y;     apt-get install -y --no-install-recommends apt-utils;     apt-get install -y --no-install-recommends       binutils       ca-certificates       curl       xz-utils;   };   {     apt-get install -y --no-install-recommends procps;   };   {     VERSION="$(grep -oE "/[0-9]+[.][0-9]+[.][0-9]+([.][0-9]+)+(-rc[0-9]+)*/" <<<"${AEROSPIKE_X86_64_LINK}" | tr -d '/')";   };   {     ARCH="$(dpkg --print-architecture)";     if [ "${ARCH}" = "amd64" ]; then       sha256=d1f6826dd70cdd88dde3d5a20d8ed248883a3bc2caba3071c8a3a9b0e0de5940;       suffix="";     elif [ "${ARCH}" = "arm64" ]; then       sha256=1c398e5283af2f33888b7d8ac5b01ac89f777ea27c85d25866a40d1e64d0341b;       suffix="-arm64";     else       echo "Unsuported architecture - ${ARCH}" >&2;       exit 1;     fi;     curl -fsSL "https://github.com/aerospike/tini/releases/download/1.0.1/as-tini-static${suffix}" --output /usr/bin/as-tini-static;     echo "${sha256} /usr/bin/as-tini-static" | sha256sum -c -;     chmod +x /usr/bin/as-tini-static;   };   {     ARCH="$(dpkg --print-architecture)";     mkdir -p aerospike/pkg;     if [ "${ARCH}" = "amd64" ]; then       pkg_link="${AEROSPIKE_X86_64_LINK}";       sha256="${AEROSPIKE_SHA_X86_64}";     elif [ "${ARCH}" = "arm64" ]; then       pkg_link="${AEROSPIKE_AARCH64_LINK}";       sha256="${AEROSPIKE_SHA_AARCH64}";     else       echo "Unsuported architecture - ${ARCH}" >&2;       exit 1;     fi;     if ! curl -fsSL "${pkg_link}" --output aerospike-server.tgz; then       echo "Could not fetch pkg - ${pkg_link}" >&2;       exit 1;     fi;     echo "${sha256} aerospike-server.tgz" | sha256sum -c -;     tar xzf aerospike-server.tgz --strip-components=1 -C aerospike;     rm aerospike-server.tgz;     mkdir -p /var/{log,run}/aerospike;     mkdir -p /licenses;     cp aerospike/LICENSE /licenses;   };   {     if [ "${AEROSPIKE_EDITION}" = "enterprise" ]; then       apt-get install -y --no-install-recommends         libcurl4         libldap-2.4.2;     elif ! [ "$(printf "%s\n%s" "${VERSION}" "6.0" | sort -V | head -1)" != "${VERSION}" ]; then       apt-get install -y --no-install-recommends         libcurl4;     fi;     dpkg -i aerospike/aerospike-server-*.deb;     rm -rf /opt/aerospike/bin;   };   {     if ! [ "$(printf "%s\n%s" "${VERSION}" "5.1" | sort -V | head -1)" != "${VERSION}" ]; then       apt-get install -y --no-install-recommends         python2;     elif ! [ "$(printf "%s\n%s" "${VERSION}" "6.2.0.3" | sort -V | head -1)" != "${VERSION}" ]; then       apt-get install -y --no-install-recommends         python3         python3-distutils;     fi;   };   {     pushd aerospike/pkg || exit 1;     ar -x ../aerospike-tools*.deb;     popd || exit 1;     tar xf aerospike/pkg/data.tar.xz -C aerospike/pkg/;   };   {     find aerospike/pkg/opt/aerospike/bin/ -user aerospike -group aerospike -exec chown root:root {} +;     mv aerospike/pkg/etc/aerospike/astools.conf /etc/aerospike;     if ! [ "$(printf "%s\n%s" "${VERSION}" "6.2" | sort -V | head -1)" != "${VERSION}" ]; then        mv aerospike/pkg/opt/aerospike/bin/aql /usr/bin;     fi;     if [ -d 'aerospike/pkg/opt/aerospike/bin/asadm' ]; then       mv aerospike/pkg/opt/aerospike/bin/asadm /usr/lib/;     else       mkdir /usr/lib/asadm;       mv aerospike/pkg/opt/aerospike/bin/asadm /usr/lib/asadm/;     fi;     ln -s /usr/lib/asadm/asadm /usr/bin/asadm;     if [ -f 'aerospike/pkg/opt/aerospike/bin/asinfo' ]; then       mv aerospike/pkg/opt/aerospike/bin/asinfo /usr/lib/asadm/;     fi;     ln -s /usr/lib/asadm/asinfo /usr/bin/asinfo;   };   {     rm -rf aerospike;   };   {     rm -rf /var/lib/apt/lists/*;     dpkg --purge       apt-utils       binutils       ca-certificates       curl       xz-utils 2>&1;     apt-get purge -y;     apt-get autoremove -y;     unset DEBIAN_FRONTEND;   };   echo "done";
-# Fri, 26 May 2023 22:46:43 GMT
-COPY file:c76954551192450f2d9e2a428b0b3a3daeba46fccf29d07ceabb675e275a068e in /etc/aerospike/aerospike.template.conf 
-# Fri, 26 May 2023 22:46:43 GMT
-EXPOSE 3000 3001 3002
-# Fri, 26 May 2023 22:46:43 GMT
-COPY file:57ed4c0390f91371a6d5ddbdf0ecf475b40dc8871b369f3100b157df0d753fc5 in /entrypoint.sh 
-# Fri, 26 May 2023 22:46:43 GMT
+# Thu, 21 Nov 2024 04:27:43 GMT
+# ARGS: AEROSPIKE_EDITION=enterprise AEROSPIKE_X86_64_LINK=https://artifacts.aerospike.com/aerospike-server-enterprise/7.2.0.4/aerospike-server-enterprise_7.2.0.4_tools-11.1.1_ubuntu24.04_x86_64.tgz AEROSPIKE_SHA_X86_64=56b9d435b7ad1cabb6ae2af5e3a25d82937bbbce9807f7b54234a41a8b1252ef AEROSPIKE_AARCH64_LINK=https://artifacts.aerospike.com/aerospike-server-enterprise/7.2.0.4/aerospike-server-enterprise_7.2.0.4_tools-11.1.1_ubuntu24.04_aarch64.tgz AEROSPIKE_SHA_AARCH64=16bc0a9d9a181ab84fafafcc54849b3de7587522ff279f5ff897c73c953cc068
+RUN {     export DEBIAN_FRONTEND=noninteractive;     apt-get update -y;     apt-get install -y --no-install-recommends apt-utils;     apt-get install -y --no-install-recommends       binutils       ca-certificates       curl       xz-utils;   };   {     apt-get install -y --no-install-recommends procps;   };   {     VERSION="$(grep -oE "/[0-9]+[.][0-9]+[.][0-9]+([.][0-9]+)+(-[a-z0-9]+)?([-][0-9]+[-]g[0-9a-z]*)?/" <<<"${AEROSPIKE_X86_64_LINK}" | tr -d '/' | tail -1)";   };   {     ARCH="$(dpkg --print-architecture)";     if [ "${ARCH}" = "amd64" ]; then       sha256=d1f6826dd70cdd88dde3d5a20d8ed248883a3bc2caba3071c8a3a9b0e0de5940;       suffix="";     elif [ "${ARCH}" = "arm64" ]; then       sha256=1c398e5283af2f33888b7d8ac5b01ac89f777ea27c85d25866a40d1e64d0341b;       suffix="-arm64";     else       echo "Unsuported architecture - ${ARCH}" >&2;       exit 1;     fi;     curl -fsSL "https://github.com/aerospike/tini/releases/download/1.0.1/as-tini-static${suffix}" --output /usr/bin/as-tini-static;     echo "${sha256} /usr/bin/as-tini-static" | sha256sum -c -;     chmod +x /usr/bin/as-tini-static;   };   {     ARCH="$(dpkg --print-architecture)";     mkdir -p aerospike/pkg;     if [ "${ARCH}" = "amd64" ]; then       pkg_link="${AEROSPIKE_X86_64_LINK}";       sha256="${AEROSPIKE_SHA_X86_64}";     elif [ "${ARCH}" = "arm64" ]; then       pkg_link="${AEROSPIKE_AARCH64_LINK}";       sha256="${AEROSPIKE_SHA_AARCH64}";     else       echo "Unsuported architecture - ${ARCH}" >&2;       exit 1;     fi;     if ! curl -fsSL "${pkg_link}" --output aerospike-server.tgz; then       echo "Could not fetch pkg - ${pkg_link}" >&2;       exit 1;     fi;     echo "${sha256} aerospike-server.tgz" | sha256sum -c -;     tar xzf aerospike-server.tgz --strip-components=1 -C aerospike;     rm aerospike-server.tgz;     mkdir -p /var/{log,run}/aerospike;     mkdir -p /licenses;     cp aerospike/LICENSE /licenses;   };   {     if [ "${AEROSPIKE_EDITION}" = "enterprise" ]; then       apt-get install -y --no-install-recommends         libcurl4         libldap-2.4.2;     elif ! [ "$(printf "%s\n%s" "${VERSION}" "6.0" | sort -V | head -1)" != "${VERSION}" ]; then       apt-get install -y --no-install-recommends         libcurl4;     fi;     dpkg -i aerospike/aerospike-server-*.deb;     rm -rf /opt/aerospike/bin;   };   {     if ! [ "$(printf "%s\n%s" "${VERSION}" "5.1" | sort -V | head -1)" != "${VERSION}" ]; then       apt-get install -y --no-install-recommends         python2;     elif ! [ "$(printf "%s\n%s" "${VERSION}" "6.2.0.3" | sort -V | head -1)" != "${VERSION}" ]; then       apt-get install -y --no-install-recommends         python3         python3-distutils;     fi;   };   {     ar -x aerospike/aerospike-tools*.deb --output aerospike/pkg;     tar xf aerospike/pkg/data.tar.xz -C aerospike/pkg/;   };   {     find aerospike/pkg/opt/aerospike/bin/ -user aerospike -group aerospike -exec chown root:root {} +;     mv aerospike/pkg/etc/aerospike/astools.conf /etc/aerospike;     if ! [ "$(printf "%s\n%s" "${VERSION}" "6.2" | sort -V | head -1)" != "${VERSION}" ]; then        mv aerospike/pkg/opt/aerospike/bin/aql /usr/bin;     fi;     if [ -d 'aerospike/pkg/opt/aerospike/bin/asadm' ]; then       mv aerospike/pkg/opt/aerospike/bin/asadm /usr/lib/;     else       mkdir /usr/lib/asadm;       mv aerospike/pkg/opt/aerospike/bin/asadm /usr/lib/asadm/;     fi;     ln -s /usr/lib/asadm/asadm /usr/bin/asadm;     if [ -f 'aerospike/pkg/opt/aerospike/bin/asinfo' ]; then       mv aerospike/pkg/opt/aerospike/bin/asinfo /usr/lib/asadm/;     fi;     ln -s /usr/lib/asadm/asinfo /usr/bin/asinfo;   };   {     rm -rf aerospike;   };   {     rm -rf /var/lib/apt/lists/*;     dpkg --purge       apt-utils       binutils       ca-certificates       curl       xz-utils 2>&1;     apt-get purge -y;     apt-get autoremove -y;     unset DEBIAN_FRONTEND;   };   echo "done"; # buildkit
+# Thu, 21 Nov 2024 04:27:43 GMT
+COPY aerospike.template.conf /etc/aerospike/aerospike.template.conf # buildkit
+# Thu, 21 Nov 2024 04:27:43 GMT
+EXPOSE map[3000/tcp:{} 3001/tcp:{} 3002/tcp:{}]
+# Thu, 21 Nov 2024 04:27:43 GMT
+COPY entrypoint.sh /entrypoint.sh # buildkit
+# Thu, 21 Nov 2024 04:27:43 GMT
 ENTRYPOINT ["/usr/bin/as-tini-static" "-r" "SIGUSR1" "-t" "SIGTERM" "--" "/entrypoint.sh"]
-# Fri, 26 May 2023 22:46:43 GMT
+# Thu, 21 Nov 2024 04:27:43 GMT
 CMD ["asd"]
 ```
 
 -	Layers:
-	-	`sha256:f03b40093957615593f2ed142961afb6b540507e0b47e3f7626ba5e02efbbbf1`  
-		Last Modified: Tue, 23 May 2023 01:24:08 GMT  
-		Size: 31.4 MB (31403586 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c3f05441c39f65403fd6b2f32d7796e3d6e9b98064b73be166facefd9a0bfde3`  
-		Last Modified: Fri, 26 May 2023 22:47:25 GMT  
-		Size: 49.9 MB (49867111 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:26b7c648c9f6935dc34d8a36e752ed8a89b947782b3dccb0e6be2435f30e9476`  
-		Last Modified: Fri, 26 May 2023 22:47:19 GMT  
-		Size: 1.1 KB (1088 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c0d40c4ed9f0fe3a634bba81177e10b3752ddcfaa841fb1ca3f40d7ec44abea0`  
-		Last Modified: Fri, 26 May 2023 22:47:18 GMT  
-		Size: 1.1 KB (1098 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:de44b265507ae44b212defcb50694d666f136b35c1090d9709068bc861bb2d64`  
+		Last Modified: Tue, 19 Nov 2024 17:38:27 GMT  
+		Size: 29.8 MB (29751968 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:972e69c538f28f29a487245b15489d37a39f2b87cd21da9b0c04b5342562eb39`  
+		Last Modified: Tue, 03 Dec 2024 02:15:47 GMT  
+		Size: 51.9 MB (51938715 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:49c31220b40c155714a42b9cdc78e640641f3639d087e4f30dd5805113e62250`  
+		Last Modified: Tue, 03 Dec 2024 02:15:46 GMT  
+		Size: 1.2 KB (1196 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:4de3fee3a919bd81fb722b4429c8191e32da1b8d05e385d25d89dad0358e8ef4`  
+		Last Modified: Tue, 03 Dec 2024 02:15:46 GMT  
+		Size: 1.1 KB (1107 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
 
-### `aerospike:ee-6.3.0.4_1` - linux; arm64 variant v8
+### `aerospike:ee-7.2.0.4_1` - unknown; unknown
 
 ```console
-$ docker pull aerospike@sha256:170091f8cc31e6d393ff4eacb7843b3a7144e50d48da4e2fdfc69c1de6291fdc
+$ docker pull aerospike@sha256:09b475f454a6791e7d5a162135365dee529b91a2e29cbf94750422586c572e33
 ```
 
--	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **79.4 MB (79379521 bytes)**  
+-	Total Size: **2.0 MB (1986414 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:7822e91e44f19be8a2d88c94a0baa6fae80eb44118d4fc8bb607ac1d74a31ff4`
+-	Image ID: `sha256:1ef86a0b21d158fb9be948c20444c43501ba755ca7794f2f906c634c9220e9d8`
+
+```dockerfile
+```
+
+-	Layers:
+	-	`sha256:fe9ee30b9083b7bf8d2dedb49b05e5907843d3776b83d6126ca02fea2baf166f`  
+		Last Modified: Tue, 03 Dec 2024 02:15:46 GMT  
+		Size: 2.0 MB (1957251 bytes)  
+		MIME: application/vnd.in-toto+json
+	-	`sha256:4ff996512b67a54be1997a161f5bb31e4bc33a2297884795688e4c2e3c14f596`  
+		Last Modified: Tue, 03 Dec 2024 02:15:46 GMT  
+		Size: 29.2 KB (29163 bytes)  
+		MIME: application/vnd.in-toto+json
+
+### `aerospike:ee-7.2.0.4_1` - linux; arm64 variant v8
+
+```console
+$ docker pull aerospike@sha256:9ba3751aee6125da065306876125cdf545759a80988314c5237a893d9fdf4d6a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **80.3 MB (80275044 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:0f478f98324c517a69b4f8e2ada14abd50dc95faae7231747d77395fe4cd7318`
 -	Entrypoint: `["\/usr\/bin\/as-tini-static","-r","SIGUSR1","-t","SIGTERM","--","\/entrypoint.sh"]`
 -	Default Command: `["asd"]`
 -	`SHELL`: `["\/bin\/bash","-Eeuo","pipefail","-c"]`
 
 ```dockerfile
-# Tue, 23 May 2023 00:43:15 GMT
-ADD file:0fee550e337f1bd111a7ef785a9553674f25649f37deffa4aa8107ef6445d259 in / 
-# Tue, 23 May 2023 00:43:15 GMT
-CMD ["bash"]
-# Tue, 23 May 2023 01:22:45 GMT
+# Tue, 19 Nov 2024 16:18:45 GMT
+ARG RELEASE
+# Tue, 19 Nov 2024 16:18:45 GMT
+ARG LAUNCHPAD_BUILD_ARCH
+# Tue, 19 Nov 2024 16:18:45 GMT
+LABEL org.opencontainers.image.ref.name=ubuntu
+# Tue, 19 Nov 2024 16:18:45 GMT
+LABEL org.opencontainers.image.version=24.04
+# Tue, 19 Nov 2024 16:18:47 GMT
+ADD file:765dfd09ec2ac4870c8b3efd6ef4a994f99695c574d546d7a9a0e69bbb970b03 in / 
+# Tue, 19 Nov 2024 16:18:47 GMT
+CMD ["/bin/bash"]
+# Thu, 21 Nov 2024 04:27:43 GMT
+LABEL org.opencontainers.image.title=Aerospike Enterprise Server org.opencontainers.image.description=Aerospike is a real-time database with predictable performance at petabyte scale with microsecond latency over billions of transactions. org.opencontainers.image.documentation=https://hub.docker.com/_/aerospike org.opencontainers.image.base.name=docker.io/library/ubuntu:24.04 org.opencontainers.image.source=https://github.com/aerospike/aerospike-server.docker org.opencontainers.image.vendor=Aerospike org.opencontainers.image.version=7.2.0.4 org.opencontainers.image.url=https://github.com/aerospike/aerospike-server.docker
+# Thu, 21 Nov 2024 04:27:43 GMT
 ARG AEROSPIKE_EDITION=enterprise
-# Thu, 25 May 2023 22:40:24 GMT
-ARG AEROSPIKE_X86_64_LINK=https://artifacts.aerospike.com/aerospike-server-enterprise/6.3.0.4/aerospike-server-enterprise_6.3.0.4_tools-8.3.0_debian11_x86_64.tgz
-# Thu, 25 May 2023 22:40:24 GMT
-ARG AEROSPIKE_SHA_X86_64=85e25980c7e4d69d06cac1d1d17472c3beb2b79d4807232b84bb3dafa9de9ec0
-# Thu, 25 May 2023 22:40:24 GMT
-ARG AEROSPIKE_AARCH64_LINK=https://artifacts.aerospike.com/aerospike-server-enterprise/6.3.0.4/aerospike-server-enterprise_6.3.0.4_tools-8.3.0_debian11_aarch64.tgz
-# Thu, 25 May 2023 22:40:24 GMT
-ARG AEROSPIKE_SHA_AARCH64=74ae4f799b154e6eac9f8df9be3ae8b2d2d3abb5fefc783ee6b2df8dc97080ab
-# Thu, 25 May 2023 22:40:24 GMT
+# Thu, 21 Nov 2024 04:27:43 GMT
+ARG AEROSPIKE_X86_64_LINK=https://artifacts.aerospike.com/aerospike-server-enterprise/7.2.0.4/aerospike-server-enterprise_7.2.0.4_tools-11.1.1_ubuntu24.04_x86_64.tgz
+# Thu, 21 Nov 2024 04:27:43 GMT
+ARG AEROSPIKE_SHA_X86_64=56b9d435b7ad1cabb6ae2af5e3a25d82937bbbce9807f7b54234a41a8b1252ef
+# Thu, 21 Nov 2024 04:27:43 GMT
+ARG AEROSPIKE_AARCH64_LINK=https://artifacts.aerospike.com/aerospike-server-enterprise/7.2.0.4/aerospike-server-enterprise_7.2.0.4_tools-11.1.1_ubuntu24.04_aarch64.tgz
+# Thu, 21 Nov 2024 04:27:43 GMT
+ARG AEROSPIKE_SHA_AARCH64=16bc0a9d9a181ab84fafafcc54849b3de7587522ff279f5ff897c73c953cc068
+# Thu, 21 Nov 2024 04:27:43 GMT
 SHELL [/bin/bash -Eeuo pipefail -c]
-# Thu, 25 May 2023 22:40:43 GMT
-# ARGS: AEROSPIKE_AARCH64_LINK=https://artifacts.aerospike.com/aerospike-server-enterprise/6.3.0.4/aerospike-server-enterprise_6.3.0.4_tools-8.3.0_debian11_aarch64.tgz AEROSPIKE_EDITION=enterprise AEROSPIKE_SHA_AARCH64=74ae4f799b154e6eac9f8df9be3ae8b2d2d3abb5fefc783ee6b2df8dc97080ab AEROSPIKE_SHA_X86_64=85e25980c7e4d69d06cac1d1d17472c3beb2b79d4807232b84bb3dafa9de9ec0 AEROSPIKE_X86_64_LINK=https://artifacts.aerospike.com/aerospike-server-enterprise/6.3.0.4/aerospike-server-enterprise_6.3.0.4_tools-8.3.0_debian11_x86_64.tgz
-RUN {     export DEBIAN_FRONTEND=noninteractive;     apt-get update -y;     apt-get install -y --no-install-recommends apt-utils;     apt-get install -y --no-install-recommends       binutils       ca-certificates       curl       xz-utils;   };   {     apt-get install -y --no-install-recommends procps;   };   {     VERSION="$(grep -oE "/[0-9]+[.][0-9]+[.][0-9]+([.][0-9]+)+(-rc[0-9]+)*/" <<<"${AEROSPIKE_X86_64_LINK}" | tr -d '/')";   };   {     ARCH="$(dpkg --print-architecture)";     if [ "${ARCH}" = "amd64" ]; then       sha256=d1f6826dd70cdd88dde3d5a20d8ed248883a3bc2caba3071c8a3a9b0e0de5940;       suffix="";     elif [ "${ARCH}" = "arm64" ]; then       sha256=1c398e5283af2f33888b7d8ac5b01ac89f777ea27c85d25866a40d1e64d0341b;       suffix="-arm64";     else       echo "Unsuported architecture - ${ARCH}" >&2;       exit 1;     fi;     curl -fsSL "https://github.com/aerospike/tini/releases/download/1.0.1/as-tini-static${suffix}" --output /usr/bin/as-tini-static;     echo "${sha256} /usr/bin/as-tini-static" | sha256sum -c -;     chmod +x /usr/bin/as-tini-static;   };   {     ARCH="$(dpkg --print-architecture)";     mkdir -p aerospike/pkg;     if [ "${ARCH}" = "amd64" ]; then       pkg_link="${AEROSPIKE_X86_64_LINK}";       sha256="${AEROSPIKE_SHA_X86_64}";     elif [ "${ARCH}" = "arm64" ]; then       pkg_link="${AEROSPIKE_AARCH64_LINK}";       sha256="${AEROSPIKE_SHA_AARCH64}";     else       echo "Unsuported architecture - ${ARCH}" >&2;       exit 1;     fi;     if ! curl -fsSL "${pkg_link}" --output aerospike-server.tgz; then       echo "Could not fetch pkg - ${pkg_link}" >&2;       exit 1;     fi;     echo "${sha256} aerospike-server.tgz" | sha256sum -c -;     tar xzf aerospike-server.tgz --strip-components=1 -C aerospike;     rm aerospike-server.tgz;     mkdir -p /var/{log,run}/aerospike;     mkdir -p /licenses;     cp aerospike/LICENSE /licenses;   };   {     if [ "${AEROSPIKE_EDITION}" = "enterprise" ]; then       apt-get install -y --no-install-recommends         libcurl4         libldap-2.4.2;     elif ! [ "$(printf "%s\n%s" "${VERSION}" "6.0" | sort -V | head -1)" != "${VERSION}" ]; then       apt-get install -y --no-install-recommends         libcurl4;     fi;     dpkg -i aerospike/aerospike-server-*.deb;     rm -rf /opt/aerospike/bin;   };   {     if ! [ "$(printf "%s\n%s" "${VERSION}" "5.1" | sort -V | head -1)" != "${VERSION}" ]; then       apt-get install -y --no-install-recommends         python2;     elif ! [ "$(printf "%s\n%s" "${VERSION}" "6.2.0.3" | sort -V | head -1)" != "${VERSION}" ]; then       apt-get install -y --no-install-recommends         python3         python3-distutils;     fi;   };   {     pushd aerospike/pkg || exit 1;     ar -x ../aerospike-tools*.deb;     popd || exit 1;     tar xf aerospike/pkg/data.tar.xz -C aerospike/pkg/;   };   {     find aerospike/pkg/opt/aerospike/bin/ -user aerospike -group aerospike -exec chown root:root {} +;     mv aerospike/pkg/etc/aerospike/astools.conf /etc/aerospike;     if ! [ "$(printf "%s\n%s" "${VERSION}" "6.2" | sort -V | head -1)" != "${VERSION}" ]; then        mv aerospike/pkg/opt/aerospike/bin/aql /usr/bin;     fi;     if [ -d 'aerospike/pkg/opt/aerospike/bin/asadm' ]; then       mv aerospike/pkg/opt/aerospike/bin/asadm /usr/lib/;     else       mkdir /usr/lib/asadm;       mv aerospike/pkg/opt/aerospike/bin/asadm /usr/lib/asadm/;     fi;     ln -s /usr/lib/asadm/asadm /usr/bin/asadm;     if [ -f 'aerospike/pkg/opt/aerospike/bin/asinfo' ]; then       mv aerospike/pkg/opt/aerospike/bin/asinfo /usr/lib/asadm/;     fi;     ln -s /usr/lib/asadm/asinfo /usr/bin/asinfo;   };   {     rm -rf aerospike;   };   {     rm -rf /var/lib/apt/lists/*;     dpkg --purge       apt-utils       binutils       ca-certificates       curl       xz-utils 2>&1;     apt-get purge -y;     apt-get autoremove -y;     unset DEBIAN_FRONTEND;   };   echo "done";
-# Thu, 25 May 2023 22:40:44 GMT
-COPY file:c76954551192450f2d9e2a428b0b3a3daeba46fccf29d07ceabb675e275a068e in /etc/aerospike/aerospike.template.conf 
-# Thu, 25 May 2023 22:40:44 GMT
-EXPOSE 3000 3001 3002
-# Thu, 25 May 2023 22:40:44 GMT
-COPY file:57ed4c0390f91371a6d5ddbdf0ecf475b40dc8871b369f3100b157df0d753fc5 in /entrypoint.sh 
-# Thu, 25 May 2023 22:40:44 GMT
+# Thu, 21 Nov 2024 04:27:43 GMT
+# ARGS: AEROSPIKE_EDITION=enterprise AEROSPIKE_X86_64_LINK=https://artifacts.aerospike.com/aerospike-server-enterprise/7.2.0.4/aerospike-server-enterprise_7.2.0.4_tools-11.1.1_ubuntu24.04_x86_64.tgz AEROSPIKE_SHA_X86_64=56b9d435b7ad1cabb6ae2af5e3a25d82937bbbce9807f7b54234a41a8b1252ef AEROSPIKE_AARCH64_LINK=https://artifacts.aerospike.com/aerospike-server-enterprise/7.2.0.4/aerospike-server-enterprise_7.2.0.4_tools-11.1.1_ubuntu24.04_aarch64.tgz AEROSPIKE_SHA_AARCH64=16bc0a9d9a181ab84fafafcc54849b3de7587522ff279f5ff897c73c953cc068
+RUN {     export DEBIAN_FRONTEND=noninteractive;     apt-get update -y;     apt-get install -y --no-install-recommends apt-utils;     apt-get install -y --no-install-recommends       binutils       ca-certificates       curl       xz-utils;   };   {     apt-get install -y --no-install-recommends procps;   };   {     VERSION="$(grep -oE "/[0-9]+[.][0-9]+[.][0-9]+([.][0-9]+)+(-[a-z0-9]+)?([-][0-9]+[-]g[0-9a-z]*)?/" <<<"${AEROSPIKE_X86_64_LINK}" | tr -d '/' | tail -1)";   };   {     ARCH="$(dpkg --print-architecture)";     if [ "${ARCH}" = "amd64" ]; then       sha256=d1f6826dd70cdd88dde3d5a20d8ed248883a3bc2caba3071c8a3a9b0e0de5940;       suffix="";     elif [ "${ARCH}" = "arm64" ]; then       sha256=1c398e5283af2f33888b7d8ac5b01ac89f777ea27c85d25866a40d1e64d0341b;       suffix="-arm64";     else       echo "Unsuported architecture - ${ARCH}" >&2;       exit 1;     fi;     curl -fsSL "https://github.com/aerospike/tini/releases/download/1.0.1/as-tini-static${suffix}" --output /usr/bin/as-tini-static;     echo "${sha256} /usr/bin/as-tini-static" | sha256sum -c -;     chmod +x /usr/bin/as-tini-static;   };   {     ARCH="$(dpkg --print-architecture)";     mkdir -p aerospike/pkg;     if [ "${ARCH}" = "amd64" ]; then       pkg_link="${AEROSPIKE_X86_64_LINK}";       sha256="${AEROSPIKE_SHA_X86_64}";     elif [ "${ARCH}" = "arm64" ]; then       pkg_link="${AEROSPIKE_AARCH64_LINK}";       sha256="${AEROSPIKE_SHA_AARCH64}";     else       echo "Unsuported architecture - ${ARCH}" >&2;       exit 1;     fi;     if ! curl -fsSL "${pkg_link}" --output aerospike-server.tgz; then       echo "Could not fetch pkg - ${pkg_link}" >&2;       exit 1;     fi;     echo "${sha256} aerospike-server.tgz" | sha256sum -c -;     tar xzf aerospike-server.tgz --strip-components=1 -C aerospike;     rm aerospike-server.tgz;     mkdir -p /var/{log,run}/aerospike;     mkdir -p /licenses;     cp aerospike/LICENSE /licenses;   };   {     if [ "${AEROSPIKE_EDITION}" = "enterprise" ]; then       apt-get install -y --no-install-recommends         libcurl4         libldap-2.4.2;     elif ! [ "$(printf "%s\n%s" "${VERSION}" "6.0" | sort -V | head -1)" != "${VERSION}" ]; then       apt-get install -y --no-install-recommends         libcurl4;     fi;     dpkg -i aerospike/aerospike-server-*.deb;     rm -rf /opt/aerospike/bin;   };   {     if ! [ "$(printf "%s\n%s" "${VERSION}" "5.1" | sort -V | head -1)" != "${VERSION}" ]; then       apt-get install -y --no-install-recommends         python2;     elif ! [ "$(printf "%s\n%s" "${VERSION}" "6.2.0.3" | sort -V | head -1)" != "${VERSION}" ]; then       apt-get install -y --no-install-recommends         python3         python3-distutils;     fi;   };   {     ar -x aerospike/aerospike-tools*.deb --output aerospike/pkg;     tar xf aerospike/pkg/data.tar.xz -C aerospike/pkg/;   };   {     find aerospike/pkg/opt/aerospike/bin/ -user aerospike -group aerospike -exec chown root:root {} +;     mv aerospike/pkg/etc/aerospike/astools.conf /etc/aerospike;     if ! [ "$(printf "%s\n%s" "${VERSION}" "6.2" | sort -V | head -1)" != "${VERSION}" ]; then        mv aerospike/pkg/opt/aerospike/bin/aql /usr/bin;     fi;     if [ -d 'aerospike/pkg/opt/aerospike/bin/asadm' ]; then       mv aerospike/pkg/opt/aerospike/bin/asadm /usr/lib/;     else       mkdir /usr/lib/asadm;       mv aerospike/pkg/opt/aerospike/bin/asadm /usr/lib/asadm/;     fi;     ln -s /usr/lib/asadm/asadm /usr/bin/asadm;     if [ -f 'aerospike/pkg/opt/aerospike/bin/asinfo' ]; then       mv aerospike/pkg/opt/aerospike/bin/asinfo /usr/lib/asadm/;     fi;     ln -s /usr/lib/asadm/asinfo /usr/bin/asinfo;   };   {     rm -rf aerospike;   };   {     rm -rf /var/lib/apt/lists/*;     dpkg --purge       apt-utils       binutils       ca-certificates       curl       xz-utils 2>&1;     apt-get purge -y;     apt-get autoremove -y;     unset DEBIAN_FRONTEND;   };   echo "done"; # buildkit
+# Thu, 21 Nov 2024 04:27:43 GMT
+COPY aerospike.template.conf /etc/aerospike/aerospike.template.conf # buildkit
+# Thu, 21 Nov 2024 04:27:43 GMT
+EXPOSE map[3000/tcp:{} 3001/tcp:{} 3002/tcp:{}]
+# Thu, 21 Nov 2024 04:27:43 GMT
+COPY entrypoint.sh /entrypoint.sh # buildkit
+# Thu, 21 Nov 2024 04:27:43 GMT
 ENTRYPOINT ["/usr/bin/as-tini-static" "-r" "SIGUSR1" "-t" "SIGTERM" "--" "/entrypoint.sh"]
-# Thu, 25 May 2023 22:40:44 GMT
+# Thu, 21 Nov 2024 04:27:43 GMT
 CMD ["asd"]
 ```
 
 -	Layers:
-	-	`sha256:d981f2c20c93e1c57a46cd87bc5b9a554be5323072a0d0ab4b354aabd237bbcf`  
-		Last Modified: Tue, 23 May 2023 00:46:07 GMT  
-		Size: 30.1 MB (30052747 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e6dde83835e0ce107c45a1cf6a33198bbeb95cd467612818680f3981bce632a6`  
-		Last Modified: Thu, 25 May 2023 22:41:18 GMT  
-		Size: 49.3 MB (49324584 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6d51ea54a2b115e4a05a212874c17f1cde085c722dceadde1fa33e3be97443fb`  
-		Last Modified: Thu, 25 May 2023 22:41:12 GMT  
-		Size: 1.1 KB (1091 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:24a74d7f989fd60a14f18e4c6fcdb5aa30e480350c7665034561090dbb130784`  
-		Last Modified: Thu, 25 May 2023 22:41:12 GMT  
-		Size: 1.1 KB (1099 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:8bb55f0677778c3027fcc4253dc452bc9c22de989a696391e739fb1cdbbdb4c2`  
+		Last Modified: Tue, 19 Nov 2024 17:38:33 GMT  
+		Size: 28.9 MB (28892671 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:b2d479c431296cfa67b42627d6e5762f86161e2d60cd67cf95b31b93079a65c2`  
+		Last Modified: Tue, 03 Dec 2024 05:37:46 GMT  
+		Size: 51.4 MB (51380071 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:6420c19d9909118068b7cfd2cb19818bcc869f7e0bbfdc4e4dab5f070371d3f1`  
+		Last Modified: Tue, 03 Dec 2024 05:37:44 GMT  
+		Size: 1.2 KB (1196 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:f30084fb2780b4b63dc37a51579d32d39cc9d57a747f3c899d89330593f36515`  
+		Last Modified: Tue, 03 Dec 2024 05:37:44 GMT  
+		Size: 1.1 KB (1106 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+
+### `aerospike:ee-7.2.0.4_1` - unknown; unknown
+
+```console
+$ docker pull aerospike@sha256:c986563265207bfc853b175472359a5134fa8bc308b59e83d47cdac99202ae74
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **2.0 MB (1988765 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:527a49b4f5c016b83241a4294d4077bffbf9a43a896936d5aeb6bc22c27de8db`
+
+```dockerfile
+```
+
+-	Layers:
+	-	`sha256:88880498b02135c05227166c3f553d468388b18b0ecc42ae27888ee5ec1a9ddb`  
+		Last Modified: Tue, 03 Dec 2024 05:37:45 GMT  
+		Size: 2.0 MB (1959522 bytes)  
+		MIME: application/vnd.in-toto+json
+	-	`sha256:40e8027a16412ba3a6aa4dc29e8905f0232f82570ee30ecd2abbe8d0d1cb8412`  
+		Last Modified: Tue, 03 Dec 2024 05:37:44 GMT  
+		Size: 29.2 KB (29243 bytes)  
+		MIME: application/vnd.in-toto+json

@@ -3,642 +3,580 @@
 # Tags of `gazebo`
 
 -	[`gazebo:gzserver11`](#gazebogzserver11)
--	[`gazebo:gzserver11-bionic`](#gazebogzserver11-bionic)
 -	[`gazebo:gzserver11-focal`](#gazebogzserver11-focal)
 -	[`gazebo:latest`](#gazebolatest)
 -	[`gazebo:libgazebo11`](#gazebolibgazebo11)
--	[`gazebo:libgazebo11-bionic`](#gazebolibgazebo11-bionic)
 -	[`gazebo:libgazebo11-focal`](#gazebolibgazebo11-focal)
 
 ## `gazebo:gzserver11`
 
 ```console
-$ docker pull gazebo@sha256:9f53fdd4121756c8eda6f712bd1d595d6b52a6ad8710f6aafb9fcd112c7a8dda
+$ docker pull gazebo@sha256:ba7ffb8351af9e53aaef720fd86b5cbd39c638252ba3f3c9e8caace476325168
 ```
 
--	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms: 1
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 2
 	-	linux; amd64
+	-	unknown; unknown
 
 ### `gazebo:gzserver11` - linux; amd64
 
 ```console
-$ docker pull gazebo@sha256:47bd8f67024bcbe075eea11f9adc8a0c07f5994e7d035c413d4a61b02de4d23c
+$ docker pull gazebo@sha256:97dfc0536447c8210e0d6388de059b9fd147d8444898ea31388d0fce823843c2
 ```
 
--	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **321.9 MB (321940227 bytes)**  
+-	Total Size: **312.1 MB (312141312 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:79cf6ff8643c32540c683008fa9d4253af7fcb049493739dc48b04e4dbc6468d`
+-	Image ID: `sha256:b8dbdfd1d82aad6029f6af5f59c78a3e324799ef69954cbbbf68a090001bbb82`
 -	Entrypoint: `["\/gzserver_entrypoint.sh"]`
 -	Default Command: `["gzserver"]`
 
 ```dockerfile
-# Thu, 13 Apr 2023 13:05:13 GMT
+# Fri, 11 Oct 2024 03:38:25 GMT
 ARG RELEASE
-# Thu, 13 Apr 2023 13:05:13 GMT
+# Fri, 11 Oct 2024 03:38:25 GMT
 ARG LAUNCHPAD_BUILD_ARCH
-# Thu, 13 Apr 2023 13:05:13 GMT
+# Fri, 11 Oct 2024 03:38:25 GMT
 LABEL org.opencontainers.image.ref.name=ubuntu
-# Thu, 13 Apr 2023 13:05:13 GMT
+# Fri, 11 Oct 2024 03:38:25 GMT
 LABEL org.opencontainers.image.version=20.04
-# Thu, 13 Apr 2023 13:05:15 GMT
-ADD file:d05d1c0936b046937bd5755876db2f8da3ed8ccbcf464bb56c312fbc7ed78589 in / 
-# Thu, 13 Apr 2023 13:05:15 GMT
+# Fri, 11 Oct 2024 03:38:27 GMT
+ADD file:7486147a645d8835a5181c79f00a3606c6b714c83bcbfcd8862221eb14690f9e in / 
+# Fri, 11 Oct 2024 03:38:27 GMT
 CMD ["/bin/bash"]
-# Tue, 18 Apr 2023 01:00:14 GMT
-RUN echo 'Etc/UTC' > /etc/timezone &&     ln -s /usr/share/zoneinfo/Etc/UTC /etc/localtime &&     apt-get update &&     apt-get install -q -y --no-install-recommends tzdata &&     rm -rf /var/lib/apt/lists/*
-# Tue, 18 Apr 2023 01:37:54 GMT
-RUN apt-get update && apt-get install -q -y --no-install-recommends     dirmngr     gnupg2     lsb-release     && rm -rf /var/lib/apt/lists/*
-# Tue, 18 Apr 2023 01:37:55 GMT
-RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys D2486D2DD83DB69272AFE98867170598AF249743
-# Tue, 18 Apr 2023 01:37:55 GMT
-RUN . /etc/os-release     && echo "deb http://packages.osrfoundation.org/gazebo/$ID-stable `lsb_release -sc` main" > /etc/apt/sources.list.d/gazebo-latest.list
-# Tue, 30 May 2023 20:33:17 GMT
-RUN apt-get update && apt-get install -y --no-install-recommends     gazebo11=11.13.0-1*     && rm -rf /var/lib/apt/lists/*
-# Tue, 30 May 2023 20:33:19 GMT
-EXPOSE 11345
-# Tue, 30 May 2023 20:33:19 GMT
-COPY file:b79966dec12c55a0a5c9e673326cc3faf9cbbeee0ea5f172e863df237eb8a601 in / 
-# Tue, 30 May 2023 20:33:19 GMT
+# Mon, 09 Dec 2024 12:55:29 GMT
+RUN echo 'Etc/UTC' > /etc/timezone &&     ln -s /usr/share/zoneinfo/Etc/UTC /etc/localtime &&     apt-get update &&     apt-get install -q -y --no-install-recommends tzdata &&     rm -rf /var/lib/apt/lists/* # buildkit
+# Mon, 09 Dec 2024 12:55:29 GMT
+RUN apt-get update && apt-get install -q -y --no-install-recommends     dirmngr     gnupg2     && rm -rf /var/lib/apt/lists/* # buildkit
+# Mon, 09 Dec 2024 12:55:29 GMT
+RUN set -eux; 	key='D2486D2DD83DB69272AFE98867170598AF249743'; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key"; 	mkdir -p /usr/share/keyrings; 	gpg --batch --export "$key" > /usr/share/keyrings/pkgs-osrf-archive-keyring.gpg; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" # buildkit
+# Mon, 09 Dec 2024 12:55:29 GMT
+RUN . /etc/os-release     && echo "deb [ signed-by=/usr/share/keyrings/pkgs-osrf-archive-keyring.gpg ] http://packages.osrfoundation.org/gazebo/$ID-stable $VERSION_CODENAME main" > /etc/apt/sources.list.d/gazebo-latest.list # buildkit
+# Mon, 09 Dec 2024 12:55:29 GMT
+RUN apt-get update && apt-get install -y --no-install-recommends     gazebo11=11.15.1-1*     && rm -rf /var/lib/apt/lists/* # buildkit
+# Mon, 09 Dec 2024 12:55:29 GMT
+EXPOSE map[11345/tcp:{}]
+# Mon, 09 Dec 2024 12:55:29 GMT
+COPY ./gzserver_entrypoint.sh / # buildkit
+# Mon, 09 Dec 2024 12:55:29 GMT
 ENTRYPOINT ["/gzserver_entrypoint.sh"]
-# Tue, 30 May 2023 20:33:19 GMT
+# Mon, 09 Dec 2024 12:55:29 GMT
 CMD ["gzserver"]
 ```
 
 -	Layers:
-	-	`sha256:99803d4b97f3db529ae9ca4174b0951afac6b309e7deaa8ec3214c584e02b3a8`  
-		Last Modified: Thu, 13 Apr 2023 03:03:13 GMT  
-		Size: 28.6 MB (28578563 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:db5ff3f6c5dd326a8361d5d9fba50621a210a6b840cadcc97c516817cb8cf8d7`  
-		Last Modified: Tue, 18 Apr 2023 01:15:00 GMT  
-		Size: 1.2 MB (1157164 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:86706d42b62d6d5a6bc799d4479e5cfa8ade7c2cba82b80f66513c23a7f587d3`  
-		Last Modified: Tue, 18 Apr 2023 01:44:11 GMT  
-		Size: 16.2 MB (16179241 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7524529b119ab214bf4d1c9991928d331aef1aefeccd007dfdc18a3328c449ad`  
-		Last Modified: Tue, 18 Apr 2023 01:44:08 GMT  
-		Size: 1.4 KB (1440 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f1ed8551e301529f226bf35170053712264067f8e81adad6513e9d9cfaaafcdb`  
-		Last Modified: Tue, 18 Apr 2023 01:44:08 GMT  
-		Size: 5.5 KB (5496 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:93f6e42ae9614142514184e116ba0d99a8c9ebc37ff5abe076fa79ed7ba856f0`  
-		Last Modified: Tue, 30 May 2023 20:39:54 GMT  
-		Size: 276.0 MB (276018134 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:447fecdc814f32d47afd2534f0e2d24fd8f9005f09d15a01de1d369174c4a429`  
-		Last Modified: Tue, 30 May 2023 20:39:24 GMT  
+	-	`sha256:d9802f032d6798e2086607424bfe88cb8ec1d6f116e11cd99592dcaf261e9cd2`  
+		Last Modified: Fri, 11 Oct 2024 04:41:25 GMT  
+		Size: 27.5 MB (27511060 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:d55b27724939102ee35a9cdb48f34f5216667c81055955817b5cbbc269506bd1`  
+		Last Modified: Mon, 09 Dec 2024 19:29:15 GMT  
+		Size: 1.2 MB (1198847 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:b80fb44c058ddabcd4051befdffe65128238e5ec5036d38d25a65d857c1c0f28`  
+		Last Modified: Mon, 09 Dec 2024 19:29:15 GMT  
+		Size: 5.4 MB (5361907 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:0ef3641eabd1611f862c208ee8576714e8a0a0253ccd0de885409f3f7e2e5676`  
+		Last Modified: Mon, 09 Dec 2024 19:29:15 GMT  
+		Size: 1.4 KB (1450 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:5384edf40a924ba3b6e4ebea240776edf6ea3cff04a008b1c2ab82791b7dec37`  
+		Last Modified: Mon, 09 Dec 2024 19:29:15 GMT  
+		Size: 292.0 B  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:b47e5c66f313291a95c156136e84c6a59e3ed3fd2443298d634c66303bf2a69e`  
+		Last Modified: Mon, 09 Dec 2024 19:29:19 GMT  
+		Size: 278.1 MB (278067567 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:99d712a32f72d4975eb3825b3bed247e3f30513bd2d50f68734ef3d725fc7a99`  
+		Last Modified: Mon, 09 Dec 2024 19:29:16 GMT  
 		Size: 189.0 B  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
 
-## `gazebo:gzserver11-bionic`
-
-```console
-$ docker pull gazebo@sha256:671b5d64aa00651078c068a7eee92faf6beacce641d5d992fd19a54f5d866930
-```
-
--	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms: 1
-	-	linux; amd64
-
-### `gazebo:gzserver11-bionic` - linux; amd64
+### `gazebo:gzserver11` - unknown; unknown
 
 ```console
-$ docker pull gazebo@sha256:fd9d5cab7ddbe77b76eff610f5486e53a3788a2c4acdd4cb69921ad8ebf84a7b
+$ docker pull gazebo@sha256:68b68e3662142ed7fe01ff75a39dbd2abf5a0748276249e7e771338dac0b0ce8
 ```
 
--	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **277.8 MB (277839235 bytes)**  
+-	Total Size: **6.6 MB (6621059 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:43ad9a1fa9ed033d4b65625af6633b6859f36e94ec1056c3511585ca868c6f0c`
--	Entrypoint: `["\/gzserver_entrypoint.sh"]`
--	Default Command: `["gzserver"]`
+-	Image ID: `sha256:fa2f3d45503c32cb44eda593a3a461e0e03032f2c9c1d95bdeb36536083cae1e`
 
 ```dockerfile
-# Tue, 30 May 2023 09:32:07 GMT
-ARG RELEASE
-# Tue, 30 May 2023 09:32:07 GMT
-ARG LAUNCHPAD_BUILD_ARCH
-# Tue, 30 May 2023 09:32:07 GMT
-LABEL org.opencontainers.image.ref.name=ubuntu
-# Tue, 30 May 2023 09:32:07 GMT
-LABEL org.opencontainers.image.version=18.04
-# Tue, 30 May 2023 09:32:09 GMT
-ADD file:3c74e7e08cbf9a87694ce6fa541af617599680fa54d9e48556fc0fbc120b4a83 in / 
-# Tue, 30 May 2023 09:32:09 GMT
-CMD ["/bin/bash"]
-# Fri, 02 Jun 2023 00:55:18 GMT
-RUN echo 'Etc/UTC' > /etc/timezone &&     ln -s /usr/share/zoneinfo/Etc/UTC /etc/localtime &&     apt-get update &&     apt-get install -q -y --no-install-recommends tzdata &&     rm -rf /var/lib/apt/lists/*
-# Fri, 02 Jun 2023 00:55:37 GMT
-RUN apt-get update && apt-get install -q -y --no-install-recommends     dirmngr     gnupg2     lsb-release     && rm -rf /var/lib/apt/lists/*
-# Fri, 02 Jun 2023 00:55:39 GMT
-RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys D2486D2DD83DB69272AFE98867170598AF249743
-# Fri, 02 Jun 2023 00:55:39 GMT
-RUN . /etc/os-release     && echo "deb http://packages.osrfoundation.org/gazebo/$ID-stable `lsb_release -sc` main" > /etc/apt/sources.list.d/gazebo-latest.list
-# Fri, 02 Jun 2023 00:58:16 GMT
-RUN apt-get update && apt-get install -y --no-install-recommends     gazebo11=11.13.0-1*     && rm -rf /var/lib/apt/lists/*
-# Fri, 02 Jun 2023 00:58:17 GMT
-EXPOSE 11345
-# Fri, 02 Jun 2023 00:58:17 GMT
-COPY file:b79966dec12c55a0a5c9e673326cc3faf9cbbeee0ea5f172e863df237eb8a601 in / 
-# Fri, 02 Jun 2023 00:58:17 GMT
-ENTRYPOINT ["/gzserver_entrypoint.sh"]
-# Fri, 02 Jun 2023 00:58:18 GMT
-CMD ["gzserver"]
 ```
 
 -	Layers:
-	-	`sha256:41af1b5f0f51947706ae712999cf098bef968a7799e7cb4bb2268829e62a6ab3`  
-		Last Modified: Fri, 02 Jun 2023 00:09:06 GMT  
-		Size: 26.7 MB (26717357 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bc27456075680427d55e79ddce0ccec278d1f81ab5181d13386de5ac3f085b90`  
-		Last Modified: Fri, 02 Jun 2023 01:02:13 GMT  
-		Size: 818.9 KB (818915 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:208a5fc38d6686d09afe4c36d24561e6952f5e2a37e4fe3aed10fc679393e454`  
-		Last Modified: Fri, 02 Jun 2023 01:02:13 GMT  
-		Size: 14.7 MB (14714619 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e8f1c4414805c51da59d1c81cf6d3cdb4a6416e4b1523359595d62645908563b`  
-		Last Modified: Fri, 02 Jun 2023 01:02:10 GMT  
-		Size: 1.4 KB (1441 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3f7c470423b35bccea898315bb522fff6efe67c1fa66231d3d86719a7f7a9863`  
-		Last Modified: Fri, 02 Jun 2023 01:02:10 GMT  
-		Size: 5.5 KB (5457 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1eb88345d023b392cd3408b3c810acc86f53c792051de6fd2e9069e9de312a81`  
-		Last Modified: Fri, 02 Jun 2023 01:02:37 GMT  
-		Size: 235.6 MB (235581256 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:827441c984c9f0878ee0294f1cf4e8de836c7d902ecb38d232d8b671a480e4f1`  
-		Last Modified: Fri, 02 Jun 2023 01:02:10 GMT  
-		Size: 190.0 B  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:b2fd4c240b53351c78a6d3e62fcf076d57e4b54a3dc860ccd65a24304f3de5fc`  
+		Last Modified: Mon, 09 Dec 2024 19:29:15 GMT  
+		Size: 6.6 MB (6604704 bytes)  
+		MIME: application/vnd.in-toto+json
+	-	`sha256:12c9fac0b45648de2078dce3fe4fb810aa11491044ff7d74d0824832f6592d5e`  
+		Last Modified: Mon, 09 Dec 2024 19:29:15 GMT  
+		Size: 16.4 KB (16355 bytes)  
+		MIME: application/vnd.in-toto+json
 
 ## `gazebo:gzserver11-focal`
 
 ```console
-$ docker pull gazebo@sha256:9f53fdd4121756c8eda6f712bd1d595d6b52a6ad8710f6aafb9fcd112c7a8dda
+$ docker pull gazebo@sha256:ba7ffb8351af9e53aaef720fd86b5cbd39c638252ba3f3c9e8caace476325168
 ```
 
--	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms: 1
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 2
 	-	linux; amd64
+	-	unknown; unknown
 
 ### `gazebo:gzserver11-focal` - linux; amd64
 
 ```console
-$ docker pull gazebo@sha256:47bd8f67024bcbe075eea11f9adc8a0c07f5994e7d035c413d4a61b02de4d23c
+$ docker pull gazebo@sha256:97dfc0536447c8210e0d6388de059b9fd147d8444898ea31388d0fce823843c2
 ```
 
--	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **321.9 MB (321940227 bytes)**  
+-	Total Size: **312.1 MB (312141312 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:79cf6ff8643c32540c683008fa9d4253af7fcb049493739dc48b04e4dbc6468d`
+-	Image ID: `sha256:b8dbdfd1d82aad6029f6af5f59c78a3e324799ef69954cbbbf68a090001bbb82`
 -	Entrypoint: `["\/gzserver_entrypoint.sh"]`
 -	Default Command: `["gzserver"]`
 
 ```dockerfile
-# Thu, 13 Apr 2023 13:05:13 GMT
+# Fri, 11 Oct 2024 03:38:25 GMT
 ARG RELEASE
-# Thu, 13 Apr 2023 13:05:13 GMT
+# Fri, 11 Oct 2024 03:38:25 GMT
 ARG LAUNCHPAD_BUILD_ARCH
-# Thu, 13 Apr 2023 13:05:13 GMT
+# Fri, 11 Oct 2024 03:38:25 GMT
 LABEL org.opencontainers.image.ref.name=ubuntu
-# Thu, 13 Apr 2023 13:05:13 GMT
+# Fri, 11 Oct 2024 03:38:25 GMT
 LABEL org.opencontainers.image.version=20.04
-# Thu, 13 Apr 2023 13:05:15 GMT
-ADD file:d05d1c0936b046937bd5755876db2f8da3ed8ccbcf464bb56c312fbc7ed78589 in / 
-# Thu, 13 Apr 2023 13:05:15 GMT
+# Fri, 11 Oct 2024 03:38:27 GMT
+ADD file:7486147a645d8835a5181c79f00a3606c6b714c83bcbfcd8862221eb14690f9e in / 
+# Fri, 11 Oct 2024 03:38:27 GMT
 CMD ["/bin/bash"]
-# Tue, 18 Apr 2023 01:00:14 GMT
-RUN echo 'Etc/UTC' > /etc/timezone &&     ln -s /usr/share/zoneinfo/Etc/UTC /etc/localtime &&     apt-get update &&     apt-get install -q -y --no-install-recommends tzdata &&     rm -rf /var/lib/apt/lists/*
-# Tue, 18 Apr 2023 01:37:54 GMT
-RUN apt-get update && apt-get install -q -y --no-install-recommends     dirmngr     gnupg2     lsb-release     && rm -rf /var/lib/apt/lists/*
-# Tue, 18 Apr 2023 01:37:55 GMT
-RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys D2486D2DD83DB69272AFE98867170598AF249743
-# Tue, 18 Apr 2023 01:37:55 GMT
-RUN . /etc/os-release     && echo "deb http://packages.osrfoundation.org/gazebo/$ID-stable `lsb_release -sc` main" > /etc/apt/sources.list.d/gazebo-latest.list
-# Tue, 30 May 2023 20:33:17 GMT
-RUN apt-get update && apt-get install -y --no-install-recommends     gazebo11=11.13.0-1*     && rm -rf /var/lib/apt/lists/*
-# Tue, 30 May 2023 20:33:19 GMT
-EXPOSE 11345
-# Tue, 30 May 2023 20:33:19 GMT
-COPY file:b79966dec12c55a0a5c9e673326cc3faf9cbbeee0ea5f172e863df237eb8a601 in / 
-# Tue, 30 May 2023 20:33:19 GMT
+# Mon, 09 Dec 2024 12:55:29 GMT
+RUN echo 'Etc/UTC' > /etc/timezone &&     ln -s /usr/share/zoneinfo/Etc/UTC /etc/localtime &&     apt-get update &&     apt-get install -q -y --no-install-recommends tzdata &&     rm -rf /var/lib/apt/lists/* # buildkit
+# Mon, 09 Dec 2024 12:55:29 GMT
+RUN apt-get update && apt-get install -q -y --no-install-recommends     dirmngr     gnupg2     && rm -rf /var/lib/apt/lists/* # buildkit
+# Mon, 09 Dec 2024 12:55:29 GMT
+RUN set -eux; 	key='D2486D2DD83DB69272AFE98867170598AF249743'; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key"; 	mkdir -p /usr/share/keyrings; 	gpg --batch --export "$key" > /usr/share/keyrings/pkgs-osrf-archive-keyring.gpg; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" # buildkit
+# Mon, 09 Dec 2024 12:55:29 GMT
+RUN . /etc/os-release     && echo "deb [ signed-by=/usr/share/keyrings/pkgs-osrf-archive-keyring.gpg ] http://packages.osrfoundation.org/gazebo/$ID-stable $VERSION_CODENAME main" > /etc/apt/sources.list.d/gazebo-latest.list # buildkit
+# Mon, 09 Dec 2024 12:55:29 GMT
+RUN apt-get update && apt-get install -y --no-install-recommends     gazebo11=11.15.1-1*     && rm -rf /var/lib/apt/lists/* # buildkit
+# Mon, 09 Dec 2024 12:55:29 GMT
+EXPOSE map[11345/tcp:{}]
+# Mon, 09 Dec 2024 12:55:29 GMT
+COPY ./gzserver_entrypoint.sh / # buildkit
+# Mon, 09 Dec 2024 12:55:29 GMT
 ENTRYPOINT ["/gzserver_entrypoint.sh"]
-# Tue, 30 May 2023 20:33:19 GMT
+# Mon, 09 Dec 2024 12:55:29 GMT
 CMD ["gzserver"]
 ```
 
 -	Layers:
-	-	`sha256:99803d4b97f3db529ae9ca4174b0951afac6b309e7deaa8ec3214c584e02b3a8`  
-		Last Modified: Thu, 13 Apr 2023 03:03:13 GMT  
-		Size: 28.6 MB (28578563 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:db5ff3f6c5dd326a8361d5d9fba50621a210a6b840cadcc97c516817cb8cf8d7`  
-		Last Modified: Tue, 18 Apr 2023 01:15:00 GMT  
-		Size: 1.2 MB (1157164 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:86706d42b62d6d5a6bc799d4479e5cfa8ade7c2cba82b80f66513c23a7f587d3`  
-		Last Modified: Tue, 18 Apr 2023 01:44:11 GMT  
-		Size: 16.2 MB (16179241 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7524529b119ab214bf4d1c9991928d331aef1aefeccd007dfdc18a3328c449ad`  
-		Last Modified: Tue, 18 Apr 2023 01:44:08 GMT  
-		Size: 1.4 KB (1440 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f1ed8551e301529f226bf35170053712264067f8e81adad6513e9d9cfaaafcdb`  
-		Last Modified: Tue, 18 Apr 2023 01:44:08 GMT  
-		Size: 5.5 KB (5496 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:93f6e42ae9614142514184e116ba0d99a8c9ebc37ff5abe076fa79ed7ba856f0`  
-		Last Modified: Tue, 30 May 2023 20:39:54 GMT  
-		Size: 276.0 MB (276018134 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:447fecdc814f32d47afd2534f0e2d24fd8f9005f09d15a01de1d369174c4a429`  
-		Last Modified: Tue, 30 May 2023 20:39:24 GMT  
+	-	`sha256:d9802f032d6798e2086607424bfe88cb8ec1d6f116e11cd99592dcaf261e9cd2`  
+		Last Modified: Fri, 11 Oct 2024 04:41:25 GMT  
+		Size: 27.5 MB (27511060 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:d55b27724939102ee35a9cdb48f34f5216667c81055955817b5cbbc269506bd1`  
+		Last Modified: Mon, 09 Dec 2024 19:29:15 GMT  
+		Size: 1.2 MB (1198847 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:b80fb44c058ddabcd4051befdffe65128238e5ec5036d38d25a65d857c1c0f28`  
+		Last Modified: Mon, 09 Dec 2024 19:29:15 GMT  
+		Size: 5.4 MB (5361907 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:0ef3641eabd1611f862c208ee8576714e8a0a0253ccd0de885409f3f7e2e5676`  
+		Last Modified: Mon, 09 Dec 2024 19:29:15 GMT  
+		Size: 1.4 KB (1450 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:5384edf40a924ba3b6e4ebea240776edf6ea3cff04a008b1c2ab82791b7dec37`  
+		Last Modified: Mon, 09 Dec 2024 19:29:15 GMT  
+		Size: 292.0 B  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:b47e5c66f313291a95c156136e84c6a59e3ed3fd2443298d634c66303bf2a69e`  
+		Last Modified: Mon, 09 Dec 2024 19:29:19 GMT  
+		Size: 278.1 MB (278067567 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:99d712a32f72d4975eb3825b3bed247e3f30513bd2d50f68734ef3d725fc7a99`  
+		Last Modified: Mon, 09 Dec 2024 19:29:16 GMT  
 		Size: 189.0 B  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+
+### `gazebo:gzserver11-focal` - unknown; unknown
+
+```console
+$ docker pull gazebo@sha256:68b68e3662142ed7fe01ff75a39dbd2abf5a0748276249e7e771338dac0b0ce8
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **6.6 MB (6621059 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:fa2f3d45503c32cb44eda593a3a461e0e03032f2c9c1d95bdeb36536083cae1e`
+
+```dockerfile
+```
+
+-	Layers:
+	-	`sha256:b2fd4c240b53351c78a6d3e62fcf076d57e4b54a3dc860ccd65a24304f3de5fc`  
+		Last Modified: Mon, 09 Dec 2024 19:29:15 GMT  
+		Size: 6.6 MB (6604704 bytes)  
+		MIME: application/vnd.in-toto+json
+	-	`sha256:12c9fac0b45648de2078dce3fe4fb810aa11491044ff7d74d0824832f6592d5e`  
+		Last Modified: Mon, 09 Dec 2024 19:29:15 GMT  
+		Size: 16.4 KB (16355 bytes)  
+		MIME: application/vnd.in-toto+json
 
 ## `gazebo:latest`
 
 ```console
-$ docker pull gazebo@sha256:69e885bbdc326bf7c2cbdb34a2fbe9f4a5f26908b131bf91d2ddf0734dff9565
+$ docker pull gazebo@sha256:4c294e47eb3752542b824618f8e95835909e27dfa14fa0b39f6410647d201da8
 ```
 
--	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms: 1
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 2
 	-	linux; amd64
+	-	unknown; unknown
 
 ### `gazebo:latest` - linux; amd64
 
 ```console
-$ docker pull gazebo@sha256:58c86a1e9bfe5bd5035349679fba796ec4710287b612e18ff96438c620ead6a0
+$ docker pull gazebo@sha256:3eea476332ca8c66ec98ca233191dd532eda7bea616f5a110fd8707f454b6df1
 ```
 
--	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **612.1 MB (612147842 bytes)**  
+-	Total Size: **609.3 MB (609309801 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:a6ad241ba12109c0213d356346af82fcf63cc89c767d1bea1ee98d370dfdd26e`
+-	Image ID: `sha256:5d0a27d0cf973beeeefbf7f38f32193c9cbbfe9e005372687d6a0fbf2e3cbaac`
 -	Entrypoint: `["\/gzserver_entrypoint.sh"]`
 -	Default Command: `["gzserver"]`
 
 ```dockerfile
-# Thu, 13 Apr 2023 13:05:13 GMT
+# Fri, 11 Oct 2024 03:38:25 GMT
 ARG RELEASE
-# Thu, 13 Apr 2023 13:05:13 GMT
+# Fri, 11 Oct 2024 03:38:25 GMT
 ARG LAUNCHPAD_BUILD_ARCH
-# Thu, 13 Apr 2023 13:05:13 GMT
+# Fri, 11 Oct 2024 03:38:25 GMT
 LABEL org.opencontainers.image.ref.name=ubuntu
-# Thu, 13 Apr 2023 13:05:13 GMT
+# Fri, 11 Oct 2024 03:38:25 GMT
 LABEL org.opencontainers.image.version=20.04
-# Thu, 13 Apr 2023 13:05:15 GMT
-ADD file:d05d1c0936b046937bd5755876db2f8da3ed8ccbcf464bb56c312fbc7ed78589 in / 
-# Thu, 13 Apr 2023 13:05:15 GMT
+# Fri, 11 Oct 2024 03:38:27 GMT
+ADD file:7486147a645d8835a5181c79f00a3606c6b714c83bcbfcd8862221eb14690f9e in / 
+# Fri, 11 Oct 2024 03:38:27 GMT
 CMD ["/bin/bash"]
-# Tue, 18 Apr 2023 01:00:14 GMT
-RUN echo 'Etc/UTC' > /etc/timezone &&     ln -s /usr/share/zoneinfo/Etc/UTC /etc/localtime &&     apt-get update &&     apt-get install -q -y --no-install-recommends tzdata &&     rm -rf /var/lib/apt/lists/*
-# Tue, 18 Apr 2023 01:37:54 GMT
-RUN apt-get update && apt-get install -q -y --no-install-recommends     dirmngr     gnupg2     lsb-release     && rm -rf /var/lib/apt/lists/*
-# Tue, 18 Apr 2023 01:37:55 GMT
-RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys D2486D2DD83DB69272AFE98867170598AF249743
-# Tue, 18 Apr 2023 01:37:55 GMT
-RUN . /etc/os-release     && echo "deb http://packages.osrfoundation.org/gazebo/$ID-stable `lsb_release -sc` main" > /etc/apt/sources.list.d/gazebo-latest.list
-# Tue, 30 May 2023 20:33:17 GMT
-RUN apt-get update && apt-get install -y --no-install-recommends     gazebo11=11.13.0-1*     && rm -rf /var/lib/apt/lists/*
-# Tue, 30 May 2023 20:33:19 GMT
-EXPOSE 11345
-# Tue, 30 May 2023 20:33:19 GMT
-COPY file:b79966dec12c55a0a5c9e673326cc3faf9cbbeee0ea5f172e863df237eb8a601 in / 
-# Tue, 30 May 2023 20:33:19 GMT
+# Mon, 09 Dec 2024 12:55:29 GMT
+RUN echo 'Etc/UTC' > /etc/timezone &&     ln -s /usr/share/zoneinfo/Etc/UTC /etc/localtime &&     apt-get update &&     apt-get install -q -y --no-install-recommends tzdata &&     rm -rf /var/lib/apt/lists/* # buildkit
+# Mon, 09 Dec 2024 12:55:29 GMT
+RUN apt-get update && apt-get install -q -y --no-install-recommends     dirmngr     gnupg2     && rm -rf /var/lib/apt/lists/* # buildkit
+# Mon, 09 Dec 2024 12:55:29 GMT
+RUN set -eux; 	key='D2486D2DD83DB69272AFE98867170598AF249743'; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key"; 	mkdir -p /usr/share/keyrings; 	gpg --batch --export "$key" > /usr/share/keyrings/pkgs-osrf-archive-keyring.gpg; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" # buildkit
+# Mon, 09 Dec 2024 12:55:29 GMT
+RUN . /etc/os-release     && echo "deb [ signed-by=/usr/share/keyrings/pkgs-osrf-archive-keyring.gpg ] http://packages.osrfoundation.org/gazebo/$ID-stable $VERSION_CODENAME main" > /etc/apt/sources.list.d/gazebo-latest.list # buildkit
+# Mon, 09 Dec 2024 12:55:29 GMT
+RUN apt-get update && apt-get install -y --no-install-recommends     gazebo11=11.15.1-1*     && rm -rf /var/lib/apt/lists/* # buildkit
+# Mon, 09 Dec 2024 12:55:29 GMT
+EXPOSE map[11345/tcp:{}]
+# Mon, 09 Dec 2024 12:55:29 GMT
+COPY ./gzserver_entrypoint.sh / # buildkit
+# Mon, 09 Dec 2024 12:55:29 GMT
 ENTRYPOINT ["/gzserver_entrypoint.sh"]
-# Tue, 30 May 2023 20:33:19 GMT
+# Mon, 09 Dec 2024 12:55:29 GMT
 CMD ["gzserver"]
-# Tue, 30 May 2023 20:37:51 GMT
-RUN apt-get update && apt-get install -y --no-install-recommends     libgazebo11-dev=11.13.0-1*     && rm -rf /var/lib/apt/lists/*
+# Mon, 09 Dec 2024 12:55:29 GMT
+RUN apt-get update && apt-get install -y --no-install-recommends     libgazebo11-dev=11.15.1-1*     && rm -rf /var/lib/apt/lists/* # buildkit
 ```
 
 -	Layers:
-	-	`sha256:99803d4b97f3db529ae9ca4174b0951afac6b309e7deaa8ec3214c584e02b3a8`  
-		Last Modified: Thu, 13 Apr 2023 03:03:13 GMT  
-		Size: 28.6 MB (28578563 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:db5ff3f6c5dd326a8361d5d9fba50621a210a6b840cadcc97c516817cb8cf8d7`  
-		Last Modified: Tue, 18 Apr 2023 01:15:00 GMT  
-		Size: 1.2 MB (1157164 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:86706d42b62d6d5a6bc799d4479e5cfa8ade7c2cba82b80f66513c23a7f587d3`  
-		Last Modified: Tue, 18 Apr 2023 01:44:11 GMT  
-		Size: 16.2 MB (16179241 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7524529b119ab214bf4d1c9991928d331aef1aefeccd007dfdc18a3328c449ad`  
-		Last Modified: Tue, 18 Apr 2023 01:44:08 GMT  
-		Size: 1.4 KB (1440 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f1ed8551e301529f226bf35170053712264067f8e81adad6513e9d9cfaaafcdb`  
-		Last Modified: Tue, 18 Apr 2023 01:44:08 GMT  
-		Size: 5.5 KB (5496 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:93f6e42ae9614142514184e116ba0d99a8c9ebc37ff5abe076fa79ed7ba856f0`  
-		Last Modified: Tue, 30 May 2023 20:39:54 GMT  
-		Size: 276.0 MB (276018134 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:447fecdc814f32d47afd2534f0e2d24fd8f9005f09d15a01de1d369174c4a429`  
-		Last Modified: Tue, 30 May 2023 20:39:24 GMT  
+	-	`sha256:d9802f032d6798e2086607424bfe88cb8ec1d6f116e11cd99592dcaf261e9cd2`  
+		Last Modified: Fri, 11 Oct 2024 04:41:25 GMT  
+		Size: 27.5 MB (27511060 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:d55b27724939102ee35a9cdb48f34f5216667c81055955817b5cbbc269506bd1`  
+		Last Modified: Mon, 09 Dec 2024 19:29:15 GMT  
+		Size: 1.2 MB (1198847 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:b80fb44c058ddabcd4051befdffe65128238e5ec5036d38d25a65d857c1c0f28`  
+		Last Modified: Mon, 09 Dec 2024 19:29:15 GMT  
+		Size: 5.4 MB (5361907 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:0ef3641eabd1611f862c208ee8576714e8a0a0253ccd0de885409f3f7e2e5676`  
+		Last Modified: Mon, 09 Dec 2024 19:29:15 GMT  
+		Size: 1.4 KB (1450 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:5384edf40a924ba3b6e4ebea240776edf6ea3cff04a008b1c2ab82791b7dec37`  
+		Last Modified: Mon, 09 Dec 2024 19:29:15 GMT  
+		Size: 292.0 B  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:b47e5c66f313291a95c156136e84c6a59e3ed3fd2443298d634c66303bf2a69e`  
+		Last Modified: Mon, 09 Dec 2024 19:29:19 GMT  
+		Size: 278.1 MB (278067567 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:99d712a32f72d4975eb3825b3bed247e3f30513bd2d50f68734ef3d725fc7a99`  
+		Last Modified: Mon, 09 Dec 2024 19:29:16 GMT  
 		Size: 189.0 B  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bd43bf1a88b46009880cfb513b12edbaed40c02a9d0cc1b4988907ff5c4045c4`  
-		Last Modified: Tue, 30 May 2023 20:40:46 GMT  
-		Size: 290.2 MB (290207615 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:3050ffc3c19773a71bc3b1026cfc174ec32b3a97b6dd42f8ac2d6d3a95d64ca3`  
+		Last Modified: Mon, 09 Dec 2024 20:39:35 GMT  
+		Size: 297.2 MB (297168489 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+
+### `gazebo:latest` - unknown; unknown
+
+```console
+$ docker pull gazebo@sha256:5e456cfb80f91f5d184b9a016c089e378e268ff233ecfd93373ccf9b99e7af68
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **37.6 MB (37550374 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:be4db618f5c3f4aafdd64ac2bb53af5858f584fbaa8cc3bc52dd1f039e41eb0c`
+
+```dockerfile
+```
+
+-	Layers:
+	-	`sha256:f13305cf555b2104abb7d8a0782217856fcd51f2b18e354ea105c5e5c373f6dd`  
+		Last Modified: Mon, 09 Dec 2024 20:39:35 GMT  
+		Size: 37.5 MB (37541712 bytes)  
+		MIME: application/vnd.in-toto+json
+	-	`sha256:a781552e8708b7f1ff4f52aa3cefb93f05dc179ea71dc170313789b30fb98e9f`  
+		Last Modified: Mon, 09 Dec 2024 20:39:31 GMT  
+		Size: 8.7 KB (8662 bytes)  
+		MIME: application/vnd.in-toto+json
 
 ## `gazebo:libgazebo11`
 
 ```console
-$ docker pull gazebo@sha256:69e885bbdc326bf7c2cbdb34a2fbe9f4a5f26908b131bf91d2ddf0734dff9565
+$ docker pull gazebo@sha256:4c294e47eb3752542b824618f8e95835909e27dfa14fa0b39f6410647d201da8
 ```
 
--	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms: 1
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 2
 	-	linux; amd64
+	-	unknown; unknown
 
 ### `gazebo:libgazebo11` - linux; amd64
 
 ```console
-$ docker pull gazebo@sha256:58c86a1e9bfe5bd5035349679fba796ec4710287b612e18ff96438c620ead6a0
+$ docker pull gazebo@sha256:3eea476332ca8c66ec98ca233191dd532eda7bea616f5a110fd8707f454b6df1
 ```
 
--	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **612.1 MB (612147842 bytes)**  
+-	Total Size: **609.3 MB (609309801 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:a6ad241ba12109c0213d356346af82fcf63cc89c767d1bea1ee98d370dfdd26e`
+-	Image ID: `sha256:5d0a27d0cf973beeeefbf7f38f32193c9cbbfe9e005372687d6a0fbf2e3cbaac`
 -	Entrypoint: `["\/gzserver_entrypoint.sh"]`
 -	Default Command: `["gzserver"]`
 
 ```dockerfile
-# Thu, 13 Apr 2023 13:05:13 GMT
+# Fri, 11 Oct 2024 03:38:25 GMT
 ARG RELEASE
-# Thu, 13 Apr 2023 13:05:13 GMT
+# Fri, 11 Oct 2024 03:38:25 GMT
 ARG LAUNCHPAD_BUILD_ARCH
-# Thu, 13 Apr 2023 13:05:13 GMT
+# Fri, 11 Oct 2024 03:38:25 GMT
 LABEL org.opencontainers.image.ref.name=ubuntu
-# Thu, 13 Apr 2023 13:05:13 GMT
+# Fri, 11 Oct 2024 03:38:25 GMT
 LABEL org.opencontainers.image.version=20.04
-# Thu, 13 Apr 2023 13:05:15 GMT
-ADD file:d05d1c0936b046937bd5755876db2f8da3ed8ccbcf464bb56c312fbc7ed78589 in / 
-# Thu, 13 Apr 2023 13:05:15 GMT
+# Fri, 11 Oct 2024 03:38:27 GMT
+ADD file:7486147a645d8835a5181c79f00a3606c6b714c83bcbfcd8862221eb14690f9e in / 
+# Fri, 11 Oct 2024 03:38:27 GMT
 CMD ["/bin/bash"]
-# Tue, 18 Apr 2023 01:00:14 GMT
-RUN echo 'Etc/UTC' > /etc/timezone &&     ln -s /usr/share/zoneinfo/Etc/UTC /etc/localtime &&     apt-get update &&     apt-get install -q -y --no-install-recommends tzdata &&     rm -rf /var/lib/apt/lists/*
-# Tue, 18 Apr 2023 01:37:54 GMT
-RUN apt-get update && apt-get install -q -y --no-install-recommends     dirmngr     gnupg2     lsb-release     && rm -rf /var/lib/apt/lists/*
-# Tue, 18 Apr 2023 01:37:55 GMT
-RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys D2486D2DD83DB69272AFE98867170598AF249743
-# Tue, 18 Apr 2023 01:37:55 GMT
-RUN . /etc/os-release     && echo "deb http://packages.osrfoundation.org/gazebo/$ID-stable `lsb_release -sc` main" > /etc/apt/sources.list.d/gazebo-latest.list
-# Tue, 30 May 2023 20:33:17 GMT
-RUN apt-get update && apt-get install -y --no-install-recommends     gazebo11=11.13.0-1*     && rm -rf /var/lib/apt/lists/*
-# Tue, 30 May 2023 20:33:19 GMT
-EXPOSE 11345
-# Tue, 30 May 2023 20:33:19 GMT
-COPY file:b79966dec12c55a0a5c9e673326cc3faf9cbbeee0ea5f172e863df237eb8a601 in / 
-# Tue, 30 May 2023 20:33:19 GMT
+# Mon, 09 Dec 2024 12:55:29 GMT
+RUN echo 'Etc/UTC' > /etc/timezone &&     ln -s /usr/share/zoneinfo/Etc/UTC /etc/localtime &&     apt-get update &&     apt-get install -q -y --no-install-recommends tzdata &&     rm -rf /var/lib/apt/lists/* # buildkit
+# Mon, 09 Dec 2024 12:55:29 GMT
+RUN apt-get update && apt-get install -q -y --no-install-recommends     dirmngr     gnupg2     && rm -rf /var/lib/apt/lists/* # buildkit
+# Mon, 09 Dec 2024 12:55:29 GMT
+RUN set -eux; 	key='D2486D2DD83DB69272AFE98867170598AF249743'; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key"; 	mkdir -p /usr/share/keyrings; 	gpg --batch --export "$key" > /usr/share/keyrings/pkgs-osrf-archive-keyring.gpg; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" # buildkit
+# Mon, 09 Dec 2024 12:55:29 GMT
+RUN . /etc/os-release     && echo "deb [ signed-by=/usr/share/keyrings/pkgs-osrf-archive-keyring.gpg ] http://packages.osrfoundation.org/gazebo/$ID-stable $VERSION_CODENAME main" > /etc/apt/sources.list.d/gazebo-latest.list # buildkit
+# Mon, 09 Dec 2024 12:55:29 GMT
+RUN apt-get update && apt-get install -y --no-install-recommends     gazebo11=11.15.1-1*     && rm -rf /var/lib/apt/lists/* # buildkit
+# Mon, 09 Dec 2024 12:55:29 GMT
+EXPOSE map[11345/tcp:{}]
+# Mon, 09 Dec 2024 12:55:29 GMT
+COPY ./gzserver_entrypoint.sh / # buildkit
+# Mon, 09 Dec 2024 12:55:29 GMT
 ENTRYPOINT ["/gzserver_entrypoint.sh"]
-# Tue, 30 May 2023 20:33:19 GMT
+# Mon, 09 Dec 2024 12:55:29 GMT
 CMD ["gzserver"]
-# Tue, 30 May 2023 20:37:51 GMT
-RUN apt-get update && apt-get install -y --no-install-recommends     libgazebo11-dev=11.13.0-1*     && rm -rf /var/lib/apt/lists/*
+# Mon, 09 Dec 2024 12:55:29 GMT
+RUN apt-get update && apt-get install -y --no-install-recommends     libgazebo11-dev=11.15.1-1*     && rm -rf /var/lib/apt/lists/* # buildkit
 ```
 
 -	Layers:
-	-	`sha256:99803d4b97f3db529ae9ca4174b0951afac6b309e7deaa8ec3214c584e02b3a8`  
-		Last Modified: Thu, 13 Apr 2023 03:03:13 GMT  
-		Size: 28.6 MB (28578563 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:db5ff3f6c5dd326a8361d5d9fba50621a210a6b840cadcc97c516817cb8cf8d7`  
-		Last Modified: Tue, 18 Apr 2023 01:15:00 GMT  
-		Size: 1.2 MB (1157164 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:86706d42b62d6d5a6bc799d4479e5cfa8ade7c2cba82b80f66513c23a7f587d3`  
-		Last Modified: Tue, 18 Apr 2023 01:44:11 GMT  
-		Size: 16.2 MB (16179241 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7524529b119ab214bf4d1c9991928d331aef1aefeccd007dfdc18a3328c449ad`  
-		Last Modified: Tue, 18 Apr 2023 01:44:08 GMT  
-		Size: 1.4 KB (1440 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f1ed8551e301529f226bf35170053712264067f8e81adad6513e9d9cfaaafcdb`  
-		Last Modified: Tue, 18 Apr 2023 01:44:08 GMT  
-		Size: 5.5 KB (5496 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:93f6e42ae9614142514184e116ba0d99a8c9ebc37ff5abe076fa79ed7ba856f0`  
-		Last Modified: Tue, 30 May 2023 20:39:54 GMT  
-		Size: 276.0 MB (276018134 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:447fecdc814f32d47afd2534f0e2d24fd8f9005f09d15a01de1d369174c4a429`  
-		Last Modified: Tue, 30 May 2023 20:39:24 GMT  
+	-	`sha256:d9802f032d6798e2086607424bfe88cb8ec1d6f116e11cd99592dcaf261e9cd2`  
+		Last Modified: Fri, 11 Oct 2024 04:41:25 GMT  
+		Size: 27.5 MB (27511060 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:d55b27724939102ee35a9cdb48f34f5216667c81055955817b5cbbc269506bd1`  
+		Last Modified: Mon, 09 Dec 2024 19:29:15 GMT  
+		Size: 1.2 MB (1198847 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:b80fb44c058ddabcd4051befdffe65128238e5ec5036d38d25a65d857c1c0f28`  
+		Last Modified: Mon, 09 Dec 2024 19:29:15 GMT  
+		Size: 5.4 MB (5361907 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:0ef3641eabd1611f862c208ee8576714e8a0a0253ccd0de885409f3f7e2e5676`  
+		Last Modified: Mon, 09 Dec 2024 19:29:15 GMT  
+		Size: 1.4 KB (1450 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:5384edf40a924ba3b6e4ebea240776edf6ea3cff04a008b1c2ab82791b7dec37`  
+		Last Modified: Mon, 09 Dec 2024 19:29:15 GMT  
+		Size: 292.0 B  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:b47e5c66f313291a95c156136e84c6a59e3ed3fd2443298d634c66303bf2a69e`  
+		Last Modified: Mon, 09 Dec 2024 19:29:19 GMT  
+		Size: 278.1 MB (278067567 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:99d712a32f72d4975eb3825b3bed247e3f30513bd2d50f68734ef3d725fc7a99`  
+		Last Modified: Mon, 09 Dec 2024 19:29:16 GMT  
 		Size: 189.0 B  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bd43bf1a88b46009880cfb513b12edbaed40c02a9d0cc1b4988907ff5c4045c4`  
-		Last Modified: Tue, 30 May 2023 20:40:46 GMT  
-		Size: 290.2 MB (290207615 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:3050ffc3c19773a71bc3b1026cfc174ec32b3a97b6dd42f8ac2d6d3a95d64ca3`  
+		Last Modified: Mon, 09 Dec 2024 20:39:35 GMT  
+		Size: 297.2 MB (297168489 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
 
-## `gazebo:libgazebo11-bionic`
-
-```console
-$ docker pull gazebo@sha256:c0bc17d5cb72d98c58a862c3b9b2de281538c725c2fa925280588c97176edc3e
-```
-
--	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms: 1
-	-	linux; amd64
-
-### `gazebo:libgazebo11-bionic` - linux; amd64
+### `gazebo:libgazebo11` - unknown; unknown
 
 ```console
-$ docker pull gazebo@sha256:7a4e450f2f5ef614ea24c3611668895119863554578a8bd0d917e44373e8a200
+$ docker pull gazebo@sha256:5e456cfb80f91f5d184b9a016c089e378e268ff233ecfd93373ccf9b99e7af68
 ```
 
--	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **547.3 MB (547331363 bytes)**  
+-	Total Size: **37.6 MB (37550374 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:644ddabb1b9404d428e9dceb169a089c09c5962fe5d304b46c33c90470e8be6c`
--	Entrypoint: `["\/gzserver_entrypoint.sh"]`
--	Default Command: `["gzserver"]`
+-	Image ID: `sha256:be4db618f5c3f4aafdd64ac2bb53af5858f584fbaa8cc3bc52dd1f039e41eb0c`
 
 ```dockerfile
-# Tue, 30 May 2023 09:32:07 GMT
-ARG RELEASE
-# Tue, 30 May 2023 09:32:07 GMT
-ARG LAUNCHPAD_BUILD_ARCH
-# Tue, 30 May 2023 09:32:07 GMT
-LABEL org.opencontainers.image.ref.name=ubuntu
-# Tue, 30 May 2023 09:32:07 GMT
-LABEL org.opencontainers.image.version=18.04
-# Tue, 30 May 2023 09:32:09 GMT
-ADD file:3c74e7e08cbf9a87694ce6fa541af617599680fa54d9e48556fc0fbc120b4a83 in / 
-# Tue, 30 May 2023 09:32:09 GMT
-CMD ["/bin/bash"]
-# Fri, 02 Jun 2023 00:55:18 GMT
-RUN echo 'Etc/UTC' > /etc/timezone &&     ln -s /usr/share/zoneinfo/Etc/UTC /etc/localtime &&     apt-get update &&     apt-get install -q -y --no-install-recommends tzdata &&     rm -rf /var/lib/apt/lists/*
-# Fri, 02 Jun 2023 00:55:37 GMT
-RUN apt-get update && apt-get install -q -y --no-install-recommends     dirmngr     gnupg2     lsb-release     && rm -rf /var/lib/apt/lists/*
-# Fri, 02 Jun 2023 00:55:39 GMT
-RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys D2486D2DD83DB69272AFE98867170598AF249743
-# Fri, 02 Jun 2023 00:55:39 GMT
-RUN . /etc/os-release     && echo "deb http://packages.osrfoundation.org/gazebo/$ID-stable `lsb_release -sc` main" > /etc/apt/sources.list.d/gazebo-latest.list
-# Fri, 02 Jun 2023 00:58:16 GMT
-RUN apt-get update && apt-get install -y --no-install-recommends     gazebo11=11.13.0-1*     && rm -rf /var/lib/apt/lists/*
-# Fri, 02 Jun 2023 00:58:17 GMT
-EXPOSE 11345
-# Fri, 02 Jun 2023 00:58:17 GMT
-COPY file:b79966dec12c55a0a5c9e673326cc3faf9cbbeee0ea5f172e863df237eb8a601 in / 
-# Fri, 02 Jun 2023 00:58:17 GMT
-ENTRYPOINT ["/gzserver_entrypoint.sh"]
-# Fri, 02 Jun 2023 00:58:18 GMT
-CMD ["gzserver"]
-# Fri, 02 Jun 2023 01:01:43 GMT
-RUN apt-get update && apt-get install -y --no-install-recommends     libgazebo11-dev=11.13.0-1*     && rm -rf /var/lib/apt/lists/*
 ```
 
 -	Layers:
-	-	`sha256:41af1b5f0f51947706ae712999cf098bef968a7799e7cb4bb2268829e62a6ab3`  
-		Last Modified: Fri, 02 Jun 2023 00:09:06 GMT  
-		Size: 26.7 MB (26717357 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bc27456075680427d55e79ddce0ccec278d1f81ab5181d13386de5ac3f085b90`  
-		Last Modified: Fri, 02 Jun 2023 01:02:13 GMT  
-		Size: 818.9 KB (818915 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:208a5fc38d6686d09afe4c36d24561e6952f5e2a37e4fe3aed10fc679393e454`  
-		Last Modified: Fri, 02 Jun 2023 01:02:13 GMT  
-		Size: 14.7 MB (14714619 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e8f1c4414805c51da59d1c81cf6d3cdb4a6416e4b1523359595d62645908563b`  
-		Last Modified: Fri, 02 Jun 2023 01:02:10 GMT  
-		Size: 1.4 KB (1441 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3f7c470423b35bccea898315bb522fff6efe67c1fa66231d3d86719a7f7a9863`  
-		Last Modified: Fri, 02 Jun 2023 01:02:10 GMT  
-		Size: 5.5 KB (5457 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1eb88345d023b392cd3408b3c810acc86f53c792051de6fd2e9069e9de312a81`  
-		Last Modified: Fri, 02 Jun 2023 01:02:37 GMT  
-		Size: 235.6 MB (235581256 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:827441c984c9f0878ee0294f1cf4e8de836c7d902ecb38d232d8b671a480e4f1`  
-		Last Modified: Fri, 02 Jun 2023 01:02:10 GMT  
-		Size: 190.0 B  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7a17b0d2225097785cfc72ac1e963298ac0625f0343f97f0f420f2d4b7f8336d`  
-		Last Modified: Fri, 02 Jun 2023 01:03:18 GMT  
-		Size: 269.5 MB (269492128 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:f13305cf555b2104abb7d8a0782217856fcd51f2b18e354ea105c5e5c373f6dd`  
+		Last Modified: Mon, 09 Dec 2024 20:39:35 GMT  
+		Size: 37.5 MB (37541712 bytes)  
+		MIME: application/vnd.in-toto+json
+	-	`sha256:a781552e8708b7f1ff4f52aa3cefb93f05dc179ea71dc170313789b30fb98e9f`  
+		Last Modified: Mon, 09 Dec 2024 20:39:31 GMT  
+		Size: 8.7 KB (8662 bytes)  
+		MIME: application/vnd.in-toto+json
 
 ## `gazebo:libgazebo11-focal`
 
 ```console
-$ docker pull gazebo@sha256:69e885bbdc326bf7c2cbdb34a2fbe9f4a5f26908b131bf91d2ddf0734dff9565
+$ docker pull gazebo@sha256:4c294e47eb3752542b824618f8e95835909e27dfa14fa0b39f6410647d201da8
 ```
 
--	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms: 1
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 2
 	-	linux; amd64
+	-	unknown; unknown
 
 ### `gazebo:libgazebo11-focal` - linux; amd64
 
 ```console
-$ docker pull gazebo@sha256:58c86a1e9bfe5bd5035349679fba796ec4710287b612e18ff96438c620ead6a0
+$ docker pull gazebo@sha256:3eea476332ca8c66ec98ca233191dd532eda7bea616f5a110fd8707f454b6df1
 ```
 
--	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **612.1 MB (612147842 bytes)**  
+-	Total Size: **609.3 MB (609309801 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:a6ad241ba12109c0213d356346af82fcf63cc89c767d1bea1ee98d370dfdd26e`
+-	Image ID: `sha256:5d0a27d0cf973beeeefbf7f38f32193c9cbbfe9e005372687d6a0fbf2e3cbaac`
 -	Entrypoint: `["\/gzserver_entrypoint.sh"]`
 -	Default Command: `["gzserver"]`
 
 ```dockerfile
-# Thu, 13 Apr 2023 13:05:13 GMT
+# Fri, 11 Oct 2024 03:38:25 GMT
 ARG RELEASE
-# Thu, 13 Apr 2023 13:05:13 GMT
+# Fri, 11 Oct 2024 03:38:25 GMT
 ARG LAUNCHPAD_BUILD_ARCH
-# Thu, 13 Apr 2023 13:05:13 GMT
+# Fri, 11 Oct 2024 03:38:25 GMT
 LABEL org.opencontainers.image.ref.name=ubuntu
-# Thu, 13 Apr 2023 13:05:13 GMT
+# Fri, 11 Oct 2024 03:38:25 GMT
 LABEL org.opencontainers.image.version=20.04
-# Thu, 13 Apr 2023 13:05:15 GMT
-ADD file:d05d1c0936b046937bd5755876db2f8da3ed8ccbcf464bb56c312fbc7ed78589 in / 
-# Thu, 13 Apr 2023 13:05:15 GMT
+# Fri, 11 Oct 2024 03:38:27 GMT
+ADD file:7486147a645d8835a5181c79f00a3606c6b714c83bcbfcd8862221eb14690f9e in / 
+# Fri, 11 Oct 2024 03:38:27 GMT
 CMD ["/bin/bash"]
-# Tue, 18 Apr 2023 01:00:14 GMT
-RUN echo 'Etc/UTC' > /etc/timezone &&     ln -s /usr/share/zoneinfo/Etc/UTC /etc/localtime &&     apt-get update &&     apt-get install -q -y --no-install-recommends tzdata &&     rm -rf /var/lib/apt/lists/*
-# Tue, 18 Apr 2023 01:37:54 GMT
-RUN apt-get update && apt-get install -q -y --no-install-recommends     dirmngr     gnupg2     lsb-release     && rm -rf /var/lib/apt/lists/*
-# Tue, 18 Apr 2023 01:37:55 GMT
-RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys D2486D2DD83DB69272AFE98867170598AF249743
-# Tue, 18 Apr 2023 01:37:55 GMT
-RUN . /etc/os-release     && echo "deb http://packages.osrfoundation.org/gazebo/$ID-stable `lsb_release -sc` main" > /etc/apt/sources.list.d/gazebo-latest.list
-# Tue, 30 May 2023 20:33:17 GMT
-RUN apt-get update && apt-get install -y --no-install-recommends     gazebo11=11.13.0-1*     && rm -rf /var/lib/apt/lists/*
-# Tue, 30 May 2023 20:33:19 GMT
-EXPOSE 11345
-# Tue, 30 May 2023 20:33:19 GMT
-COPY file:b79966dec12c55a0a5c9e673326cc3faf9cbbeee0ea5f172e863df237eb8a601 in / 
-# Tue, 30 May 2023 20:33:19 GMT
+# Mon, 09 Dec 2024 12:55:29 GMT
+RUN echo 'Etc/UTC' > /etc/timezone &&     ln -s /usr/share/zoneinfo/Etc/UTC /etc/localtime &&     apt-get update &&     apt-get install -q -y --no-install-recommends tzdata &&     rm -rf /var/lib/apt/lists/* # buildkit
+# Mon, 09 Dec 2024 12:55:29 GMT
+RUN apt-get update && apt-get install -q -y --no-install-recommends     dirmngr     gnupg2     && rm -rf /var/lib/apt/lists/* # buildkit
+# Mon, 09 Dec 2024 12:55:29 GMT
+RUN set -eux; 	key='D2486D2DD83DB69272AFE98867170598AF249743'; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key"; 	mkdir -p /usr/share/keyrings; 	gpg --batch --export "$key" > /usr/share/keyrings/pkgs-osrf-archive-keyring.gpg; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" # buildkit
+# Mon, 09 Dec 2024 12:55:29 GMT
+RUN . /etc/os-release     && echo "deb [ signed-by=/usr/share/keyrings/pkgs-osrf-archive-keyring.gpg ] http://packages.osrfoundation.org/gazebo/$ID-stable $VERSION_CODENAME main" > /etc/apt/sources.list.d/gazebo-latest.list # buildkit
+# Mon, 09 Dec 2024 12:55:29 GMT
+RUN apt-get update && apt-get install -y --no-install-recommends     gazebo11=11.15.1-1*     && rm -rf /var/lib/apt/lists/* # buildkit
+# Mon, 09 Dec 2024 12:55:29 GMT
+EXPOSE map[11345/tcp:{}]
+# Mon, 09 Dec 2024 12:55:29 GMT
+COPY ./gzserver_entrypoint.sh / # buildkit
+# Mon, 09 Dec 2024 12:55:29 GMT
 ENTRYPOINT ["/gzserver_entrypoint.sh"]
-# Tue, 30 May 2023 20:33:19 GMT
+# Mon, 09 Dec 2024 12:55:29 GMT
 CMD ["gzserver"]
-# Tue, 30 May 2023 20:37:51 GMT
-RUN apt-get update && apt-get install -y --no-install-recommends     libgazebo11-dev=11.13.0-1*     && rm -rf /var/lib/apt/lists/*
+# Mon, 09 Dec 2024 12:55:29 GMT
+RUN apt-get update && apt-get install -y --no-install-recommends     libgazebo11-dev=11.15.1-1*     && rm -rf /var/lib/apt/lists/* # buildkit
 ```
 
 -	Layers:
-	-	`sha256:99803d4b97f3db529ae9ca4174b0951afac6b309e7deaa8ec3214c584e02b3a8`  
-		Last Modified: Thu, 13 Apr 2023 03:03:13 GMT  
-		Size: 28.6 MB (28578563 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:db5ff3f6c5dd326a8361d5d9fba50621a210a6b840cadcc97c516817cb8cf8d7`  
-		Last Modified: Tue, 18 Apr 2023 01:15:00 GMT  
-		Size: 1.2 MB (1157164 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:86706d42b62d6d5a6bc799d4479e5cfa8ade7c2cba82b80f66513c23a7f587d3`  
-		Last Modified: Tue, 18 Apr 2023 01:44:11 GMT  
-		Size: 16.2 MB (16179241 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7524529b119ab214bf4d1c9991928d331aef1aefeccd007dfdc18a3328c449ad`  
-		Last Modified: Tue, 18 Apr 2023 01:44:08 GMT  
-		Size: 1.4 KB (1440 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f1ed8551e301529f226bf35170053712264067f8e81adad6513e9d9cfaaafcdb`  
-		Last Modified: Tue, 18 Apr 2023 01:44:08 GMT  
-		Size: 5.5 KB (5496 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:93f6e42ae9614142514184e116ba0d99a8c9ebc37ff5abe076fa79ed7ba856f0`  
-		Last Modified: Tue, 30 May 2023 20:39:54 GMT  
-		Size: 276.0 MB (276018134 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:447fecdc814f32d47afd2534f0e2d24fd8f9005f09d15a01de1d369174c4a429`  
-		Last Modified: Tue, 30 May 2023 20:39:24 GMT  
+	-	`sha256:d9802f032d6798e2086607424bfe88cb8ec1d6f116e11cd99592dcaf261e9cd2`  
+		Last Modified: Fri, 11 Oct 2024 04:41:25 GMT  
+		Size: 27.5 MB (27511060 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:d55b27724939102ee35a9cdb48f34f5216667c81055955817b5cbbc269506bd1`  
+		Last Modified: Mon, 09 Dec 2024 19:29:15 GMT  
+		Size: 1.2 MB (1198847 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:b80fb44c058ddabcd4051befdffe65128238e5ec5036d38d25a65d857c1c0f28`  
+		Last Modified: Mon, 09 Dec 2024 19:29:15 GMT  
+		Size: 5.4 MB (5361907 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:0ef3641eabd1611f862c208ee8576714e8a0a0253ccd0de885409f3f7e2e5676`  
+		Last Modified: Mon, 09 Dec 2024 19:29:15 GMT  
+		Size: 1.4 KB (1450 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:5384edf40a924ba3b6e4ebea240776edf6ea3cff04a008b1c2ab82791b7dec37`  
+		Last Modified: Mon, 09 Dec 2024 19:29:15 GMT  
+		Size: 292.0 B  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:b47e5c66f313291a95c156136e84c6a59e3ed3fd2443298d634c66303bf2a69e`  
+		Last Modified: Mon, 09 Dec 2024 19:29:19 GMT  
+		Size: 278.1 MB (278067567 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:99d712a32f72d4975eb3825b3bed247e3f30513bd2d50f68734ef3d725fc7a99`  
+		Last Modified: Mon, 09 Dec 2024 19:29:16 GMT  
 		Size: 189.0 B  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bd43bf1a88b46009880cfb513b12edbaed40c02a9d0cc1b4988907ff5c4045c4`  
-		Last Modified: Tue, 30 May 2023 20:40:46 GMT  
-		Size: 290.2 MB (290207615 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:3050ffc3c19773a71bc3b1026cfc174ec32b3a97b6dd42f8ac2d6d3a95d64ca3`  
+		Last Modified: Mon, 09 Dec 2024 20:39:35 GMT  
+		Size: 297.2 MB (297168489 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+
+### `gazebo:libgazebo11-focal` - unknown; unknown
+
+```console
+$ docker pull gazebo@sha256:5e456cfb80f91f5d184b9a016c089e378e268ff233ecfd93373ccf9b99e7af68
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **37.6 MB (37550374 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:be4db618f5c3f4aafdd64ac2bb53af5858f584fbaa8cc3bc52dd1f039e41eb0c`
+
+```dockerfile
+```
+
+-	Layers:
+	-	`sha256:f13305cf555b2104abb7d8a0782217856fcd51f2b18e354ea105c5e5c373f6dd`  
+		Last Modified: Mon, 09 Dec 2024 20:39:35 GMT  
+		Size: 37.5 MB (37541712 bytes)  
+		MIME: application/vnd.in-toto+json
+	-	`sha256:a781552e8708b7f1ff4f52aa3cefb93f05dc179ea71dc170313789b30fb98e9f`  
+		Last Modified: Mon, 09 Dec 2024 20:39:31 GMT  
+		Size: 8.7 KB (8662 bytes)  
+		MIME: application/vnd.in-toto+json
